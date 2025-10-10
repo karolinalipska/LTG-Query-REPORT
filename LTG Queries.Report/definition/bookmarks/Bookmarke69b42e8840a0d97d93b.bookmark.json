@@ -1,0 +1,17 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/bookmark/1.4.0/schema.json",
+  "displayName": "Report Menu P0",
+  "name": "Bookmarke69b42e8840a0d97d93b",
+  "options": {
+    "targetVisualNames": []
+  },
+  "explorationState": {
+    "version": "1.0",
+    "activeSection": "ReportSection57d6fc2e5960dbb28957",
+    "sections": {
+      "ReportSection57d6fc2e5960dbb28957": {
+        "visualContainers": {}
+      }
+    }
+  }
+}

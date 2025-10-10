@@ -1,0 +1,64 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/bookmark/1.4.0/schema.json",
+  "displayName": "Expanded Slicers P5",
+  "name": "Bookmarkbe86fdf1d2550835a1a1",
+  "options": {
+    "targetVisualNames": [
+      "7f20607efdba4e76426c"
+    ],
+    "suppressData": true
+  },
+  "explorationState": {
+    "version": "1.3",
+    "activeSection": "ReportSection30d91c54358ce7db8514",
+    "sections": {
+      "ReportSection30d91c54358ce7db8514": {
+        "visualContainers": {
+          "31005da190929a1e7770": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "3e63999e22adc9cd9403": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "7b8ce61a092a1500b692": {
+            "singleVisual": {
+              "visualType": "image",
+              "objects": {}
+            }
+          }
+        },
+        "visualContainerGroups": {
+          "b2e95c27b48752a0e82c": {
+            "isHidden": true
+          },
+          "f926a4fbe8723c99cf5a": {
+            "isHidden": false
+          }
+        }
+      }
+    },
+    "objects": {
+      "merge": {
+        "outspacePane": [
+          {
+            "properties": {
+              "expanded": {
+                "expr": {
+                  "Literal": {
+                    "Value": "false"
+                  }
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

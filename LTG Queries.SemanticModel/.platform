@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "LTG Queries"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "2143c2ca-64b0-4dd3-94be-4a34173a0bba"
+  }
+}

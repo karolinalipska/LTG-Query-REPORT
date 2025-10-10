@@ -1,0 +1,170 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
+  "name": "86af1c9ef6e23a718ade",
+  "position": {
+    "x": 941.51975683890578,
+    "y": 75.866261398176292,
+    "z": 2000,
+    "height": 643.89057750759878,
+    "width": 338.48024316109422,
+    "tabOrder": 2000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Unpicked Pallet"
+                    }
+                  },
+                  "Property": "Date Only"
+                }
+              },
+              "queryRef": "Unpicked Pallet.Date Only",
+              "nativeQueryRef": "Date Only",
+              "format": "d"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Unpicked Pallet"
+                        }
+                      },
+                      "Property": "Unpicked LPN"
+                    }
+                  },
+                  "Function": 2
+                }
+              },
+              "queryRef": "Unpicked Pallet.Unpicked LPN",
+              "nativeQueryRef": "LPNs",
+              "displayName": "LPNs"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Unpicked Pallet"
+                        }
+                      },
+                      "Property": "Qty"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(Unpicked Pallet.Qty)",
+              "nativeQueryRef": "Qty"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "columnHeaders": [
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "98.42362044285592D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Unpicked Pallet.Unpicked LPN"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "124.22963849885808D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(Unpicked Pallet.Qty)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "94.72306953996163D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Unpicked Pallet.Date Only"
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Summary By Date'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualHeader": [
+        {
+          "properties": {
+            "background": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 2,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

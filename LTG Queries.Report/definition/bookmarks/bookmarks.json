@@ -1,0 +1,35 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/bookmarksMetadata/1.0.0/schema.json",
+  "items": [
+    {
+      "name": "Bookmarke69b42e8840a0d97d93b"
+    },
+    {
+      "name": "Bookmark8cfdad8198b353026ac6",
+      "displayName": "Slicers P5 Views",
+      "children": [
+        "Bookmark43d1e40da884c3f978fb",
+        "Bookmarkbe86fdf1d2550835a1a1",
+        "Bookmark40820a5b56f9ab3015a7"
+      ]
+    },
+    {
+      "name": "Bookmarkf3471c058258d8627c04",
+      "displayName": "Slicers P4 Views",
+      "children": [
+        "Bookmark71fd27a991e038e979b8",
+        "Bookmarkd5dbde975b0a5ced516d",
+        "Bookmarkbaf8579225aa423da28a"
+      ]
+    },
+    {
+      "name": "Bookmark52a8ba0827a45faabb02",
+      "displayName": "Slicers P3 Views",
+      "children": [
+        "Bookmark1c6af3eba4bef4a7907b",
+        "Bookmark3ddb93e3903d6930a84f",
+        "Bookmark698aac007c067a1d82e0"
+      ]
+    }
+  ]
+}

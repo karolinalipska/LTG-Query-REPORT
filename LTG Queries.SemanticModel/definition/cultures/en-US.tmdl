@@ -1,0 +1,3436 @@
+cultureInfo en-US
+
+	linguisticMetadata =
+			{
+			  "Version": "3.1.0",
+			  "Language": "en-US",
+			  "Entities": {
+			    "dynamic_calendar": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dynamic Calendar"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "dynamic calendar": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "calendar": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "dynamic almanac": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "dynamic datebook": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "dynamic agenda": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "dynamic logbook": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "dynamic diary": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "almanac": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "datebook": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "agenda": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "logbook": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "diary": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        }
+			      ]
+			    },
+			    "dynamic_calendar.date": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dynamic Calendar",
+			          "ConceptualProperty": "Date"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "date": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "moment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "dynamic_calendar.day_ID": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dynamic Calendar",
+			          "ConceptualProperty": "DayID"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "day ID": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "DayID": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "day identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "day identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "day identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "day credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "dynamic_calendar.year_ID": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dynamic Calendar",
+			          "ConceptualProperty": "YearID"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "year ID": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "YearID": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "year identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "year identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "year identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "year credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "yr id": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        }
+			      ]
+			    },
+			    "dynamic_calendar.v28Days28_day": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dynamic Calendar",
+			          "ConceptualProperty": "28Days"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "28 day": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "28Days": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "dynamic_calendar.week_ID": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dynamic Calendar",
+			          "ConceptualProperty": "WeekID"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "week ID": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "WeekID": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "week identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "week identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "week identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "week credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "dynamic_calendar.period_ID": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dynamic Calendar",
+			          "ConceptualProperty": "PeriodID"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "period ID": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "PeriodID": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "period": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "period identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "period identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "period identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "period credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "era": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "epoch": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "age": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "stage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "phase": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        }
+			      ],
+			      "NameType": "Identifier"
+			    },
+			    "dynamic_calendar.year": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dynamic Calendar",
+			          "ConceptualProperty": "Year"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "year": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        }
+			      ]
+			    },
+			    "dynamic_calendar.month": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dynamic Calendar",
+			          "ConceptualProperty": "Month"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "month": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        }
+			      ]
+			    },
+			    "dynamic_calendar.month_name": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dynamic Calendar",
+			          "ConceptualProperty": "Month Name"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "month name": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "month nickname": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "month title": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "month label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "month tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "mth name": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        }
+			      ]
+			    },
+			    "dynamic_calendar.day_number": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dynamic Calendar",
+			          "ConceptualProperty": "Day Number"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "day number": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "day no": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "dynamic_calendar.end_of_week": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dynamic Calendar",
+			          "ConceptualProperty": "End of Week"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "end of week": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "end": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "completion of week": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "conclusion of week": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "expiration of week": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "close of week": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "finish of week": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "last of week": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "stop of week": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "closing of week": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "ending of week": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "completion": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        }
+			      ]
+			    },
+			    "dynamic_calendar.quarter": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dynamic Calendar",
+			          "ConceptualProperty": "Quarter"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "quarter": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "qtr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.818
+			          }
+			        }
+			      ]
+			    },
+			    "dynamic_calendar.week_of_year": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dynamic Calendar",
+			          "ConceptualProperty": "Week of Year"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "week of year": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "week of yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        }
+			      ]
+			    },
+			    "dynamic_calendar.day_of_week": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dynamic Calendar",
+			          "ConceptualProperty": "Day of Week"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "day of week": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "dynamic_calendar.day_name": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dynamic Calendar",
+			          "ConceptualProperty": "Day Name"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "day name": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "day nickname": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "day title": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "day label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "day tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "dynamic_calendar.month_abbreviation": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dynamic Calendar",
+			          "ConceptualProperty": "Month Abbreviation"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "month abbreviation": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "abbreviation": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "mth abbreviation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "month contraction": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "month ellipsis": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "month acronym": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "month condensation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "month abridgement": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "month truncation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "month curtailment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "month reduction": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "contraction": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        }
+			      ]
+			    },
+			    "dynamic_calendar.WE_date_abbreviation": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dynamic Calendar",
+			          "ConceptualProperty": "WE Date Abbreviation"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "WE date abbreviation": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "abbreviation": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "date abbreviation": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "we moment abbreviation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "we period abbreviation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "moment abbreviation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "period abbreviation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "we date contraction": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "we date ellipsis": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "we date acronym": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "we date condensation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "we date abridgement": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "we date truncation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        }
+			      ]
+			    },
+			    "dynamic_calendar.WE_abbreviation": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dynamic Calendar",
+			          "ConceptualProperty": "WE Abbreviation"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "WE abbreviation": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "abbreviation": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "we contraction": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "we ellipsis": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "we acronym": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "we condensation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "we abridgement": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "we truncation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "we curtailment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "we reduction": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "contraction": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "ellipsis": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        }
+			      ]
+			    },
+			    "dynamic_calendar.year_week_end": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dynamic Calendar",
+			          "ConceptualProperty": "Year Week End"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "year week end": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "end": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "week end": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "year week completion": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "year week conclusion": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "year week expiration": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "week completion": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "week conclusion": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "week expiration": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "year week close": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "year week finish": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "year week last": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "year week stop": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        }
+			      ]
+			    },
+			    "dynamic_calendar.week_of_year_2_digits": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dynamic Calendar",
+			          "ConceptualProperty": "Week of Year 2 Digits"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "week of year 2 digits": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "week of year 2 digit": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "week of yr 2 digit": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.624
+			          }
+			        }
+			      ]
+			    },
+			    "dynamic_calendar.year_week_num": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dynamic Calendar",
+			          "ConceptualProperty": "Year Week Num"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "year week num": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "year week number": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "yr week num": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        }
+			      ]
+			    },
+			    "dynamic_calendar.date_and_day_name": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dynamic Calendar",
+			          "ConceptualProperty": "Date and Day Name"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "date and day name": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date day name": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "date and day nickname": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.748
+			          }
+			        },
+			        {
+			          "date and day title": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.748
+			          }
+			        },
+			        {
+			          "date and day label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.748
+			          }
+			        },
+			        {
+			          "date and day tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.748
+			          }
+			        },
+			        {
+			          "date day nickname": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "date day title": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "date day label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "date day tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "moment and day name": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "moment day name": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        }
+			      ]
+			    },
+			    "dynamic_calendar.period_ID_ref": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dynamic Calendar",
+			          "ConceptualProperty": "PeriodID_Ref"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "period ID ref": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "PeriodID_Ref": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "period": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "ref": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "ID ref": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "period identification ref": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "period identity ref": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "period identifier ref": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "identification ref": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "identity ref": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "identifier ref": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "period credential ref": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "credential ref": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "period id arbitrator": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "period id adjudicator": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        }
+			      ]
+			    },
+			    "dynamic_calendar.date_ddmmyyyy": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dynamic Calendar",
+			          "ConceptualProperty": "Date dd-mm-yyyy"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "date dd-mm-yyyy": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date dd mm yyyy": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "moment dd mm yyyy": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "period dd mm yyyy": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        }
+			      ]
+			    },
+			    "dynamic_calendar.date_yyyymm": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dynamic Calendar",
+			          "ConceptualProperty": "Date yyyymm"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "date yyyymm": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "moment yyyymm": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "period yyyymm": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "dynamic_calendar.per_ref_order": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dynamic Calendar",
+			          "ConceptualProperty": "PerRefOrder"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "per ref order": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "PerRefOrder": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "per ref instruction": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "per arbitrator order": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "per adjudicator order": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "per ref direction": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "per mediator order": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "per arbiter order": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "per ref edict": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "per referee order": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "per umpire order": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "per ref command": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        }
+			      ]
+			    },
+			    "dynamic_calendar.year__period": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dynamic Calendar",
+			          "ConceptualProperty": "Year & Period"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "year & period": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "yr & period": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "year & era": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "year & epoch": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "year & age": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "year & stage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "year & phase": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "year & episode": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.458
+			          }
+			        },
+			        {
+			          "year & interlude": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.458
+			          }
+			        },
+			        {
+			          "year & interval": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.458
+			          }
+			        },
+			        {
+			          "year & extent": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.458
+			          }
+			        }
+			      ]
+			    },
+			    "dynamic_calendar.selected_period": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dynamic Calendar",
+			          "ConceptualProperty": "Selected_Period"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "selected period": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Selected_Period": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "period": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "selected era": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "selected epoch": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "era": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "epoch": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "selected age": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        },
+			        {
+			          "selected stage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        },
+			        {
+			          "selected phase": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        },
+			        {
+			          "age": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "stage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "phase": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        }
+			      ]
+			    },
+			    "dynamic_calendar.selected_year": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dynamic Calendar",
+			          "ConceptualProperty": "Selected_Year"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "selected year": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Selected_Year": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "selected yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        }
+			      ]
+			    },
+			    "dynamic_calendar.selected_week": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dynamic Calendar",
+			          "ConceptualProperty": "Selected_Week"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "selected week": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Selected_Week": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "dynamic_calendar.min_selected_P": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dynamic Calendar",
+			          "ConceptualProperty": "MinSelected_P"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "min selected P": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "MinSelected_P": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "minimum selected p": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "dynamic_calendar.max_selected_P": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dynamic Calendar",
+			          "ConceptualProperty": "MaxSelected_P"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "max selected P": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "MaxSelected_P": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "maximum selected p": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "OfficeThesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "unpicked_pallet.car_move_id": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Unpicked Pallet",
+			          "ConceptualProperty": "CAR_MOVE_ID"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Load Id": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "crane_10_sku_spread.sku_id": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Crane 10 SKU Spread",
+			          "ConceptualProperty": "sku_id"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "SKU": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    }
+			  },
+			  "Relationships": {
+			    "dynamic_calendar_is_named_period_ID": {
+			      "Binding": {
+			        "ConceptualEntity": "Dynamic Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dynamic_calendar": {
+			          "Target": {
+			            "Entity": "dynamic_calendar"
+			          }
+			        },
+			        "dynamic_calendar.period_ID": {
+			          "Target": {
+			            "Entity": "dynamic_calendar.period_ID"
+			          }
+			        }
+			      }
+			    },
+			    "dynamic_calendar_has_date": {
+			      "Binding": {
+			        "ConceptualEntity": "Dynamic Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dynamic_calendar": {
+			          "Target": {
+			            "Entity": "dynamic_calendar"
+			          }
+			        },
+			        "dynamic_calendar.date": {
+			          "Target": {
+			            "Entity": "dynamic_calendar.date"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dynamic_calendar"
+			            },
+			            "Object": {
+			              "Role": "dynamic_calendar.date"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "dynamic_calendar_has_day_ID": {
+			      "Binding": {
+			        "ConceptualEntity": "Dynamic Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dynamic_calendar": {
+			          "Target": {
+			            "Entity": "dynamic_calendar"
+			          }
+			        },
+			        "dynamic_calendar.day_ID": {
+			          "Target": {
+			            "Entity": "dynamic_calendar.day_ID"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dynamic_calendar"
+			            },
+			            "Object": {
+			              "Role": "dynamic_calendar.day_ID"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "dynamic_calendar_has_year_ID": {
+			      "Binding": {
+			        "ConceptualEntity": "Dynamic Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dynamic_calendar": {
+			          "Target": {
+			            "Entity": "dynamic_calendar"
+			          }
+			        },
+			        "dynamic_calendar.year_ID": {
+			          "Target": {
+			            "Entity": "dynamic_calendar.year_ID"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dynamic_calendar"
+			            },
+			            "Object": {
+			              "Role": "dynamic_calendar.year_ID"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "dynamic_calendar_has_v28Days28_day": {
+			      "Binding": {
+			        "ConceptualEntity": "Dynamic Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dynamic_calendar": {
+			          "Target": {
+			            "Entity": "dynamic_calendar"
+			          }
+			        },
+			        "dynamic_calendar.v28Days28_day": {
+			          "Target": {
+			            "Entity": "dynamic_calendar.v28Days28_day"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dynamic_calendar"
+			            },
+			            "Object": {
+			              "Role": "dynamic_calendar.v28Days28_day"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "dynamic_calendar_has_week_ID": {
+			      "Binding": {
+			        "ConceptualEntity": "Dynamic Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dynamic_calendar": {
+			          "Target": {
+			            "Entity": "dynamic_calendar"
+			          }
+			        },
+			        "dynamic_calendar.week_ID": {
+			          "Target": {
+			            "Entity": "dynamic_calendar.week_ID"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dynamic_calendar"
+			            },
+			            "Object": {
+			              "Role": "dynamic_calendar.week_ID"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "dynamic_calendar_has_year": {
+			      "Binding": {
+			        "ConceptualEntity": "Dynamic Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dynamic_calendar": {
+			          "Target": {
+			            "Entity": "dynamic_calendar"
+			          }
+			        },
+			        "dynamic_calendar.year": {
+			          "Target": {
+			            "Entity": "dynamic_calendar.year"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dynamic_calendar"
+			            },
+			            "Object": {
+			              "Role": "dynamic_calendar.year"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "dynamic_calendar_has_month": {
+			      "Binding": {
+			        "ConceptualEntity": "Dynamic Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dynamic_calendar": {
+			          "Target": {
+			            "Entity": "dynamic_calendar"
+			          }
+			        },
+			        "dynamic_calendar.month": {
+			          "Target": {
+			            "Entity": "dynamic_calendar.month"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dynamic_calendar"
+			            },
+			            "Object": {
+			              "Role": "dynamic_calendar.month"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "dynamic_calendar_has_month_name": {
+			      "Binding": {
+			        "ConceptualEntity": "Dynamic Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dynamic_calendar": {
+			          "Target": {
+			            "Entity": "dynamic_calendar"
+			          }
+			        },
+			        "dynamic_calendar.month_name": {
+			          "Target": {
+			            "Entity": "dynamic_calendar.month_name"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dynamic_calendar"
+			            },
+			            "Object": {
+			              "Role": "dynamic_calendar.month_name"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "dynamic_calendar_has_day_number": {
+			      "Binding": {
+			        "ConceptualEntity": "Dynamic Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dynamic_calendar": {
+			          "Target": {
+			            "Entity": "dynamic_calendar"
+			          }
+			        },
+			        "dynamic_calendar.day_number": {
+			          "Target": {
+			            "Entity": "dynamic_calendar.day_number"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dynamic_calendar"
+			            },
+			            "Object": {
+			              "Role": "dynamic_calendar.day_number"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "dynamic_calendar_has_end_of_week": {
+			      "Binding": {
+			        "ConceptualEntity": "Dynamic Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dynamic_calendar": {
+			          "Target": {
+			            "Entity": "dynamic_calendar"
+			          }
+			        },
+			        "dynamic_calendar.end_of_week": {
+			          "Target": {
+			            "Entity": "dynamic_calendar.end_of_week"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dynamic_calendar"
+			            },
+			            "Object": {
+			              "Role": "dynamic_calendar.end_of_week"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "dynamic_calendar_has_quarter": {
+			      "Binding": {
+			        "ConceptualEntity": "Dynamic Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dynamic_calendar": {
+			          "Target": {
+			            "Entity": "dynamic_calendar"
+			          }
+			        },
+			        "dynamic_calendar.quarter": {
+			          "Target": {
+			            "Entity": "dynamic_calendar.quarter"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dynamic_calendar"
+			            },
+			            "Object": {
+			              "Role": "dynamic_calendar.quarter"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "dynamic_calendar_has_week_of_year": {
+			      "Binding": {
+			        "ConceptualEntity": "Dynamic Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dynamic_calendar": {
+			          "Target": {
+			            "Entity": "dynamic_calendar"
+			          }
+			        },
+			        "dynamic_calendar.week_of_year": {
+			          "Target": {
+			            "Entity": "dynamic_calendar.week_of_year"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dynamic_calendar"
+			            },
+			            "Object": {
+			              "Role": "dynamic_calendar.week_of_year"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "dynamic_calendar_has_day_of_week": {
+			      "Binding": {
+			        "ConceptualEntity": "Dynamic Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dynamic_calendar": {
+			          "Target": {
+			            "Entity": "dynamic_calendar"
+			          }
+			        },
+			        "dynamic_calendar.day_of_week": {
+			          "Target": {
+			            "Entity": "dynamic_calendar.day_of_week"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dynamic_calendar"
+			            },
+			            "Object": {
+			              "Role": "dynamic_calendar.day_of_week"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "dynamic_calendar_has_day_name": {
+			      "Binding": {
+			        "ConceptualEntity": "Dynamic Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dynamic_calendar": {
+			          "Target": {
+			            "Entity": "dynamic_calendar"
+			          }
+			        },
+			        "dynamic_calendar.day_name": {
+			          "Target": {
+			            "Entity": "dynamic_calendar.day_name"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dynamic_calendar"
+			            },
+			            "Object": {
+			              "Role": "dynamic_calendar.day_name"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "dynamic_calendar_has_month_abbreviation": {
+			      "Binding": {
+			        "ConceptualEntity": "Dynamic Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dynamic_calendar": {
+			          "Target": {
+			            "Entity": "dynamic_calendar"
+			          }
+			        },
+			        "dynamic_calendar.month_abbreviation": {
+			          "Target": {
+			            "Entity": "dynamic_calendar.month_abbreviation"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dynamic_calendar"
+			            },
+			            "Object": {
+			              "Role": "dynamic_calendar.month_abbreviation"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "dynamic_calendar_has_WE_date_abbreviation": {
+			      "Binding": {
+			        "ConceptualEntity": "Dynamic Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dynamic_calendar": {
+			          "Target": {
+			            "Entity": "dynamic_calendar"
+			          }
+			        },
+			        "dynamic_calendar.WE_date_abbreviation": {
+			          "Target": {
+			            "Entity": "dynamic_calendar.WE_date_abbreviation"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dynamic_calendar"
+			            },
+			            "Object": {
+			              "Role": "dynamic_calendar.WE_date_abbreviation"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "dynamic_calendar_has_WE_abbreviation": {
+			      "Binding": {
+			        "ConceptualEntity": "Dynamic Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dynamic_calendar": {
+			          "Target": {
+			            "Entity": "dynamic_calendar"
+			          }
+			        },
+			        "dynamic_calendar.WE_abbreviation": {
+			          "Target": {
+			            "Entity": "dynamic_calendar.WE_abbreviation"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dynamic_calendar"
+			            },
+			            "Object": {
+			              "Role": "dynamic_calendar.WE_abbreviation"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "dynamic_calendar_has_year_week_end": {
+			      "Binding": {
+			        "ConceptualEntity": "Dynamic Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dynamic_calendar": {
+			          "Target": {
+			            "Entity": "dynamic_calendar"
+			          }
+			        },
+			        "dynamic_calendar.year_week_end": {
+			          "Target": {
+			            "Entity": "dynamic_calendar.year_week_end"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dynamic_calendar"
+			            },
+			            "Object": {
+			              "Role": "dynamic_calendar.year_week_end"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "dynamic_calendar_has_week_of_year_2_digits": {
+			      "Binding": {
+			        "ConceptualEntity": "Dynamic Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dynamic_calendar": {
+			          "Target": {
+			            "Entity": "dynamic_calendar"
+			          }
+			        },
+			        "dynamic_calendar.week_of_year_2_digits": {
+			          "Target": {
+			            "Entity": "dynamic_calendar.week_of_year_2_digits"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dynamic_calendar"
+			            },
+			            "Object": {
+			              "Role": "dynamic_calendar.week_of_year_2_digits"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "dynamic_calendar_has_year_week_num": {
+			      "Binding": {
+			        "ConceptualEntity": "Dynamic Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dynamic_calendar": {
+			          "Target": {
+			            "Entity": "dynamic_calendar"
+			          }
+			        },
+			        "dynamic_calendar.year_week_num": {
+			          "Target": {
+			            "Entity": "dynamic_calendar.year_week_num"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dynamic_calendar"
+			            },
+			            "Object": {
+			              "Role": "dynamic_calendar.year_week_num"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "dynamic_calendar_has_date_and_day_name": {
+			      "Binding": {
+			        "ConceptualEntity": "Dynamic Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dynamic_calendar": {
+			          "Target": {
+			            "Entity": "dynamic_calendar"
+			          }
+			        },
+			        "dynamic_calendar.date_and_day_name": {
+			          "Target": {
+			            "Entity": "dynamic_calendar.date_and_day_name"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dynamic_calendar"
+			            },
+			            "Object": {
+			              "Role": "dynamic_calendar.date_and_day_name"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "dynamic_calendar_has_period_ID_ref": {
+			      "Binding": {
+			        "ConceptualEntity": "Dynamic Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dynamic_calendar": {
+			          "Target": {
+			            "Entity": "dynamic_calendar"
+			          }
+			        },
+			        "dynamic_calendar.period_ID_ref": {
+			          "Target": {
+			            "Entity": "dynamic_calendar.period_ID_ref"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dynamic_calendar"
+			            },
+			            "Object": {
+			              "Role": "dynamic_calendar.period_ID_ref"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "dynamic_calendar_has_date_ddmmyyyy": {
+			      "Binding": {
+			        "ConceptualEntity": "Dynamic Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dynamic_calendar": {
+			          "Target": {
+			            "Entity": "dynamic_calendar"
+			          }
+			        },
+			        "dynamic_calendar.date_ddmmyyyy": {
+			          "Target": {
+			            "Entity": "dynamic_calendar.date_ddmmyyyy"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dynamic_calendar"
+			            },
+			            "Object": {
+			              "Role": "dynamic_calendar.date_ddmmyyyy"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "dynamic_calendar_has_date_yyyymm": {
+			      "Binding": {
+			        "ConceptualEntity": "Dynamic Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dynamic_calendar": {
+			          "Target": {
+			            "Entity": "dynamic_calendar"
+			          }
+			        },
+			        "dynamic_calendar.date_yyyymm": {
+			          "Target": {
+			            "Entity": "dynamic_calendar.date_yyyymm"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dynamic_calendar"
+			            },
+			            "Object": {
+			              "Role": "dynamic_calendar.date_yyyymm"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "dynamic_calendar_has_per_ref_order": {
+			      "Binding": {
+			        "ConceptualEntity": "Dynamic Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dynamic_calendar": {
+			          "Target": {
+			            "Entity": "dynamic_calendar"
+			          }
+			        },
+			        "dynamic_calendar.per_ref_order": {
+			          "Target": {
+			            "Entity": "dynamic_calendar.per_ref_order"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dynamic_calendar"
+			            },
+			            "Object": {
+			              "Role": "dynamic_calendar.per_ref_order"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "dynamic_calendar_has_year__period": {
+			      "Binding": {
+			        "ConceptualEntity": "Dynamic Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dynamic_calendar": {
+			          "Target": {
+			            "Entity": "dynamic_calendar"
+			          }
+			        },
+			        "dynamic_calendar.year__period": {
+			          "Target": {
+			            "Entity": "dynamic_calendar.year__period"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dynamic_calendar"
+			            },
+			            "Object": {
+			              "Role": "dynamic_calendar.year__period"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "dynamic_calendar_has_selected_period": {
+			      "Binding": {
+			        "ConceptualEntity": "Dynamic Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dynamic_calendar": {
+			          "Target": {
+			            "Entity": "dynamic_calendar"
+			          }
+			        },
+			        "dynamic_calendar.selected_period": {
+			          "Target": {
+			            "Entity": "dynamic_calendar.selected_period"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dynamic_calendar"
+			            },
+			            "Object": {
+			              "Role": "dynamic_calendar.selected_period"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "dynamic_calendar_has_selected_year": {
+			      "Binding": {
+			        "ConceptualEntity": "Dynamic Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dynamic_calendar": {
+			          "Target": {
+			            "Entity": "dynamic_calendar"
+			          }
+			        },
+			        "dynamic_calendar.selected_year": {
+			          "Target": {
+			            "Entity": "dynamic_calendar.selected_year"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dynamic_calendar"
+			            },
+			            "Object": {
+			              "Role": "dynamic_calendar.selected_year"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "dynamic_calendar_has_selected_week": {
+			      "Binding": {
+			        "ConceptualEntity": "Dynamic Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dynamic_calendar": {
+			          "Target": {
+			            "Entity": "dynamic_calendar"
+			          }
+			        },
+			        "dynamic_calendar.selected_week": {
+			          "Target": {
+			            "Entity": "dynamic_calendar.selected_week"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dynamic_calendar"
+			            },
+			            "Object": {
+			              "Role": "dynamic_calendar.selected_week"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "dynamic_calendar_has_min_selected_P": {
+			      "Binding": {
+			        "ConceptualEntity": "Dynamic Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dynamic_calendar": {
+			          "Target": {
+			            "Entity": "dynamic_calendar"
+			          }
+			        },
+			        "dynamic_calendar.min_selected_P": {
+			          "Target": {
+			            "Entity": "dynamic_calendar.min_selected_P"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dynamic_calendar"
+			            },
+			            "Object": {
+			              "Role": "dynamic_calendar.min_selected_P"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "dynamic_calendar_has_max_selected_P": {
+			      "Binding": {
+			        "ConceptualEntity": "Dynamic Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dynamic_calendar": {
+			          "Target": {
+			            "Entity": "dynamic_calendar"
+			          }
+			        },
+			        "dynamic_calendar.max_selected_P": {
+			          "Target": {
+			            "Entity": "dynamic_calendar.max_selected_P"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dynamic_calendar"
+			            },
+			            "Object": {
+			              "Role": "dynamic_calendar.max_selected_P"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "dynamic_calendar_has_min_period": {
+			      "Binding": {
+			        "ConceptualEntity": "Dynamic Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dynamic_calendar": {
+			          "Target": {
+			            "Entity": "dynamic_calendar"
+			          }
+			        },
+			        "min_period": {
+			          "Target": {
+			            "Entity": "min_period"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dynamic_calendar"
+			            },
+			            "Object": {
+			              "Role": "min_period"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "min_period"
+			            },
+			            "Object": {
+			              "Role": "dynamic_calendar"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "dynamic_calendar_has_max_period": {
+			      "Binding": {
+			        "ConceptualEntity": "Dynamic Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dynamic_calendar": {
+			          "Target": {
+			            "Entity": "dynamic_calendar"
+			          }
+			        },
+			        "max_period": {
+			          "Target": {
+			            "Entity": "max_period"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dynamic_calendar"
+			            },
+			            "Object": {
+			              "Role": "max_period"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "max_period"
+			            },
+			            "Object": {
+			              "Role": "dynamic_calendar"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    }
+			  }
+			}
+		contentType: json
+

@@ -1,0 +1,313 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
+  "name": "dc8442b3a7da90663365",
+  "position": {
+    "x": 0,
+    "y": 81.702127659574472,
+    "z": 1000,
+    "height": 638.05471124620067,
+    "width": 1280,
+    "tabOrder": 1000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mondelez Orders Status"
+                    }
+                  },
+                  "Property": "Order Number"
+                }
+              },
+              "queryRef": "Mondelez Orders Status.Order Number",
+              "nativeQueryRef": "Order Number"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mondelez Orders Status"
+                    }
+                  },
+                  "Property": "Order Entry Date"
+                }
+              },
+              "queryRef": "Mondelez Orders Status.Order Entry Date",
+              "nativeQueryRef": "Order Entry Date"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mondelez Orders Status"
+                    }
+                  },
+                  "Property": "Order Fulfilment - Order Status"
+                }
+              },
+              "queryRef": "Mondelez Orders Status.Order Fulfilment - Order Status",
+              "nativeQueryRef": "Order Fulfilment - Order Status"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Mondelez Orders Status"
+                        }
+                      },
+                      "Property": "Shorts"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(Mondelez Orders Status.Shorts)",
+              "nativeQueryRef": "Shorts"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mondelez Orders Status"
+                    }
+                  },
+                  "Property": "Shipment Line Status"
+                }
+              },
+              "queryRef": "Mondelez Orders Status.Shipment Line Status",
+              "nativeQueryRef": "Shipment Line Status"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mondelez Orders Status"
+                    }
+                  },
+                  "Property": "Wave"
+                }
+              },
+              "queryRef": "Mondelez Orders Status.Wave",
+              "nativeQueryRef": "Wave"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mondelez Orders Status"
+                    }
+                  },
+                  "Property": "Shipment Status"
+                }
+              },
+              "queryRef": "Mondelez Orders Status.Shipment Status",
+              "nativeQueryRef": "Shipment Status"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mondelez Orders Status"
+                    }
+                  },
+                  "Property": "Load ID"
+                }
+              },
+              "queryRef": "Mondelez Orders Status.Load ID",
+              "nativeQueryRef": "Load ID"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mondelez Orders Status"
+                    }
+                  },
+                  "Property": "Host External Id"
+                }
+              },
+              "queryRef": "Mondelez Orders Status.Host External Id",
+              "nativeQueryRef": "Host External Id"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mondelez Orders Status"
+                    }
+                  },
+                  "Property": "Appointment Start"
+                }
+              },
+              "queryRef": "Mondelez Orders Status.Appointment Start",
+              "nativeQueryRef": "Appointment Start"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mondelez Orders Status"
+                    }
+                  },
+                  "Property": "Trailer Assigned"
+                }
+              },
+              "queryRef": "Mondelez Orders Status.Trailer Assigned",
+              "nativeQueryRef": "Trailer Assigned"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mondelez Orders Status"
+                    }
+                  },
+                  "Property": "Trailer Closed"
+                }
+              },
+              "queryRef": "Mondelez Orders Status.Trailer Closed",
+              "nativeQueryRef": "Trailer Closed"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mondelez Orders Status"
+                    }
+                  },
+                  "Property": "Trailer Despatched"
+                }
+              },
+              "queryRef": "Mondelez Orders Status.Trailer Despatched",
+              "nativeQueryRef": "Trailer Despatched"
+            }
+          ],
+          "showAll": true
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Mondelez Orders Status"
+                  }
+                },
+                "Property": "Order Entry Date"
+              }
+            },
+            "direction": "Descending"
+          }
+        ]
+      }
+    },
+    "objects": {
+      "columnHeaders": [
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "values": [
+        {
+          "properties": {
+            "wordWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnFormatting": [
+        {
+          "properties": {
+            "labelPrecision": {
+              "expr": {
+                "Literal": {
+                  "Value": "0L"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(Mondelez Orders Status.Shorts)"
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Details'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualHeader": [
+        {
+          "properties": {
+            "background": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 2,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

@@ -1,0 +1,420 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/report/3.0.0/schema.json",
+  "themeCollection": {
+    "baseTheme": {
+      "name": "CY18SU07",
+      "reportVersionAtImport": {
+        "visual": "1.8.30",
+        "report": "2.0.30",
+        "page": "1.3.30"
+      },
+      "type": "SharedResources"
+    },
+    "customTheme": {
+      "name": "DPDHL_PowerBI_Theme24738601369804702.json",
+      "reportVersionAtImport": {
+        "visual": "1.8.51",
+        "report": "2.0.51",
+        "page": "1.3.51"
+      },
+      "type": "RegisteredResources"
+    }
+  },
+  "objects": {
+    "outspacePane": [
+      {
+        "properties": {
+          "expanded": {
+            "expr": {
+              "Literal": {
+                "Value": "true"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "resourcePackages": [
+    {
+      "name": "SharedResources",
+      "type": "SharedResources",
+      "items": [
+        {
+          "name": "CY18SU07",
+          "path": "BaseThemes/CY18SU07.json",
+          "type": "BaseTheme"
+        }
+      ]
+    },
+    {
+      "name": "RegisteredResources",
+      "type": "RegisteredResources",
+      "items": [
+        {
+          "name": "Left_Arrow9258415874184311.png",
+          "path": "Left_Arrow9258415874184311.png",
+          "type": "Image"
+        },
+        {
+          "name": "left_toggle01929726919216357.png",
+          "path": "left_toggle01929726919216357.png",
+          "type": "Image"
+        },
+        {
+          "name": "Lock9756357113659142.png",
+          "path": "Lock9756357113659142.png",
+          "type": "Image"
+        },
+        {
+          "name": "Minus2297282794603226.png",
+          "path": "Minus2297282794603226.png",
+          "type": "Image"
+        },
+        {
+          "name": "Off_Limits6744739189940367.png",
+          "path": "Off_Limits6744739189940367.png",
+          "type": "Image"
+        },
+        {
+          "name": "People5046007668749728.png",
+          "path": "People5046007668749728.png",
+          "type": "Image"
+        },
+        {
+          "name": "Person_with_Cart24062496696048985.png",
+          "path": "Person_with_Cart24062496696048985.png",
+          "type": "Image"
+        },
+        {
+          "name": "Person_with_Carton27185710947427855.png",
+          "path": "Person_with_Carton27185710947427855.png",
+          "type": "Image"
+        },
+        {
+          "name": "Pie_Chart7100110896614804.png",
+          "path": "Pie_Chart7100110896614804.png",
+          "type": "Image"
+        },
+        {
+          "name": "Question_Mark000916269575023998.png",
+          "path": "Question_Mark000916269575023998.png",
+          "type": "Image"
+        },
+        {
+          "name": "Recycle8830468720908422.png",
+          "path": "Recycle8830468720908422.png",
+          "type": "Image"
+        },
+        {
+          "name": "RF_Gun47243145720798085.png",
+          "path": "RF_Gun47243145720798085.png",
+          "type": "Image"
+        },
+        {
+          "name": "Right_toggle08484881923598775.png",
+          "path": "Right_toggle08484881923598775.png",
+          "type": "Image"
+        },
+        {
+          "name": "Science_web5742230950303151.png",
+          "path": "Science_web5742230950303151.png",
+          "type": "Image"
+        },
+        {
+          "name": "Short_Racks9722356251313011.png",
+          "path": "Short_Racks9722356251313011.png",
+          "type": "Image"
+        },
+        {
+          "name": "Stopwatch7216747421406133.png",
+          "path": "Stopwatch7216747421406133.png",
+          "type": "Image"
+        },
+        {
+          "name": "Thumbs_up0027168651664140064.png",
+          "path": "Thumbs_up0027168651664140064.png",
+          "type": "Image"
+        },
+        {
+          "name": "Tools02893929512661675.png",
+          "path": "Tools02893929512661675.png",
+          "type": "Image"
+        },
+        {
+          "name": "Tree7714538251174914.png",
+          "path": "Tree7714538251174914.png",
+          "type": "Image"
+        },
+        {
+          "name": "Truck5149173636368838.png",
+          "path": "Truck5149173636368838.png",
+          "type": "Image"
+        },
+        {
+          "name": "Warehouse34194460270420857.png",
+          "path": "Warehouse34194460270420857.png",
+          "type": "Image"
+        },
+        {
+          "name": "Writing_Notes2218800238262586.png",
+          "path": "Writing_Notes2218800238262586.png",
+          "type": "Image"
+        },
+        {
+          "name": "2_Gears1353309328810668.png",
+          "path": "2_Gears1353309328810668.png",
+          "type": "Image"
+        },
+        {
+          "name": "4_Gears2344468616291422.png",
+          "path": "4_Gears2344468616291422.png",
+          "type": "Image"
+        },
+        {
+          "name": "Cell_Phone5393853573999785.png",
+          "path": "Cell_Phone5393853573999785.png",
+          "type": "Image"
+        },
+        {
+          "name": "Chainlink3810325271689221.png",
+          "path": "Chainlink3810325271689221.png",
+          "type": "Image"
+        },
+        {
+          "name": "Checklist_Complete42413358330506834.png",
+          "path": "Checklist_Complete42413358330506834.png",
+          "type": "Image"
+        },
+        {
+          "name": "Clear_Filters_Icon40450328880522113.png",
+          "path": "Clear_Filters_Icon40450328880522113.png",
+          "type": "Image"
+        },
+        {
+          "name": "Clipboard5422198666586211.png",
+          "path": "Clipboard5422198666586211.png",
+          "type": "Image"
+        },
+        {
+          "name": "Cloud3016611858733289.png",
+          "path": "Cloud3016611858733289.png",
+          "type": "Image"
+        },
+        {
+          "name": "Clouds5413102794872198.png",
+          "path": "Clouds5413102794872198.png",
+          "type": "Image"
+        },
+        {
+          "name": "Cone5292522439110989.png",
+          "path": "Cone5292522439110989.png",
+          "type": "Image"
+        },
+        {
+          "name": "Connected_Globe6337589228743168.png",
+          "path": "Connected_Globe6337589228743168.png",
+          "type": "Image"
+        },
+        {
+          "name": "Database4683910246600911.png",
+          "path": "Database4683910246600911.png",
+          "type": "Image"
+        },
+        {
+          "name": "DHL_Light_Data_Standard9187995607823125.png",
+          "path": "DHL_Light_Data_Standard9187995607823125.png",
+          "type": "Image"
+        },
+        {
+          "name": "DHL_Light_Data_Standard_line3399655716550898.png",
+          "path": "DHL_Light_Data_Standard_line3399655716550898.png",
+          "type": "Image"
+        },
+        {
+          "name": "Down_Trend8007630760194882.png",
+          "path": "Down_Trend8007630760194882.png",
+          "type": "Image"
+        },
+        {
+          "name": "Exclamation7638198066303596.png",
+          "path": "Exclamation7638198066303596.png",
+          "type": "Image"
+        },
+        {
+          "name": "Gear6801551394382228.png",
+          "path": "Gear6801551394382228.png",
+          "type": "Image"
+        },
+        {
+          "name": "Globe646210921720576.png",
+          "path": "Globe646210921720576.png",
+          "type": "Image"
+        },
+        {
+          "name": "Graph21839258209058188.png",
+          "path": "Graph21839258209058188.png",
+          "type": "Image"
+        },
+        {
+          "name": "Home_Final7065014094165554.png",
+          "path": "Home_Final7065014094165554.png",
+          "type": "Image"
+        },
+        {
+          "name": "Information23220968000176634.png",
+          "path": "Information23220968000176634.png",
+          "type": "Image"
+        },
+        {
+          "name": "Large_Rack10995479682735887.png",
+          "path": "Large_Rack10995479682735887.png",
+          "type": "Image"
+        },
+        {
+          "name": "Label37230352336678174.png",
+          "path": "Label37230352336678174.png",
+          "type": "Image"
+        },
+        {
+          "name": "Up_Trend9991510992582893.png",
+          "path": "Up_Trend9991510992582893.png",
+          "type": "Image"
+        },
+        {
+          "name": "DHL_Light_Data_Image5938038457332386.png",
+          "path": "DHL_Light_Data_Image5938038457332386.png",
+          "type": "Image"
+        },
+        {
+          "name": "Trash_Can05806760579763903.png",
+          "path": "Trash_Can05806760579763903.png",
+          "type": "Image"
+        },
+        {
+          "name": "Forklift6424770867993987.png",
+          "path": "Forklift6424770867993987.png",
+          "type": "Image"
+        },
+        {
+          "name": "Carton5979411828373706.png",
+          "path": "Carton5979411828373706.png",
+          "type": "Image"
+        },
+        {
+          "name": "Calendar09723508936200331.png",
+          "path": "Calendar09723508936200331.png",
+          "type": "Image"
+        },
+        {
+          "name": "Lightbulb6893433854403757.png",
+          "path": "Lightbulb6893433854403757.png",
+          "type": "Image"
+        },
+        {
+          "name": "Person008137527823651292.png",
+          "path": "Person008137527823651292.png",
+          "type": "Image"
+        },
+        {
+          "name": "Key25698450965622843.png",
+          "path": "Key25698450965622843.png",
+          "type": "Image"
+        },
+        {
+          "name": "QR_Scan4851549152257868.png",
+          "path": "QR_Scan4851549152257868.png",
+          "type": "Image"
+        },
+        {
+          "name": "DHL_Light_Menu6493693964438227.png",
+          "path": "DHL_Light_Menu6493693964438227.png",
+          "type": "Image"
+        },
+        {
+          "name": "Right_Arrow9835658429342515.png",
+          "path": "Right_Arrow9835658429342515.png",
+          "type": "Image"
+        },
+        {
+          "name": "Battery6038100013935643.png",
+          "path": "Battery6038100013935643.png",
+          "type": "Image"
+        },
+        {
+          "name": "Handshake3474061092499745.png",
+          "path": "Handshake3474061092499745.png",
+          "type": "Image"
+        },
+        {
+          "name": "Message_bubble2844312221529657.png",
+          "path": "Message_bubble2844312221529657.png",
+          "type": "Image"
+        },
+        {
+          "name": "Computer_Screen17245433676869015.png",
+          "path": "Computer_Screen17245433676869015.png",
+          "type": "Image"
+        },
+        {
+          "name": "Magnifying_Glass23345584382327722.png",
+          "path": "Magnifying_Glass23345584382327722.png",
+          "type": "Image"
+        },
+        {
+          "name": "Molecule564006826854462.png",
+          "path": "Molecule564006826854462.png",
+          "type": "Image"
+        },
+        {
+          "name": "Rack16498571085835256.png",
+          "path": "Rack16498571085835256.png",
+          "type": "Image"
+        },
+        {
+          "name": "Check07893850213295961.png",
+          "path": "Check07893850213295961.png",
+          "type": "Image"
+        },
+        {
+          "name": "Pallet7257826866367583.png",
+          "path": "Pallet7257826866367583.png",
+          "type": "Image"
+        },
+        {
+          "name": "Person_with_Pallet_Jack07564658483772413.png",
+          "path": "Person_with_Pallet_Jack07564658483772413.png",
+          "type": "Image"
+        },
+        {
+          "name": "Plus1519753770729908.png",
+          "path": "Plus1519753770729908.png",
+          "type": "Image"
+        },
+        {
+          "name": "Tablet4381291751125451.png",
+          "path": "Tablet4381291751125451.png",
+          "type": "Image"
+        },
+        {
+          "name": "DPDHL_PowerBI_Theme24738601369804702.json",
+          "path": "DPDHL_PowerBI_Theme24738601369804702.json",
+          "type": "CustomTheme"
+        }
+      ]
+    }
+  ],
+  "settings": {
+    "useStylableVisualContainerHeader": true,
+    "exportDataMode": "AllowSummarized",
+    "defaultDrillFilterOtherVisuals": true,
+    "useEnhancedTooltips": true
+  },
+  "slowDataSourceSettings": {
+    "isCrossHighlightingDisabled": false,
+    "isSlicerSelectionsButtonEnabled": false,
+    "isFilterSelectionsButtonEnabled": false,
+    "isFieldWellButtonEnabled": false,
+    "isApplyAllButtonEnabled": false
+  }
+}

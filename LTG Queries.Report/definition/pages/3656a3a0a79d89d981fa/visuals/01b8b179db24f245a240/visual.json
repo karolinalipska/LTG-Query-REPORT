@@ -1,0 +1,417 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
+  "name": "01b8b179db24f245a240",
+  "position": {
+    "x": 0,
+    "y": 75.866261398176292,
+    "z": 1000,
+    "height": 643.89057750759878,
+    "width": 1280,
+    "tabOrder": 1000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Picked Pallets On Site"
+                    }
+                  },
+                  "Property": "Location"
+                }
+              },
+              "queryRef": "Picked Pallets On Site.Location",
+              "nativeQueryRef": "Location"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Picked Pallets On Site"
+                    }
+                  },
+                  "Property": "Area"
+                }
+              },
+              "queryRef": "Picked Pallets On Site.Area",
+              "nativeQueryRef": "Area"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Picked Pallets On Site"
+                    }
+                  },
+                  "Property": "LPN"
+                }
+              },
+              "queryRef": "Picked Pallets On Site.LPN",
+              "nativeQueryRef": "LPN"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Picked Pallets On Site"
+                    }
+                  },
+                  "Property": "SKU"
+                }
+              },
+              "queryRef": "Picked Pallets On Site.SKU",
+              "nativeQueryRef": "SKU"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Picked Pallets On Site"
+                    }
+                  },
+                  "Property": "Client"
+                }
+              },
+              "queryRef": "Picked Pallets On Site.Client",
+              "nativeQueryRef": "Client"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Picked Pallets On Site"
+                    }
+                  },
+                  "Property": "Batch"
+                }
+              },
+              "queryRef": "Picked Pallets On Site.Batch",
+              "nativeQueryRef": "Batch"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Picked Pallets On Site"
+                    }
+                  },
+                  "Property": "SAP Storage"
+                }
+              },
+              "queryRef": "Picked Pallets On Site.SAP Storage",
+              "nativeQueryRef": "SAP Storage"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Picked Pallets On Site"
+                    }
+                  },
+                  "Property": "Expiry"
+                }
+              },
+              "queryRef": "Picked Pallets On Site.Expiry",
+              "nativeQueryRef": "Expiry"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Picked Pallets On Site"
+                    }
+                  },
+                  "Property": "Footprint"
+                }
+              },
+              "queryRef": "Picked Pallets On Site.Footprint",
+              "nativeQueryRef": "Footprint"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Picked Pallets On Site"
+                    }
+                  },
+                  "Property": "Footprint Qty of SKU"
+                }
+              },
+              "queryRef": "Sum(Picked Pallets On Site.Footprint Qty of SKU)",
+              "nativeQueryRef": "Footprint Qty of SKU1"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Picked Pallets On Site"
+                    }
+                  },
+                  "Property": "Order Number"
+                }
+              },
+              "queryRef": "Picked Pallets On Site.Order Number",
+              "nativeQueryRef": "Order Number"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Picked Pallets On Site"
+                    }
+                  },
+                  "Property": "Load ID"
+                }
+              },
+              "queryRef": "Picked Pallets On Site.Load ID",
+              "nativeQueryRef": "Load ID"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Picked Pallets On Site"
+                        }
+                      },
+                      "Property": "Qty"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(Picked Pallets On Site.Qty)",
+              "nativeQueryRef": "Qty"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Picked Pallets On Site"
+                    }
+                  },
+                  "Property": "Last Movement"
+                }
+              },
+              "queryRef": "Picked Pallets On Site.Last Movement",
+              "nativeQueryRef": "Last Movement"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Picked Pallets On Site"
+                    }
+                  },
+                  "Property": "Picked Date"
+                }
+              },
+              "queryRef": "Picked Pallets On Site.Picked Date",
+              "nativeQueryRef": "Picked Date"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Picked Pallets On Site"
+                  }
+                },
+                "Property": "Last Movement"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ]
+      }
+    },
+    "objects": {
+      "columnHeaders": [
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "72.72342597301795D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(Picked Pallets On Site.Footprint Qty of SKU)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "158.3434650455927D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Picked Pallets On Site.Area"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "102.7538004977861D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Picked Pallets On Site.Batch"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "107.74163712133884D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Picked Pallets On Site.Location"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "96.57755981725731D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Picked Pallets On Site.Client"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "78.42551937105361D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Picked Pallets On Site.SKU"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "73.30091034182519D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Picked Pallets On Site.SAP Storage"
+          }
+        }
+      ],
+      "values": [
+        {
+          "properties": {
+            "wordWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Details'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualHeader": [
+        {
+          "properties": {
+            "background": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 2,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

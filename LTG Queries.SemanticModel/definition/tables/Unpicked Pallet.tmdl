@@ -1,0 +1,145 @@
+table 'Unpicked Pallet'
+	lineageTag: 72ffd3a2-5ed3-4ec3-a068-7c4daefc309f
+
+	column 'Transaction Date'
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: Date
+		lineageTag: cbd25fff-457a-48b4-b659-02a306570f26
+		summarizeBy: none
+		sourceColumn: Transaction Date
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Activity Code'
+		dataType: string
+		sourceProviderType: Varchar2
+		lineageTag: 43d516fc-d995-4e57-8911-1c8321623533
+		summarizeBy: none
+		sourceColumn: Activity Code
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Unpicked LPN'
+		dataType: string
+		sourceProviderType: Varchar2
+		lineageTag: 9e8082c7-b0ea-4498-8910-410fafccf084
+		summarizeBy: none
+		sourceColumn: Unpicked LPN
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'New LPN'
+		dataType: string
+		sourceProviderType: Varchar2
+		lineageTag: 071283d9-0dad-486e-9530-5ac88db82f22
+		summarizeBy: none
+		sourceColumn: New LPN
+
+		annotation SummarizationSetBy = Automatic
+
+	column SKU
+		dataType: string
+		sourceProviderType: Varchar2
+		lineageTag: 646ba0aa-bc0b-4ea4-812b-dfcd0829b91c
+		summarizeBy: none
+		sourceColumn: SKU
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Client ID'
+		dataType: string
+		sourceProviderType: Varchar2
+		lineageTag: 8e51f783-5cc1-4b21-85bb-c409d9cd2968
+		summarizeBy: none
+		sourceColumn: Client ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Client
+		dataType: string
+		sourceProviderType: Varchar2
+		lineageTag: cb55b39f-b3e2-47b4-9ad6-de2b7d9a5b7c
+		summarizeBy: none
+		sourceColumn: Client
+
+		annotation SummarizationSetBy = Automatic
+
+	column Qty
+		dataType: int64
+		formatString: 0
+		sourceProviderType: Int64
+		lineageTag: 248d77ed-9450-46c4-8cef-60a6bf2fff2a
+		summarizeBy: sum
+		sourceColumn: Qty
+
+		annotation SummarizationSetBy = Automatic
+
+	column SHIP_ID
+		dataType: string
+		sourceProviderType: Varchar2
+		lineageTag: 3cbe1463-706c-4173-bdf1-b2c0737308d0
+		summarizeBy: none
+		sourceColumn: SHIP_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Order Number'
+		dataType: string
+		sourceProviderType: Varchar2
+		lineageTag: d171528e-37ee-450f-b488-526dd02b9220
+		summarizeBy: none
+		sourceColumn: Order Number
+
+		annotation SummarizationSetBy = Automatic
+
+	column CAR_MOVE_ID
+		dataType: string
+		sourceProviderType: Varchar2
+		lineageTag: 5a4d3c0d-ba8a-4158-af25-d10bd5e585f0
+		summarizeBy: none
+		sourceColumn: CAR_MOVE_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Date Only'
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: Date
+		lineageTag: 96b94f4b-c405-4f32-a0a3-93b0f7c60539
+		summarizeBy: none
+		sourceColumn: Date Only
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'SAP Storage'
+		dataType: string
+		sourceProviderType: Varchar2
+		lineageTag: 8f28f430-7258-4c99-b9b4-9e0c1656cf8b
+		summarizeBy: none
+		sourceColumn: SAP Storage
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Pick Date'
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: Date
+		lineageTag: fd4c88a4-385a-4dce-9a4f-69c23e4b8967
+		summarizeBy: none
+		sourceColumn: Pick Date
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Unpicked Pallet' = m
+		mode: directQuery
+		source =
+				let
+				    Source = Oracle.Database(LTG_BlueYonder_Server_Prod, [HierarchicalNavigation=true, Query="SELECT#(lf)    dt.trndte - 1 / 24           ""Transaction Date"",#(lf)    trunc(dt.trndte - 1 / 24)    ""Date Only"",#(lf)    dt.actcod                    ""Activity Code"",#(lf)    dt.lodnum                    ""Unpicked LPN"",#(lf)    nvl(dt.to_lodnum, dt.lodnum) ""New LPN"",#(lf)    dt.prtnum                    ""SKU"",#(lf)    dt.INV_ATTR_STR2             ""SAP Storage"", --25/09/25 KL added per request 4990 --#(lf)    dt.prt_client_id             ""Client ID"",#(lf)    CASE#(lf)        WHEN dt.prt_client_id = 'CID013634' THEN#(lf)            'Mondelez'#(lf)        WHEN dt.prt_client_id = 'CID000001' THEN#(lf)            'Mars'#(lf)        ELSE#(lf)            dt.prt_client_id#(lf)    END                          ""Client"",#(lf)    dt.trnqty                    ""Qty"",#(lf)    pck.ship_id,#(lf)    pck.ordnum                   ""Order Number"",#(lf)    pck.""Pick Date"", --25/09/25 KL added per request 4990 --#(lf)    act.car_move_id#(lf)FROM#(lf)    dlytrn dt#(lf)    LEFT JOIN (#(lf)        SELECT#(lf)            MIN(trndte - 1 / 24)   ""Pick Date"",#(lf)            nvl(LEAD(MIN(trndte - 1 / 24))#(lf)                OVER(PARTITION BY nvl(to_lodnum, lodnum)#(lf)                     ORDER BY#(lf)                         MIN(trndte - 1 / 24)#(lf)            ),#(lf)                sysdate - 1 / 24)  AS next_pick_date,#(lf)            actcod,#(lf)            nvl(to_lodnum, lodnum) ""SSCC"",#(lf)            prt_client_id,#(lf)            ship_id,#(lf)            ordnum#(lf)        FROM#(lf)            dlytrn#(lf)        WHERE#(lf)            actcod IN ( 'LSTPCK', 'PALPCK' )#(lf)            AND ordnum IS NOT NULL#(lf)        GROUP BY#(lf)            actcod,#(lf)            nvl(to_lodnum, lodnum),#(lf)            prt_client_id,#(lf)            ship_id,#(lf)            ordnum#(lf)    )      pck ON dt.lodnum = pck.""SSCC""#(lf)             AND dt.trndte - 1 / 24 > pck.""Pick Date""#(lf)             AND dt.trndte - 1 / 24 < pck.next_pick_date#(lf)    left join #(lf)    (#(lf)    select#(lf)que.*,#(lf)nvl(lead(que.""Date"") over (partition by que.ordnum order by que.""Date""),sysdate-1/24) ""Next Allocation""#(lf)from#(lf)(#(lf)select distinct #(lf)trndte-1/24 ""Date"",#(lf)actcod,#(lf)ordnum,#(lf)ship_id,#(lf)stop_id,#(lf)car_move_id#(lf)from ordact#(lf)where actcod = 'SASGWAV'#(lf))que#(lf))act on pck.ordnum = act.ordnum and pck.""Pick Date"" > act.""Date"" and pck.""Pick Date"" < act.""Next Allocation""#(lf)WHERE#(lf)        dt.actcod = 'UPCK'#(lf)    AND dt.tostol = 'PERM-SHP-LOC'#(lf)    and dt.trndte-1/24 > trunc(sysdate-25)#(lf)    order by 1"])
+				in
+				    Source
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,101 @@
+table 'Crane 10 SKU Spread'
+	lineageTag: cd2971d4-9f85-47b3-b319-bbe391122c6e
+
+	column Aisle
+		dataType: string
+		sourceProviderType: varchar(3)
+		lineageTag: 987533ca-bf95-447f-aa29-e5bd696e028c
+		summarizeBy: none
+		sourceColumn: Aisle
+
+		annotation SummarizationSetBy = Automatic
+
+	column Client
+		dataType: string
+		sourceProviderType: varchar(35)
+		lineageTag: 244dbbd5-67a0-4898-9384-636a5093cb3d
+		summarizeBy: none
+		sourceColumn: Client
+
+		annotation SummarizationSetBy = Automatic
+
+	column sku_id
+		dataType: string
+		sourceProviderType: varchar(35)
+		lineageTag: 9d4d7dd6-4c9e-4afd-94e0-1366b779cc42
+		summarizeBy: none
+		sourceColumn: sku_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Quality Status'
+		dataType: string
+		sourceProviderType: varchar(5)
+		lineageTag: 7e701e26-8037-4d6c-8316-01d4433456b2
+		summarizeBy: none
+		sourceColumn: Quality Status
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Pallets In Crane 10'
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 0e85a795-8e6d-4cea-98b8-ab5ce2dae5ad
+		summarizeBy: sum
+		sourceColumn: Pallets In Crane 10
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Other Cranes'
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 5085cfc9-4bf2-4e1f-9aa6-cba4c4d87611
+		summarizeBy: sum
+		sourceColumn: Other Cranes
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Total Pallets'
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: daa8370c-1fd4-4dc5-b596-d51c11622d35
+		summarizeBy: sum
+		sourceColumn: Total Pallets
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'H10 Percentage'
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 2eaa2483-2d6a-4128-a2fb-f5803ef30dbf
+		summarizeBy: sum
+		sourceColumn: H10 Percentage
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Percentage Group'
+		dataType: string
+		sourceProviderType: varchar(10)
+		lineageTag: f75b27b7-5f15-4b5f-bcf1-a53f678975e4
+		summarizeBy: none
+		sourceColumn: Percentage Group
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Crane 10 SKU Spread' = m
+		mode: directQuery
+		source =
+				let
+				    Source = Sql.Database(LTG_WCS_Server_Prod, #"LTG_WCS_Database (P)", [Query="SELECT TOP 100 PERCENT#(lf)    H10.Aisle,#(lf)    H10.Client,#(lf)    H10.sku_id,#(lf)    H10.[Quality Status],#(lf)    H10.[Pallet Count] AS [Pallets In Crane 10],#(lf)    oth.[Pallet Count] AS [Other Cranes],#(lf)    tot.[Pallet Count] AS [Total Pallets],#(lf)    ROUND((CAST(H10.[Pallet Count] AS FLOAT) / NULLIF(tot.[Pallet Count], 0)) * 100, 2) AS [H10 Percentage],#(lf)#(tab)case #(lf)#(tab)#(tab)when ROUND((CAST(H10.[Pallet Count] AS FLOAT) / NULLIF(tot.[Pallet Count], 0)) * 100, 2) >= '90' and ROUND((CAST(H10.[Pallet Count] AS FLOAT) / NULLIF(tot.[Pallet Count], 0)) * 100, 2) <= '100' then '90% >=100%'#(lf)#(tab)#(tab)when ROUND((CAST(H10.[Pallet Count] AS FLOAT) / NULLIF(tot.[Pallet Count], 0)) * 100, 2) >= '80' and ROUND((CAST(H10.[Pallet Count] AS FLOAT) / NULLIF(tot.[Pallet Count], 0)) * 100, 2) < '90' then '80% >90%'#(lf)#(tab)#(tab)when ROUND((CAST(H10.[Pallet Count] AS FLOAT) / NULLIF(tot.[Pallet Count], 0)) * 100, 2) >= '70' and ROUND((CAST(H10.[Pallet Count] AS FLOAT) / NULLIF(tot.[Pallet Count], 0)) * 100, 2) < '80' then '70% >80%'#(lf)#(tab)#(tab)when ROUND((CAST(H10.[Pallet Count] AS FLOAT) / NULLIF(tot.[Pallet Count], 0)) * 100, 2) >= '60' and ROUND((CAST(H10.[Pallet Count] AS FLOAT) / NULLIF(tot.[Pallet Count], 0)) * 100, 2) < '70' then '60% >70%'#(lf)#(tab)#(tab)when ROUND((CAST(H10.[Pallet Count] AS FLOAT) / NULLIF(tot.[Pallet Count], 0)) * 100, 2) >= '50' and ROUND((CAST(H10.[Pallet Count] AS FLOAT) / NULLIF(tot.[Pallet Count], 0)) * 100, 2) < '60' then '50% >60%'#(lf)#(tab)#(tab)when ROUND((CAST(H10.[Pallet Count] AS FLOAT) / NULLIF(tot.[Pallet Count], 0)) * 100, 2) >= '40' and ROUND((CAST(H10.[Pallet Count] AS FLOAT) / NULLIF(tot.[Pallet Count], 0)) * 100, 2) < '50' then '40% >50%'#(lf)#(tab)#(tab)when ROUND((CAST(H10.[Pallet Count] AS FLOAT) / NULLIF(tot.[Pallet Count], 0)) * 100, 2) >= '30' and ROUND((CAST(H10.[Pallet Count] AS FLOAT) / NULLIF(tot.[Pallet Count], 0)) * 100, 2) < '40' then '30% >50%'#(lf)#(tab)#(tab)when ROUND((CAST(H10.[Pallet Count] AS FLOAT) / NULLIF(tot.[Pallet Count], 0)) * 100, 2) < '30' then '<30%'#(lf)#(tab)#(tab)end ""Percentage Group""#(lf)#(lf)FROM (#(lf)    SELECT DISTINCT#(lf)        LEFT(tm.location, 3) AS Aisle,#(lf)        CASE #(lf)            WHEN st.sku_id LIKE 'BY%' THEN 'Mars'#(lf)            WHEN st.sku_id LIKE 'MDLZ%' THEN 'Mondelez'#(lf)            ELSE st.sku_id #(lf)        END AS Client,#(lf)        st.sku_id,#(lf)        st.host_quality_status_code AS [Quality Status],#(lf)        COUNT(tm.tm_id) AS [Pallet Count]#(lf)    FROM x_tm tm#(lf)    LEFT JOIN x_stock st ON tm.tm_id = st.tm_id#(lf)    WHERE #(lf)        LEFT(tm.location, 3) = 'H10'#(lf)        AND tm_state = 'IN STORE'#(lf)    GROUP BY#(lf)        LEFT(tm.location, 3),#(lf)        st.sku_id,#(lf)        st.host_quality_status_code,#(lf)        CASE #(lf)            WHEN st.sku_id LIKE 'BY%' THEN 'Mars'#(lf)            WHEN st.sku_id LIKE 'MDLZ%' THEN 'Mondelez'#(lf)            ELSE st.sku_id #(lf)        END#(lf)) AS H10#(lf)LEFT JOIN (#(lf)    SELECT DISTINCT#(lf)        st.sku_id,#(lf)        st.host_quality_status_code AS [Quality Status],#(lf)        COUNT(tm.tm_id) AS [Pallet Count]#(lf)    FROM x_tm tm#(lf)    LEFT JOIN x_stock st ON tm.tm_id = st.tm_id#(lf)    WHERE #(lf)        LEFT(tm.location, 3) IN ('H01','H02','H03','H04','H05','H06','H07','H08','H09','H11')#(lf)        AND tm_state = 'IN STORE'#(lf)    GROUP BY#(lf)        st.sku_id,#(lf)        st.host_quality_status_code#(lf)) AS oth ON H10.sku_id = oth.sku_id AND H10.[Quality Status] = oth.[Quality Status]#(lf)LEFT JOIN (#(lf)    SELECT DISTINCT#(lf)        st.sku_id,#(lf)        st.host_quality_status_code AS [Quality Status],#(lf)        COUNT(tm.tm_id) AS [Pallet Count]#(lf)    FROM x_tm tm#(lf)    LEFT JOIN x_stock st ON tm.tm_id = st.tm_id#(lf)    WHERE #(lf)        LEFT(tm.location, 3) IN ('H01','H02','H03','H04','H05','H06','H07','H08','H09','H10','H11')#(lf)        AND tm_state = 'IN STORE'#(lf)    GROUP BY#(lf)        st.sku_id,#(lf)        st.host_quality_status_code#(lf)) AS tot ON H10.sku_id = tot.sku_id AND H10.[Quality Status] = tot.[Quality Status]#(lf)ORDER BY [H10 Percentage] DESC;"])
+				in
+				    Source
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

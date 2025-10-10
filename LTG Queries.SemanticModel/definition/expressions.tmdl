@@ -1,0 +1,94 @@
+expression EMG_BlueYonder_Server_PPT = "Czcholstc002800.prg-dc.dhl.com:1521/O19005T" meta [IsParameterQuery=true, Type="Any", IsParameterQueryRequired=true]
+	lineageTag: 6a378472-058e-4d4f-98cc-245a50ade577
+	queryGroup: 'EMG SQL Direct Query Connections'
+
+	annotation PBI_ResultType = Text
+
+expression EMG_WCS_Server = "2.116.197.10" meta [IsParameterQuery=true, Type="Any", IsParameterQueryRequired=true]
+	lineageTag: 1e53203c-4856-4796-820b-89c8b68232f4
+	queryGroup: 'EMG SQL Direct Query Connections'
+
+	annotation PBI_ResultType = Text
+
+expression EMG_Nulogy_Server = "dscusnoramnulogysqlsrvprd.database.windows.net" meta [IsParameterQuery=true, Type="Any", IsParameterQueryRequired=true]
+	lineageTag: 1df69d89-4984-429d-891c-fc80779ef148
+	queryGroup: 'EMG SQL Direct Query Connections'
+
+	annotation PBI_ResultType = Text
+
+expression EMG_Nulogy_Database = "dscusnoramnulogysqldbprd" meta [IsParameterQuery=true, Type="Any", IsParameterQueryRequired=true]
+	lineageTag: 0348faa5-5546-46c8-a9be-b094ea2bf499
+	queryGroup: 'EMG SQL Direct Query Connections'
+
+	annotation PBI_ResultType = Text
+
+expression 'EMG_WCS_Database (T)' = "Testwcs" meta [IsParameterQuery=true, Type="Any", IsParameterQueryRequired=true]
+	lineageTag: e60c9036-3f66-40e0-acaa-a6a221e06fea
+	queryGroup: 'EMG SQL Direct Query Connections'
+
+	annotation PBI_ResultType = Text
+
+expression EMG_BlueYonder_Server_Prod = "czstlls0838.prg-dc.dhl.com:1521/O1910PS" meta [IsParameterQuery=true, Type="Any", IsParameterQueryRequired=true]
+	lineageTag: f7e739fc-81ea-4b42-b314-6135997b0f14
+	queryGroup: 'EMG SQL Direct Query Connections'
+
+	annotation PBI_ResultType = Text
+
+expression LTG_BlueYonder_Server_Prod = "czstlls0870.prg-dc.dhl.com:1521/O19B1PS" meta [IsParameterQuery=true, Type="Any", IsParameterQueryRequired=true]
+	lineageTag: 41c14608-eb78-4135-bf04-96b745e7d7e2
+	queryGroup: 'LTG SQL Direct Query Connections'
+
+	annotation PBI_ResultType = Text
+
+expression LTG_WCS_Server_Prod = "2.127.133.132" meta [IsParameterQuery=true, Type="Any", IsParameterQueryRequired=true]
+	lineageTag: 5c187bd8-aecf-46ac-a675-9ad94d694844
+	queryGroup: 'LTG SQL Direct Query Connections'
+
+	annotation PBI_ResultType = Text
+
+expression 'LTG_WCS_Database (P)' = "wcs" meta [IsParameterQuery=true, Type="Any", IsParameterQueryRequired=true]
+	lineageTag: a0685653-b3cf-4c5a-ba48-f07a5bfcc9eb
+	queryGroup: 'LTG SQL Direct Query Connections'
+
+	annotation PBI_ResultType = Text
+
+expression 'LTG_WCS_Database (T)' = "Testwcs" meta [IsParameterQuery=true, Type="Any", IsParameterQueryRequired=true]
+	lineageTag: 95aa981b-be09-4483-b896-2b34e1c78342
+	queryGroup: 'LTG SQL Direct Query Connections'
+
+	annotation PBI_ResultType = Text
+
+expression 'EMG_WCS_Database (P)' = "wcs" meta [IsParameterQuery=true, Type="Any", IsParameterQueryRequired=true]
+	lineageTag: e88c4255-c4ce-4fe4-b016-f1e00973201d
+	queryGroup: 'EMG SQL Direct Query Connections'
+
+	annotation PBI_ResultType = Text
+
+expression 'Gateway Data Warehouse Server' = "dscglobalbyssppldnsazr.database.windows.net" meta [IsParameterQuery=true, Type="Any", IsParameterQueryRequired=true]
+	lineageTag: ad4e1902-a5a6-448d-ba8a-50e505b5a1a1
+	queryGroup: 'Dual Data Connections'
+
+	annotation PBI_ResultType = Text
+
+expression 'Gateway Data Warehouse Database' = "dscwmsbyuk2" meta [IsParameterQuery=true, Type="Any", IsParameterQueryRequired=true]
+	lineageTag: cd815b67-190e-4539-a9dd-b30758b92379
+	queryGroup: 'Dual Data Connections'
+
+	annotation PBI_ResultType = Text
+
+/// LTG=6d6fd25c-c815-4aca-a281-d2bb89782d45
+/// EMG=d23d6e12-2bef-477e-8236-51a3df3be9ac
+expression workspaceID = "6d6fd25c-c815-4aca-a281-d2bb89782d45" meta [IsParameterQuery=true, Type="Any", IsParameterQueryRequired=true]
+	lineageTag: d304197b-21b0-4ee9-9756-7d5436135e43
+	queryGroup: 'Dataflow Parameters'
+
+	annotation PBI_ResultType = Text
+
+/// LTG=4833ac48-597e-4fb6-b281-d8f3374e1155
+/// EMG=ca6d0807-3dee-44a8-9553-1ac772f28831
+expression dataflowID = "4833ac48-597e-4fb6-b281-d8f3374e1155" meta [IsParameterQuery=true, Type="Any", IsParameterQueryRequired=true]
+	lineageTag: 36c82fa5-3f79-4108-bac8-2c8cb3f55bf0
+	queryGroup: 'Dataflow Parameters'
+
+	annotation PBI_ResultType = Text
+

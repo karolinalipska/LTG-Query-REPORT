@@ -1,0 +1,258 @@
+table 'Load Status'
+	lineageTag: d27dba8f-9cbf-4a32-bcd1-2433178afcd2
+
+	column RAG_STATUS
+		dataType: string
+		sourceProviderType: Char
+		lineageTag: 98dc13c1-1c8a-4a81-a847-2aeb05185616
+		summarizeBy: none
+		sourceColumn: RAG_STATUS
+
+		annotation SummarizationSetBy = Automatic
+
+	column Load
+		dataType: string
+		isNullable: false
+		sourceProviderType: Varchar2
+		lineageTag: 105704da-2f45-4af4-b47b-e9fff74eca46
+		summarizeBy: none
+		sourceColumn: Load
+
+		annotation SummarizationSetBy = Automatic
+
+	column Appointment
+		dataType: string
+		sourceProviderType: Varchar2
+		lineageTag: e40160ad-cc89-4985-82ce-35c7660ebafe
+		summarizeBy: none
+		sourceColumn: Appointment
+
+		annotation SummarizationSetBy = Automatic
+
+	column Haulier
+		dataType: string
+		sourceProviderType: Varchar2
+		lineageTag: 53467ac4-3c67-4c80-b8d7-020a6bcf8afb
+		summarizeBy: none
+		sourceColumn: Haulier
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Load type'
+		dataType: string
+		sourceProviderType: Varchar2
+		lineageTag: 4ece38c8-a09f-410e-87a7-0a9b6e12e226
+		summarizeBy: none
+		sourceColumn: Load type
+
+		annotation SummarizationSetBy = Automatic
+
+	column Client
+		dataType: string
+		sourceProviderType: Varchar2
+		lineageTag: 29f285f1-151c-4a3a-acb1-c0d934cee1a5
+		summarizeBy: none
+		sourceColumn: Client
+
+		annotation SummarizationSetBy = Automatic
+
+	column '(Stops) Address'
+		dataType: string
+		sourceProviderType: Varchar2
+		lineageTag: c50cdd50-9aa4-42c5-8c92-6a3547213a9b
+		summarizeBy: none
+		sourceColumn: (Stops) Address
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Check For'
+		dataType: string
+		sourceProviderType: Varchar2
+		lineageTag: be44821d-b4fe-4854-b65c-14f53a2c6937
+		summarizeBy: none
+		sourceColumn: Check For
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'App Start'
+		dataType: string
+		sourceProviderType: Varchar2
+		lineageTag: 1bc42aac-0f2e-4b06-9f2c-f0aa79ed36ca
+		summarizeBy: none
+		sourceColumn: App Start
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'App Date'
+		dataType: string
+		sourceProviderType: Varchar2
+		lineageTag: dcb2fcf1-5524-4f99-9af5-e46ab809a82d
+		summarizeBy: none
+		sourceColumn: App Date
+
+		annotation SummarizationSetBy = Automatic
+
+	column Choc/Gum
+		dataType: string
+		sourceProviderType: Char
+		lineageTag: db368270-68c5-4cbb-acc1-0c3ca1e446fe
+		summarizeBy: none
+		sourceColumn: Choc/Gum
+
+		annotation SummarizationSetBy = Automatic
+
+	column Sandwich
+		dataType: string
+		sourceProviderType: Char
+		lineageTag: b61f406c-39d6-443a-871d-6cf42c5e2345
+		summarizeBy: none
+		sourceColumn: Sandwich
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Total Pall'
+		dataType: double
+		sourceProviderType: Decimal(38, 127)
+		lineageTag: 1569f916-217c-4a7c-b15e-7eb70df42492
+		summarizeBy: sum
+		sourceColumn: Total Pall
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Double Stack'
+		dataType: string
+		sourceProviderType: Char
+		lineageTag: 5d187264-520c-4610-93c2-d93f6b0a40d2
+		summarizeBy: none
+		sourceColumn: Double Stack
+
+		annotation SummarizationSetBy = Automatic
+
+	column Shorts
+		dataType: double
+		sourceProviderType: Decimal(38, 127)
+		lineageTag: a758aad2-6fda-42c3-a1f6-2921a64e6d32
+		summarizeBy: sum
+		sourceColumn: Shorts
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Replen Case Qty'
+		dataType: double
+		sourceProviderType: Decimal(38, 127)
+		lineageTag: 8690d9d3-fe37-4de7-a91e-bb215dea0734
+		summarizeBy: sum
+		sourceColumn: Replen Case Qty
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Replen No'
+		dataType: double
+		sourceProviderType: Decimal(38, 127)
+		lineageTag: 9d4878e1-6990-45a6-8e0e-8f25a857773a
+		summarizeBy: sum
+		sourceColumn: Replen No
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Total Case Pick'
+		dataType: double
+		sourceProviderType: Decimal(38, 127)
+		lineageTag: 291433c6-93a1-44f0-b3f0-4ecf2e75d3ba
+		summarizeBy: sum
+		sourceColumn: Total Case Pick
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Case Pick Remaining'
+		dataType: double
+		sourceProviderType: Decimal(38, 127)
+		lineageTag: 4a7b4f46-5227-45fd-a357-bcc543393684
+		summarizeBy: sum
+		sourceColumn: Case Pick Remaining
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Pallets WRAP-IN'
+		dataType: double
+		sourceProviderType: Decimal(38, 127)
+		lineageTag: 1fcb6a85-4561-4fd7-81a8-2fc99a280a5d
+		summarizeBy: sum
+		sourceColumn: Pallets WRAP-IN
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Pallets MIN01'
+		dataType: double
+		sourceProviderType: Decimal(38, 127)
+		lineageTag: 2613abad-a969-4207-9faf-2ba9dd24fa1d
+		summarizeBy: sum
+		sourceColumn: Pallets MIN01
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Ready To Release'
+		dataType: string
+		sourceProviderType: Varchar2
+		lineageTag: 36551ebf-8cd9-44b1-93b6-94101a140df1
+		summarizeBy: none
+		sourceColumn: Ready To Release
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Released date'
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: Date
+		lineageTag: 78a3effb-15ab-4a35-b460-d24a18eb6d80
+		summarizeBy: none
+		sourceColumn: Released date
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Time Left'
+		dataType: string
+		sourceProviderType: Varchar2
+		lineageTag: 9a91859c-9d5d-4410-a406-f2dec62f917d
+		summarizeBy: none
+		sourceColumn: Time Left
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Gravity Lane'
+		dataType: string
+		sourceProviderType: Varchar2
+		lineageTag: 39b5e6ab-0517-413f-9b04-afbff97d1783
+		summarizeBy: none
+		sourceColumn: Gravity Lane
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Load Status' = m
+		mode: directQuery
+		source =
+				let
+				    Source = Oracle.Database(LTG_BlueYonder_Server_Prod, [Query="select case when sql.Gravity_Lane is not null then 'B'#(lf)             when sql.Gravity_Lane is null#(lf)         and sql.Ready_to_release like 'N%' then 'R'#(lf)             when sql.Ready_to_release = 'Y' then 'G'#(lf)             else 'Y'#(lf)        end as RAG_status,#(lf)        sql.schbat as ""Load"",#(lf)        --sql.car_move_id, /* removed - 03/05/23 MK */#(lf)        sql.host_ext_id as ""Appointment"",#(lf)        sql.Haulier as ""Haulier"",#(lf)        case when sql.trlr_id is not null#(lf)         and sql.live_load = 1 then 'Live_Load'#(lf)             when sql.trlr_id is not null#(lf)         and sql.live_load = 0 then 'Pre_Load'#(lf)             when sql.trlr_id is null then 'No_Trailer'#(lf)             else null#(lf)        end as ""Load type"",#(lf)        sql.Client as ""Client"",#(lf)        --        case when sql.stops > 1 then 'Multi Stop - ' || sql.stops || ' Stops'#(lf)        --             else sql.adrnam#(lf)        --        end as adress, /* removed - 03/05 MK */#(lf)#(lf)        '(' || sql.stops || ') ' || listagg(distinct sql.adrnam, '; ') as ""(Stops) Address"",#(lf)        listagg(distinct (case when upper(sql.adrnam) like '%AMAZON%' then 'LABELS'#(lf)                               when upper(sql.adrnam) like '%LIDL%' then 'DESLAVE'#(lf)                               when upper(sql.adrnam) like '%ALDI%' then 'DESLAVE'#(lf)                               when upper(sql.adrnam) like '%TESCO%' then 'Check Notes For DELID'#(lf)                               when sql.ADR_ID = 'A000025972' then 'BESTWAY #1'#(lf)                               when sql.ADR_ID = 'A000025941' then 'BESTWAY #2'#(lf)                               --when upper(sql.adrnam) like '%BESTWAY%' then 'BESTWAY'#(lf)#(lf)                               /*100 check for LTG KL 23/08 */#(lf)                          end), '; ')#(lf)        /* added for NI Labels (from here) - 18/04/24 MK */#(lf)        ||#(lf)        case when listagg(distinct (case when upper(sql.adrnam) like '%AMAZON%' then 'LABELS'#(lf)                                         when upper(sql.adrnam) like '%LIDL%' then 'DESLAVE'#(lf)                                         when upper(sql.adrnam) like '%ALDI%' then 'DESLAVE'#(lf)                                         when upper(sql.adrnam) like '%TESCO%' then 'Check Notes For DELID'#(lf)                                         when sql.ADR_ID = 'A000025972' then 'BESTWAY #1'#(lf)                                         when sql.ADR_ID = 'A000025941' then 'BESTWAY #2'#(lf)                                         --when upper(sql.adrnam) like '%BESTWAY%' then 'BESTWAY'#(lf)#(lf)                                         /*100 check for LTG KL 23/08 */#(lf)                                    end), '; ') is not null#(lf)         and sql.not_for_eu is not null then '; '#(lf)        end || sql.not_for_eu as ""Check For"",#(lf)        /* added for NI Labels (to here) - 18/04/24 MK */#(lf)        /* added - 03/05 MK */#(lf)        sql.App_start as ""App Start"",#(lf)        sql.App_Date ""App Date"",#(lf)        sql.chock as ""Choc/Gum"",#(lf)        sql.Sandwich as ""Sandwich"",#(lf)        -- added for sandwich pallet indication KL 24/01/2024 --#(lf)#(lf)        /* added - 03/05 MK */#(lf)        sql.Total_pallets as ""Total Pall"",#(lf)        sql.Double_Stack as ""Double Stack"",#(lf)        sql.Shorts as ""Shorts"",#(lf)        sql.""Replen Case Qty"" as ""Replen Case Qty"",#(lf)        sql.Replen as ""Replen No"",#(lf)        sql.Total_Case_Pick as ""Total Case Pick"",#(lf)        sql.Case_Pick_Remaining as ""Case Pick Remaining"",#(lf)        sql.Pallets_Wrap_In as ""Pallets WRAP-IN"",#(lf)        sql.Pallets_MIN01 as ""Pallets MIN01"",#(lf)        sql.Ready_to_release as ""Ready To Release"",#(lf)        sql.released_dte - (1 / 24) as ""Released date"",#(lf)        /* adjusted an hour - 19/04 MK */#(lf)        case when sql.Ready_to_release = 'Released' then 70 - round((sysdate - sql.released_dte) *24*60, 0) || ' min'#(lf)        end as ""Time Left"",#(lf)        /* added - 03/05 MK */#(lf)        sql.Gravity_Lane as ""Gravity Lane""#(lf)   from (select pb.schbat,#(lf)                car_move.car_move_id,#(lf)                car_move.host_ext_id,#(lf)                carhdr.carnam as Haulier,#(lf)                case when ord.client_id = 'CID000001' then 'MARS'#(lf)                     when ord.client_id = 'CID013634' then 'MONDELEZ'#(lf)                     when ord.client_id = 'CID001842' then 'KP'#(lf)                     else 'New Client'#(lf)                end as Client,#(lf)                adrmst.adrnam,#(lf)                adrmst.ADR_ID,#(lf)                car_move.trlr_id,#(lf)                case when exists(select 1#(lf)                                   from trlr#(lf)                                  where trlr.trlr_id = car_move.trlr_id#(lf)                                    and trlr.live_load_flg = 1) then '1'#(lf)                     else '0'#(lf)                end Live_Load,#(lf)                (select count(distinct (stop.adr_id))#(lf)                   from car_move cr,#(lf)                        stop,#(lf)                        adrmst#(lf)                  where stop.car_move_id = cr.car_move_id#(lf)                    and adrmst.adr_id = stop.adr_id#(lf)                    and cr.car_move_id = car_move.car_move_id) stops,#(lf)                --to_char(appt.start_dte, 'DD-MM-YYYY HH24:MI') App_start, --Changed 22/08/2024 as time was wrong A.Earlam--#(lf)                to_char(appt.start_dte-1 / 24, 'YYYY-MM-DD HH24:MI') App_start,#(lf)                to_char(appt.start_dte-1 / 24, 'YYYY-MM-DD') App_Date,#(lf)                --Changed 01/09/2025 to use minutes instead of MI for better sorting Paul McManus--#(lf)#(lf)                (select ceil(sum(ol1.ordqty / pr1.untpal)) pallets#(lf)                   from shipment_line sl1,#(lf)                        ord_line ol1,#(lf)                        prtftp_view pr1#(lf)                  where ol1.ordnum = sl1.ordnum#(lf)                    and ol1.ordlin = sl1.ordlin#(lf)                    and ol1.prtnum = pr1.prtnum#(lf)                    and ol1.wh_id = pr1.wh_id#(lf)                    and ol1.prt_client_id = pr1.prt_client_id#(lf)                    and sl1.schbat = pb.schbat) Total_pallets,#(lf)                (case when exists(select 1#(lf)                                    from shipment_line sl1,#(lf)                                         ord_line ol1,#(lf)                                         prtmst pr1#(lf)                                   where ol1.ordnum = sl1.ordnum#(lf)                                     and ol1.ordlin = sl1.ordlin#(lf)                                     and ol1.prtnum = pr1.prtnum#(lf)                                     and ol1.wh_id = pr1.wh_id_tmpl#(lf)                                     and ol1.prt_client_id = pr1.prt_client_id#(lf)                                     and sl1.schbat = pb.schbat#(lf)                                     and pr1.prtfam like '01%') then 'Y'#(lf)                      else 'N'#(lf)                 end || ' / ' ||#(lf)                 case when exists(select 1#(lf)                                    from shipment_line sl1,#(lf)                                         ord_line ol1,#(lf)                                         prtmst pr1#(lf)                                   where ol1.ordnum = sl1.ordnum#(lf)                                     and ol1.ordlin = sl1.ordlin#(lf)                                     and ol1.prtnum = pr1.prtnum#(lf)                                     and ol1.wh_id = pr1.wh_id_tmpl#(lf)                                     and ol1.prt_client_id = pr1.prt_client_id#(lf)                                     and sl1.schbat = pb.schbat#(lf)                                     and pr1.prtfam like '08%') then 'Y'#(lf)                      else 'N'#(lf)                 end) Chock,#(lf)                case when exists(select 1#(lf)                                   from ord_note,#(lf)                                        shipment_line#(lf)                                  where shipment_line.ordnum = ord_note.ordnum#(lf)                                 --and shipment_line.wh_id = ord_note.wh_id#(lf)#(lf)                                    and ord_note.nottxt like '%SANDWICH%'#(lf)                                    and shipment_line.schbat = pb.schbat) then 'Y'#(lf)                     else 'N'#(lf)                end as Sandwich,#(lf)                -- added for sandwich pallet indication KL 24/01/2024 --#(lf)#(lf)                case when exists(select 1#(lf)                                        /* added for NI Labels (from here) - 18/04/24 MK */#(lf)                                   from ord_note,#(lf)                                        shipment_line#(lf)                                  where shipment_line.ordnum = ord_note.ordnum#(lf)                                    and ord_note.nottxt like '%CR06 - NON-EU-LABEL%'#(lf)                                    and shipment_line.schbat = pb.schbat) then 'PET FOOD - NI LABEL'#(lf)                end as not_for_eu,#(lf)                /* added for NI Labels (to here) - 18/04/24 MK */#(lf)                case when exists(select 1#(lf)                                   from ord,#(lf)                                        shipment_line#(lf)                                  where shipment_line.ordnum = ord.ordnum#(lf)                                    and shipment_line.wh_id = ord.wh_id#(lf)                                    and ord.cpotyp = 'D6'#(lf)                                    and shipment_line.schbat = pb.schbat) then 'Y'#(lf)                     else 'N'#(lf)                end as Double_Stack,#(lf)                nvl((select sum(pckqty)#(lf)                       from rplwrk#(lf)                      where rplwrk.schbat = pb.schbat#(lf)                        and rplwrk.rplsts in ('F', 'H', 'S', 'U', 'I')), 0) Shorts,#(lf)                nvl((select sum(pckqty)#(lf)                       from rplwrk#(lf)                      where rplwrk.schbat = pb.schbat#(lf)                        and rplwrk.rplsts not in ('F', 'H', 'S', 'U', 'I')), 0) ""Replen Case Qty"",#(lf)                (select count(*)#(lf)                   from rplwrk,#(lf)                        rplwrk rp2#(lf)                  where rp2.rplref = rplwrk.parref#(lf)                    and rp2.schbat = pb.schbat) Replen,#(lf)                nvl((select sum(pckqty)#(lf)                       from pckwrk_view#(lf)                      where schbat = pb.schbat#(lf)                        and lodlvl = 'S'), 0) + nvl((select sum(pckqty)#(lf)                                                       from rplwrk#(lf)                                                      where rplwrk.schbat = pb.schbat#(lf)                                                        and rplwrk.rplsts not in ('F', 'H', 'S', 'U', 'I')), 0) Total_Case_Pick,#(lf)                nvl((select sum(pckqty) - sum(appqty)#(lf)                       from pckwrk_view#(lf)                      where schbat = pb.schbat#(lf)                        and lodlvl = 'S'), 0) + nvl((select sum(pckqty)#(lf)                                                       from rplwrk#(lf)                                                      where rplwrk.schbat = pb.schbat#(lf)                                                        and rplwrk.rplsts not in ('F', 'H', 'S', 'U', 'I')), 0) Case_Pick_Remaining,#(lf)                (select count(distinct (inventory_pckwrk_view.lodnum))#(lf)                   from inventory_pckwrk_view#(lf)                  where inventory_pckwrk_view.stoloc like 'WRAP%'#(lf)                    and inventory_pckwrk_view.schbat = pb.schbat) Pallets_Wrap_In,#(lf)                (select count(distinct (inventory_pckwrk_view.lodnum))#(lf)                   from inventory_pckwrk_view#(lf)                  where inventory_pckwrk_view.stoloc = 'MIN01'#(lf)                    and inventory_pckwrk_view.schbat = pb.schbat) Pallets_MIN01,#(lf)                case when exists(select 1#(lf)                                   from pckwrk_view#(lf)                                  where lodlvl = 'S'#(lf)                                    and pckqty > appqty#(lf)                                    and schbat = pb.schbat) then 'N-Case picks'#(lf)                     when exists(select 1#(lf)                                   from rplwrk#(lf)                                  where rplwrk.schbat = pb.schbat) then 'N-Shorts'#(lf)                     when exists(select 1#(lf)                                   from inventory_pckwrk_view#(lf)                                  where inventory_pckwrk_view.stoloc in ('WRAP-IN', 'MIN01', 'WRAP-IN-KP')#(lf)                                    and inventory_pckwrk_view.schbat = pb.schbat) then 'N-Pallets Wrap'#(lf)                               when exists(select 1#(lf)                                             from inventory_pckwrk_view#(lf)                                            where inventory_pckwrk_view.stoloc like 'INV%'#(lf)                                              and inventory_pckwrk_view.schbat = pb.schbat) then 'N-Pallets in Invert'#(lf)                -- Karolina Lipska line 214 to 217 added 06/08/2025 due to pallet in Invert missed from reasons preventing releasing ----#(lf)                     when exists(select 1#(lf)                                   from inventory_pckwrk_view#(lf)                                  where inventory_pckwrk_view.stoloc in ('TAINT-TO-PPT', 'PPT-TO-TAINT', 'INFEEDA', 'INFEEDB', 'PPT-TO-WIDE', 'WIDE-TO-PPT')#(lf)                                    and inventory_pckwrk_view.schbat = pb.schbat) then 'N-Pallets in TRANSIT'#(lf)                     when exists(select 1#(lf)                                   from inventory_pckwrk_view#(lf)                                  where inventory_pckwrk_view.stoloc in ('REJECTB')#(lf)                                    and inventory_pckwrk_view.schbat = pb.schbat) then 'N-Pallet in RejectB'                                    #(lf)                     --- 20/06/2024 KT Added  Transit Location#(lf)#(lf)                     when exists(select 1#(lf)                                   from pckwrk_view#(lf)                                  where lodlvl = 'L'#(lf)                                    and pckqty > appqty#(lf)                                    and srcloc not like 'ASRS%'#(lf)                                    and schbat = pb.schbat) then 'N-Wide Aisle Picks'#(lf)                     when exists(select distinct 'Y'#(lf)                                   from pckwrk_view pwv#(lf)                                  inner#(lf)                                   join ord_line ol#(lf)                                     on pwv.wh_id = ol.wh_id#(lf)                                    and pwv.client_id = ol.client_id#(lf)                                    and pwv.ordnum = ol.ordnum#(lf)                                    and pwv.ordlin = ol.ordlin#(lf)                                    and pwv.ordsln = ol.ordsln#(lf)                                    and ol.pckgr1 = 'REWORK'#(lf)                                  where schbat = pb.schbat#(lf)                                    and appqty = 0#(lf)                                    and pwv.pcksts = 'H') then 'N-Rework to be Released'#(lf)                     when exists(select distinct 'Y'#(lf)                                   from pckwrk_view pwv#(lf)                                  inner#(lf)                                   join ord_line ol#(lf)                                     on pwv.wh_id = ol.wh_id#(lf)                                    and pwv.client_id = ol.client_id#(lf)                                    and pwv.ordnum = ol.ordnum#(lf)                                    and pwv.ordlin = ol.ordlin#(lf)                                    and pwv.ordsln = ol.ordsln#(lf)                                    and ol.pckgr1 = 'REWORK'#(lf)                                  where schbat = pb.schbat#(lf)                                    and appqty = 0#(lf)                                    and pwv.pcksts = 'R') then 'N-Pallets heading to Rework'#(lf)                     when exists(select 1#(lf)                                   from inventory_pckwrk_view#(lf)                                  where stoloc like '%REWORK%'#(lf)                                    and inventory_pckwrk_view.schbat = pb.schbat) then 'N-Pallets in Rework'#(lf)                     when pb.batsts = 'REL' then 'Released'#(lf)                     else 'Y'#(lf)                end as Ready_to_release,#(lf)                max(pb.reldte) released_dte,#(lf)                (select stoloc#(lf)                   from inventory_pckwrk_view#(lf)                  where inventory_pckwrk_view.stoloc like 'DL%'#(lf)                    and inventory_pckwrk_view.schbat = pb.schbat#(lf)                    and rownum < 2) Gravity_Lane#(lf)           from pckbat pb#(lf)          inner#(lf)           join shipment_line sl#(lf)             on pb.wh_id = sl.wh_id#(lf)            and sl.schbat = pb.schbat#(lf)          inner#(lf)           join shipment s#(lf)             on sl.wh_id = s.wh_id#(lf)            and s.ship_id = sl.ship_id#(lf)          inner#(lf)           join ord#(lf)             on ord.ordnum = sl.ordnum#(lf)           left#(lf)           join cstmst#(lf)             on cstmst.cstnum = ord.stcust#(lf)          inner#(lf)           join adrmst#(lf)             on adrmst.adr_id = cstmst.adr_id#(lf)           left outer#(lf)           join pckwrk_view pwv#(lf)             on pb.wh_id = pwv.wh_id#(lf)            and pb.schbat = pwv.schbat#(lf)           left outer#(lf)           join rplwrk rw#(lf)             on pb.wh_id = rw.wh_id#(lf)            and pb.schbat = rw.schbat#(lf)           left#(lf)           join stop#(lf)             on s.stop_id = stop.stop_id#(lf)           left#(lf)           join car_move#(lf)             on car_move.car_move_id = stop.car_move_id#(lf)           left#(lf)           join appt#(lf)             on appt.car_move_id = car_move.car_move_id#(lf)           left#(lf)           join carhdr#(lf)             on car_move.carcod = carhdr.carcod#(lf)          where pb.batsts not in ('PLAN', 'CMPL')#(lf)            and ord.ordtyp <> 'JIT'#(lf)            --and ord.client_id = 'CID013634'#(lf)            and s.shpsts != 'C'#(lf)          group by pb.wh_id,#(lf)                pb.schbat,#(lf)                pb.batcod,#(lf)                car_move.car_move_id,#(lf)                car_move.host_ext_id,#(lf)                carhdr.carnam,#(lf)                car_move.trlr_id,#(lf)                case when exists(select 1#(lf)                                   from trlr#(lf)                                  where trlr.trlr_id = car_move.trlr_id#(lf)                                    and trlr.live_load_flg = 1) then '1'#(lf)                     else '0' end,#(lf)                     case when ord.client_id = 'CID000001' then 'MARS'#(lf)                          when ord.client_id = 'CID013634' then 'MONDELEZ'#(lf)                          when ord.client_id = 'CID001842' then 'KP'#(lf)                          else 'New Client' end,#(lf)                          adrmst.adrnam,#(lf)                          adrmst.adr_id,#(lf)                          --to_char(appt.start_dte, 'DD-MM-YYYY HH24:MI') App_start, #(lf)                          --Changed 22/08/2024 as time was wrong A.Earlam--#(lf)                          --to_char(appt.start_dte-1 / 24, 'DD-MM-YYYY HH24:MI') App_start,#(lf)                          --Changed 30/10/2024 due to time change to winter time K Lipska--#(lf)                          to_char(appt.start_dte-1 / 24, 'YYYY-MM-DD HH24:MI'),#(lf)                          to_char(appt.start_dte-1 / 24, 'YYYY-MM-DD'),#(lf)                          --Changed 01/09/2025 to use Big to Little for sorting Paul McManus--#(lf)#(lf)                          case when exists(select 1#(lf)                                             from pckwrk_view#(lf)                                            where lodlvl = 'S'#(lf)                                              and pckqty > appqty#(lf)                                              and schbat = pb.schbat) then 'N-Case picks'#(lf)                               when exists(select 1#(lf)                                             from rplwrk#(lf)                                            where rplwrk.schbat = pb.schbat) then 'N-Shorts'#(lf)                               when exists(select 1#(lf)                                             from inventory_pckwrk_view#(lf)                                            where inventory_pckwrk_view.stoloc in ('WRAP-IN', 'MIN01', 'WRAP-IN-KP')#(lf)                                              and inventory_pckwrk_view.schbat = pb.schbat) then 'N-Pallets Wrap'#(lf)                               when exists(select 1#(lf)                                             from inventory_pckwrk_view#(lf)                                            where inventory_pckwrk_view.stoloc like 'INV%'#(lf)                                              and inventory_pckwrk_view.schbat = pb.schbat) then 'N-Pallets in Invert'        #(lf)                -- Karolina Lipska line 344 to 347 added 06/08/2025 due to pallet in Invert missed from reasons preventing releasing ----#(lf)                               when exists(select 1#(lf)                                             from inventory_pckwrk_view#(lf)                                            where inventory_pckwrk_view.stoloc in ('TAINT-TO-PPT', 'PPT-TO-TAINT', 'INFEEDA', 'INFEEDB', 'PPT-TO-WIDE', 'WIDE-TO-PPT')#(lf)                                              and inventory_pckwrk_view.schbat = pb.schbat) then 'N-Pallets in TRANSIT'#(lf)                               --- 20/06/2024 KT Added  Transit Location#(lf)                                when exists(select 1#(lf)                                             from inventory_pckwrk_view#(lf)                                            where inventory_pckwrk_view.stoloc in ('REJECTB')#(lf)                                              and inventory_pckwrk_view.schbat = pb.schbat) then 'N-Pallet in RejectB'             #(lf)                               when exists(select 1#(lf)                                             from pckwrk_view#(lf)                                            where lodlvl = 'L'#(lf)                                              and pckqty > appqty#(lf)                                              and srcloc not like 'ASRS%'#(lf)                                              and schbat = pb.schbat) then 'N-Wide Aisle Picks'#(lf)                               when exists(select distinct 'Y'#(lf)                                             from pckwrk_view pwv#(lf)                                            inner#(lf)                                             join ord_line ol#(lf)                                               on pwv.wh_id = ol.wh_id#(lf)                                              and pwv.client_id = ol.client_id#(lf)                                              and pwv.ordnum = ol.ordnum#(lf)                                              and pwv.ordlin = ol.ordlin#(lf)                                              and pwv.ordsln = ol.ordsln#(lf)                                              and ol.pckgr1 = 'REWORK'#(lf)                                            where schbat = pb.schbat#(lf)                                              and appqty = 0#(lf)                                              and pwv.pcksts = 'H') then 'N-Rework to be Released'#(lf)                               when exists(select distinct 'Y'#(lf)                                             from pckwrk_view pwv#(lf)                                            inner#(lf)                                             join ord_line ol#(lf)                                               on pwv.wh_id = ol.wh_id#(lf)                                              and pwv.client_id = ol.client_id#(lf)                                              and pwv.ordnum = ol.ordnum#(lf)                                              and pwv.ordlin = ol.ordlin#(lf)                                              and pwv.ordsln = ol.ordsln#(lf)                                              and ol.pckgr1 = 'REWORK'#(lf)                                            where schbat = pb.schbat#(lf)                                              and appqty = 0#(lf)                                              and pwv.pcksts = 'R') then 'N-Pallets heading to Rework'#(lf)                               when exists(select 1#(lf)                                             from inventory_pckwrk_view#(lf)                                            where stoloc like '%REWORK%'#(lf)                                              and inventory_pckwrk_view.schbat = pb.schbat) then 'N-Pallets in Rework'#(lf)                               when pb.batsts = 'REL' then 'Released'#(lf)                               else 'Y'#(lf)                          end) sql#(lf)               group by sql.schbat,#(lf)                     sql.car_move_id,#(lf)                     sql.host_ext_id,#(lf)                     sql.Haulier,#(lf)                     sql.not_for_eu,#(lf)                     /* added for NI Labels - 18/04/24 MK */#(lf)                     sql.Client,#(lf)                     --                     case when sql.stops > 1 then 'Multi Stop - ' || sql.stops || ' Stops'#(lf)                     --                          else sql.adrnam end,#(lf)#(lf)                     case when sql.trlr_id is not null#(lf)                      and sql.live_load = 1 then 'Live_Load'#(lf)                          when sql.trlr_id is not null#(lf)                      and sql.live_load = 0 then 'Pre_Load'#(lf)                          when sql.trlr_id is null then 'No_Trailer'#(lf)                          else null end,#(lf)                          sql.App_start,#(lf)                          sql.App_Date,#(lf)                          sql.stops,#(lf)                          sql.Total_pallets,#(lf)                          sql.Double_Stack,#(lf)                          sql.Shorts,#(lf)                          sql.""Replen Case Qty"",#(lf)                          sql.chock,#(lf)                          sql.Sandwich,#(lf)                          -- added for sandwich pallet indication KL 24/01/2024 --#(lf)                          sql.Replen,#(lf)                          sql.Total_Case_Pick,#(lf)                          sql.Case_Pick_Remaining,#(lf)                          sql.Pallets_Wrap_In,#(lf)                          sql.Pallets_MIN01,#(lf)                          sql.Ready_to_release,#(lf)                          sql.Gravity_Lane,#(lf)                          sql.released_dte#(lf)                    ORDER BY sql.App_start asc", CreateNavigationProperties=false])
+				in
+				    Source
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,55 @@
+table 'Picked Date Vs Appoinemnt Date'
+	lineageTag: 6b2a634b-0cdf-48e5-b818-d6d813b339b4
+
+	column 'Picked Date'
+		dataType: string
+		sourceProviderType: Varchar2
+		lineageTag: 68ba65e5-73c2-4e47-9511-afd2b14d56af
+		summarizeBy: none
+		sourceColumn: Picked Date
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Appointment Date'
+		dataType: string
+		sourceProviderType: Varchar2
+		lineageTag: 46c95ff9-7dc4-4fbf-8d3e-e759eb3c8d25
+		summarizeBy: none
+		sourceColumn: Appointment Date
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Mondelez Case Picked'
+		dataType: double
+		sourceProviderType: Decimal(38, 127)
+		lineageTag: e01ade6e-def6-4eca-b662-18241b50c53b
+		summarizeBy: sum
+		sourceColumn: Mondelez Case Picked
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Mars Case Picked'
+		dataType: double
+		sourceProviderType: Decimal(38, 127)
+		lineageTag: 3961c347-1b40-46a3-ae49-0544a19731ca
+		summarizeBy: sum
+		sourceColumn: Mars Case Picked
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition 'Picked Date Vs Appoinemnt Date' = m
+		mode: directQuery
+		source =
+				let
+				    Source = Oracle.Database(LTG_BlueYonder_Server_Prod, [HierarchicalNavigation=true, Query="select#(lf)to_char(pck.pickdate,'YYYY-MM-DD') ""Picked Date"",#(lf)to_char(sp.App_dte, 'YYYY-MM-DD')   ""Appointment Date"",#(lf)sum(pck.mndlzappqty)  ""Mondelez Case Picked"",#(lf)sum(pck.marsappqty)   ""Mars Case Picked""#(lf)from#(lf)(#(lf)select #(lf)ship_id,#(lf)sum(case when client_id = 'CID000001' then(pwv.appqty)#(lf)                    end) marsappqty,#(lf)                sum(case when client_id = 'CID013634' then(pwv.appqty)#(lf)                    end) mndlzappqty,#(lf)                    trunc(pckdte-1/24) pickdate#(lf)--                case when (to_char(pckdte, 'HH24')) in ('07', '08', '09', '10', '11', '12', '13', '14') then to_char(pckdte, 'DD-MM-YYYY') || ' - AM'#(lf)--                     when (to_char(pckdte, 'HH24')) in ('15', '16', '17', '18', '19', '20', '21', '22') then to_char(pckdte, 'DD-MM-YYYY') || ' - PM'#(lf)--                     when (to_char(pckdte, 'HH24')) in ('23') then to_char(pckdte, 'DD-MM-YYYY') || ' - NIGHTS'#(lf)--                     when (to_char(pckdte, 'HH24')) in ('00', '01', '02', '03', '04', '05', '06') then to_char(pckdte-1, 'DD-MM-YYYY') || ' - NIGHTS'#(lf)--                end shift#(lf)           from pckwrk_view pwv#(lf)          where pwv.wrktyp = 'P'#(lf)            and pwv.lodlvl = 'S'#(lf)            and pwv.pck_uom = 'CS'#(lf)          group by#(lf)          ship_id,trunc(pckdte-1/24)#(lf)--                case when (to_char(pckdte, 'HH24')) in ('07', '08', '09', '10', '11', '12', '13', '14') then to_char(pckdte, 'DD-MM-YYYY') || ' - AM'#(lf)--                     when (to_char(pckdte, 'HH24')) in ('15', '16', '17', '18', '19', '20', '21', '22') then to_char(pckdte, 'DD-MM-YYYY') || ' - PM'#(lf)--                     when (to_char(pckdte, 'HH24')) in ('23') then to_char(pckdte, 'DD-MM-YYYY') || ' - NIGHTS'#(lf)--                     when (to_char(pckdte, 'HH24')) in ('00', '01', '02', '03', '04', '05', '06') then to_char(pckdte-1, 'DD-MM-YYYY') || ' - NIGHTS'#(lf)--                end#(lf)                )pck#(lf) left join               #(lf)(#(lf)select#(lf)s.ship_id,#(lf)s.stop_id,#(lf)trunc(a.start_dte-1/24) App_dte#(lf)from#(lf)shipment s#(lf)left join stop st#(lf)on s.stop_id = st.stop_id#(lf)left join car_move cm#(lf)on st.car_move_id = cm.car_move_id#(lf)left join appt a#(lf)on cm.car_move_id =a.car_move_id#(lf)where s.stop_id is not null#(lf))sp#(lf) on pck.ship_id = sp.ship_id#(lf) group by#(lf) pck.pickdate,sp.App_dte"])
+				in
+				    Source
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

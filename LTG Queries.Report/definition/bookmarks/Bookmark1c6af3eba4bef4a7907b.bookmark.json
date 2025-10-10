@@ -1,0 +1,81 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/bookmark/1.4.0/schema.json",
+  "displayName": "Collapsed Slicers P3",
+  "name": "Bookmark1c6af3eba4bef4a7907b",
+  "options": {
+    "applyOnlyToTargetVisuals": true,
+    "targetVisualNames": [
+      "f7bb1738b04f3503ff44",
+      "4b5451d26631f4e26d49",
+      "64de77afb1e19b14e008",
+      "7bd83edaa3aeb87b2b9f",
+      "27043c8b5bbee771e01e",
+      "2f954ae56f3ccc9794e5",
+      "9db46dd83a1066aa5125",
+      "425a168fda43f133b2e3",
+      "d6e6b92cd3b022371f40",
+      "5f0c4ad4f2102026b1a0",
+      "d4a0df8990f3992f0301",
+      "ca6eae106728451f3bec",
+      "4249130956a18f2aa7c9",
+      "28aac6c11f0dc13b6a5d",
+      "27f549187dc30288f0f5",
+      "801a24c93f32b80919f5",
+      "690a8616fb68c4eb2cc1"
+    ],
+    "suppressData": true
+  },
+  "explorationState": {
+    "version": "1.3",
+    "activeSection": "ReportSection13ef5b11cbf5a73b0cb3",
+    "sections": {
+      "ReportSection13ef5b11cbf5a73b0cb3": {
+        "visualContainers": {
+          "7b8ce61a092a1500b692": {
+            "singleVisual": {
+              "visualType": "image",
+              "objects": {}
+            }
+          },
+          "3e63999e22adc9cd9403": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "31005da190929a1e7770": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          }
+        },
+        "visualContainerGroups": {
+          "f7bb1738b04f3503ff44": {
+            "isHidden": false
+          },
+          "4b5451d26631f4e26d49": {
+            "isHidden": true
+          }
+        }
+      }
+    },
+    "objects": {
+      "merge": {
+        "outspacePane": [
+          {
+            "properties": {
+              "expanded": {
+                "expr": {
+                  "Literal": {
+                    "Value": "false"
+                  }
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

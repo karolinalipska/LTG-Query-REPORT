@@ -1,0 +1,276 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
+  "name": "c04545d5a9c3132d423f",
+  "position": {
+    "x": 0,
+    "y": 75.866261398176292,
+    "z": 1000,
+    "height": 643.89057750759878,
+    "width": 941.51975683890578,
+    "tabOrder": 1000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Unpicked Pallet"
+                    }
+                  },
+                  "Property": "Transaction Date"
+                }
+              },
+              "queryRef": "Unpicked Pallet.Transaction Date",
+              "nativeQueryRef": "Transaction Date"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Unpicked Pallet"
+                    }
+                  },
+                  "Property": "Unpicked LPN"
+                }
+              },
+              "queryRef": "Unpicked Pallet.Unpicked LPN",
+              "nativeQueryRef": "Unpicked LPN"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Unpicked Pallet"
+                    }
+                  },
+                  "Property": "New LPN"
+                }
+              },
+              "queryRef": "Unpicked Pallet.New LPN",
+              "nativeQueryRef": "New LPN"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Unpicked Pallet"
+                    }
+                  },
+                  "Property": "Client ID"
+                }
+              },
+              "queryRef": "Unpicked Pallet.Client ID",
+              "nativeQueryRef": "Client ID"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Unpicked Pallet"
+                    }
+                  },
+                  "Property": "SKU"
+                }
+              },
+              "queryRef": "Unpicked Pallet.SKU",
+              "nativeQueryRef": "SKU"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Unpicked Pallet"
+                    }
+                  },
+                  "Property": "SAP Storage"
+                }
+              },
+              "queryRef": "Unpicked Pallet.SAP Storage",
+              "nativeQueryRef": "SAP Storage"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Unpicked Pallet"
+                        }
+                      },
+                      "Property": "Qty"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(Unpicked Pallet.Qty)",
+              "nativeQueryRef": "Qty"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Unpicked Pallet"
+                    }
+                  },
+                  "Property": "Order Number"
+                }
+              },
+              "queryRef": "Unpicked Pallet.Order Number",
+              "nativeQueryRef": "Order Number"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Unpicked Pallet"
+                    }
+                  },
+                  "Property": "Pick Date"
+                }
+              },
+              "queryRef": "Unpicked Pallet.Pick Date",
+              "nativeQueryRef": "Pick Date"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Unpicked Pallet"
+                    }
+                  },
+                  "Property": "CAR_MOVE_ID"
+                }
+              },
+              "queryRef": "Unpicked Pallet.CAR_MOVE_ID",
+              "nativeQueryRef": "Load Id",
+              "displayName": "Load Id"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "columnHeaders": [
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "67.03464166149307D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(Unpicked Pallet.Qty)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "107.48024562646287D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Unpicked Pallet.CAR_MOVE_ID"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "94.04016436999213D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Unpicked Pallet.Order Number"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "62.60183580642334D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Unpicked Pallet.SAP Storage"
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Details'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualHeader": [
+        {
+          "properties": {
+            "background": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 2,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

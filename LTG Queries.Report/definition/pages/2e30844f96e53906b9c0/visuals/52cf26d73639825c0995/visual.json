@@ -1,0 +1,230 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
+  "name": "52cf26d73639825c0995",
+  "position": {
+    "x": 0,
+    "y": 81.702127659574472,
+    "z": 1000,
+    "height": 638.05471124620067,
+    "width": 882.18844984802433,
+    "tabOrder": 1000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Crane 10 SKU Spread"
+                    }
+                  },
+                  "Property": "Aisle"
+                }
+              },
+              "queryRef": "Crane 10 SKU Spread.Aisle",
+              "nativeQueryRef": "Aisle"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Crane 10 SKU Spread"
+                    }
+                  },
+                  "Property": "Client"
+                }
+              },
+              "queryRef": "Crane 10 SKU Spread.Client",
+              "nativeQueryRef": "Client"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Crane 10 SKU Spread"
+                    }
+                  },
+                  "Property": "sku_id"
+                }
+              },
+              "queryRef": "Crane 10 SKU Spread.sku_id",
+              "nativeQueryRef": "SKU",
+              "displayName": "SKU"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Crane 10 SKU Spread"
+                    }
+                  },
+                  "Property": "Quality Status"
+                }
+              },
+              "queryRef": "Crane 10 SKU Spread.Quality Status",
+              "nativeQueryRef": "Quality Status"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Crane 10 SKU Spread"
+                        }
+                      },
+                      "Property": "Pallets In Crane 10"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(Crane 10 SKU Spread.Pallets In Crane 10)",
+              "nativeQueryRef": "Pallets In Crane 10"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Crane 10 SKU Spread"
+                        }
+                      },
+                      "Property": "Other Cranes"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(Crane 10 SKU Spread.Other Cranes)",
+              "nativeQueryRef": "Other Cranes"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Crane 10 SKU Spread"
+                        }
+                      },
+                      "Property": "Total Pallets"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(Crane 10 SKU Spread.Total Pallets)",
+              "nativeQueryRef": "Total Pallets"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Crane 10 SKU Spread"
+                    }
+                  },
+                  "Property": "H10 Percentage"
+                }
+              },
+              "queryRef": "Sum(Crane 10 SKU Spread.H10 Percentage)",
+              "nativeQueryRef": "H10 Percentage1"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Crane 10 SKU Spread"
+                  }
+                },
+                "Property": "sku_id"
+              }
+            },
+            "direction": "Descending"
+          }
+        ]
+      }
+    },
+    "objects": {
+      "columnHeaders": [
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "values": [
+        {
+          "properties": {
+            "wordWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Details'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualHeader": [
+        {
+          "properties": {
+            "background": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 2,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

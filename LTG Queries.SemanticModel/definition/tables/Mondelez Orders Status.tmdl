@@ -1,0 +1,139 @@
+table 'Mondelez Orders Status'
+	lineageTag: 04082249-25d5-4105-a749-916915fd7140
+
+	column 'Order Number'
+		dataType: string
+		isNullable: false
+		sourceProviderType: Varchar2
+		lineageTag: 0f9ceb41-c783-46b3-9d04-d698e9563d43
+		summarizeBy: none
+		sourceColumn: Order Number
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Order Entry Date'
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: Date
+		lineageTag: 528f025e-fce4-46b3-922a-d7881339d71e
+		summarizeBy: none
+		sourceColumn: Order Entry Date
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Order Fulfilment - Order Status'
+		dataType: string
+		sourceProviderType: Varchar2
+		lineageTag: dc4d1d66-aebd-40ae-a998-ccf44104a676
+		summarizeBy: none
+		sourceColumn: Order Fulfilment - Order Status
+
+		annotation SummarizationSetBy = Automatic
+
+	column Shorts
+		dataType: double
+		sourceProviderType: Decimal(38, 127)
+		lineageTag: 5e99b719-2dd6-42c8-9f0f-6748de03f3b0
+		summarizeBy: sum
+		sourceColumn: Shorts
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Shipment Line Status'
+		dataType: string
+		sourceProviderType: Varchar2
+		lineageTag: 8ea97d07-6f9e-462b-91ed-180aaec2c80d
+		summarizeBy: none
+		sourceColumn: Shipment Line Status
+
+		annotation SummarizationSetBy = Automatic
+
+	column Wave
+		dataType: string
+		sourceProviderType: Varchar2
+		lineageTag: 104a9648-6b4b-4bf6-942b-d0257b709ce7
+		summarizeBy: none
+		sourceColumn: Wave
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Shipment Status'
+		dataType: string
+		sourceProviderType: Varchar2
+		lineageTag: df3b8793-0218-4096-bcb3-54a5e9566a24
+		summarizeBy: none
+		sourceColumn: Shipment Status
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Load ID'
+		dataType: string
+		sourceProviderType: Varchar2
+		lineageTag: f2825814-ff4d-44d7-9a81-4b7302c85c23
+		summarizeBy: none
+		sourceColumn: Load ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Host External Id'
+		dataType: string
+		sourceProviderType: Varchar2
+		lineageTag: dc4b726f-5bd7-4f43-afb1-d3c170074fc3
+		summarizeBy: none
+		sourceColumn: Host External Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Appointment Start'
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: Date
+		lineageTag: e7ed6439-ddb2-455c-a8be-40a02b6d37e1
+		summarizeBy: none
+		sourceColumn: Appointment Start
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Trailer Assigned'
+		dataType: string
+		sourceProviderType: Varchar2
+		lineageTag: f471c430-415d-4f0c-ac23-7514e43b842e
+		summarizeBy: none
+		sourceColumn: Trailer Assigned
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Trailer Closed'
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: Date
+		lineageTag: 603e4b6e-2d94-4381-a8c4-6b3923d751c9
+		summarizeBy: none
+		sourceColumn: Trailer Closed
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Trailer Despatched'
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: Date
+		lineageTag: 903d994c-e239-40d6-bb9d-cc1a3d4b7361
+		summarizeBy: none
+		sourceColumn: Trailer Despatched
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Mondelez Orders Status' = m
+		mode: directQuery
+		source =
+				let
+				    Source = Oracle.Database(LTG_BlueYonder_Server_Prod, [HierarchicalNavigation=true, Query="SELECT#(lf)    o.ordnum                        ""Order Number"",#(lf)    o.entdte - 1 / 24               ""Order Entry Date"",#(lf)    CASE#(lf)        WHEN ( SUM(ol.ordqty) - SUM(ol.shpqty) = 0 ) THEN#(lf)            'Shipped in Full'#(lf)        WHEN ( SUM(ol.ordqty) - SUM(ol.shpqty) > 0#(lf)               AND SUM(ol.ordqty) - SUM(ol.shpqty) < SUM(ol.ordqty) )#(lf)             AND ol.cancelled_flg = 1 THEN#(lf)            'Shipped Partially - Cancelled'#(lf)        WHEN ( SUM(ol.ordqty) - SUM(ol.shpqty) > 0#(lf)               AND SUM(ol.ordqty) - SUM(ol.shpqty) < SUM(ol.ordqty) )#(lf)             AND ol.cancelled_flg = 0 THEN#(lf)            'Shipped Partially - Active'#(lf)        WHEN ( SUM(ol.ordqty) - SUM(ol.shpqty) = SUM(ol.ordqty) )#(lf)             AND ol.cancelled_flg = 1 THEN#(lf)            'Not Shipped - Cancelled'#(lf)        WHEN ( SUM(ol.ordqty) - SUM(ol.shpqty) = SUM(ol.ordqty) )#(lf)             AND ol.cancelled_flg = 0 THEN#(lf)            'Not Shipped - Active'#(lf)    END                             ""Order Fulfilment - Order Status"",#(lf)    SUM(ol.ordqty) - SUM(ol.shpqty) ""Shorts"",#(lf)    dm.lngdsc                       ""Shipment Line Status"",#(lf)    sl.schbat                       ""Wave"",#(lf)    dm1.lngdsc                      ""Shipment Status"",#(lf)    cm.car_move_id                  ""Load ID"",#(lf)    cm.host_ext_id                  ""Host External Id"",#(lf)    a.start_dte - 1 / 24            ""Appointment Start"",#(lf)    t.trlr_num                      ""Trailer Assigned"",#(lf)    t.close_dte - 1 / 24            ""Trailer Closed"",#(lf)    t.dispatch_dte - 1 / 24         ""Trailer Despatched""#(lf)FROM#(lf)    ord           o#(lf)    LEFT JOIN ord_line      ol ON o.ordnum = ol.ordnum#(lf)    LEFT JOIN shipment_line sl ON ol.ordnum || ol.ordlin = sl.ordnum || sl.ordlin#(lf)    LEFT JOIN dscmst        dm ON sl.linsts = dm.colval#(lf)                           AND dm.colnam = 'linsts'#(lf)    LEFT JOIN shipment      s ON sl.ship_id = s.ship_id#(lf)    LEFT JOIN dscmst        dm1 ON s.shpsts = dm1.colval#(lf)                            AND dm1.colnam = 'shpsts'#(lf)    LEFT JOIN stop          st ON s.stop_id = st.stop_id#(lf)    LEFT JOIN car_move      cm ON st.car_move_id = cm.car_move_id#(lf)    LEFT JOIN appt          a ON cm.car_move_id = a.car_move_id#(lf)    LEFT JOIN trlr          t ON cm.trlr_id = t.trlr_id#(lf)    LEFT JOIN pckbat        pb ON sl.schbat = pb.schbat#(lf)WHERE#(lf)    o.client_id = 'CID013634'#(lf)GROUP BY#(lf)    o.ordnum,#(lf)    ol.cancelled_flg,#(lf)    o.entdte - 1 / 24,#(lf)    dm.lngdsc,#(lf)    sl.schbat,#(lf)    dm1.lngdsc,#(lf)    cm.car_move_id,#(lf)    cm.host_ext_id,#(lf)    a.start_dte - 1 / 24,#(lf)    t.trlr_num,#(lf)    t.close_dte - 1 / 24,#(lf)    t.dispatch_dte - 1 / 24#(lf)ORDER BY#(lf)    2"])
+				in
+				    Source
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

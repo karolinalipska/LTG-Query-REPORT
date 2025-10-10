@@ -1,0 +1,155 @@
+table 'Picked Pallets On Site'
+	lineageTag: 3be5764e-b982-4ba4-9cc6-e3f938b097d9
+
+	column Location
+		dataType: string
+		sourceProviderType: Varchar2
+		lineageTag: 4201efda-b495-4cf3-a85c-46e992e5ed98
+		summarizeBy: none
+		sourceColumn: Location
+
+		annotation SummarizationSetBy = Automatic
+
+	column Area
+		dataType: string
+		sourceProviderType: Varchar2
+		lineageTag: 18d2b3e7-861f-4da2-ae6c-09562637be26
+		summarizeBy: none
+		sourceColumn: Area
+
+		annotation SummarizationSetBy = Automatic
+
+	column LPN
+		dataType: string
+		sourceProviderType: Varchar2
+		lineageTag: cd1c9e03-eced-4027-bc80-d583c565373a
+		summarizeBy: none
+		sourceColumn: LPN
+
+		annotation SummarizationSetBy = Automatic
+
+	column SKU
+		dataType: string
+		sourceProviderType: Varchar2
+		lineageTag: 6db86bdf-3a3f-48ef-9544-4142eb924bbe
+		summarizeBy: none
+		sourceColumn: SKU
+
+		annotation SummarizationSetBy = Automatic
+
+	column Client
+		dataType: string
+		sourceProviderType: Varchar2
+		lineageTag: ce7b2130-3afc-4017-9123-6492b2c8e9f4
+		summarizeBy: none
+		sourceColumn: Client
+
+		annotation SummarizationSetBy = Automatic
+
+	column Batch
+		dataType: string
+		sourceProviderType: Varchar2
+		lineageTag: 25d1d185-5aa3-499b-9c1d-88196fbd3f72
+		summarizeBy: none
+		sourceColumn: Batch
+
+		annotation SummarizationSetBy = Automatic
+
+	column Expiry
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: Date
+		lineageTag: 7fe751fd-fd24-4c84-9ad1-82c9fb6e7c49
+		summarizeBy: none
+		sourceColumn: Expiry
+
+		annotation SummarizationSetBy = Automatic
+
+	column Footprint
+		dataType: string
+		sourceProviderType: Varchar2
+		lineageTag: 432ea36e-a8c4-4b3d-a5b4-2e716c6c7675
+		summarizeBy: none
+		sourceColumn: Footprint
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Footprint Qty of SKU'
+		dataType: int64
+		formatString: 0
+		sourceProviderType: Int64
+		lineageTag: 55d46536-67e6-4b9b-9bb4-4a7c79f9cc8a
+		summarizeBy: sum
+		sourceColumn: Footprint Qty of SKU
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Order Number'
+		dataType: string
+		sourceProviderType: Varchar2
+		lineageTag: 4c04ba43-2079-498d-b180-c02e640c4c01
+		summarizeBy: none
+		sourceColumn: Order Number
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Load ID'
+		dataType: string
+		sourceProviderType: Varchar2
+		lineageTag: d89c33cd-345b-42da-b500-f3afb4922639
+		summarizeBy: none
+		sourceColumn: Load ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Qty
+		dataType: int64
+		formatString: 0
+		sourceProviderType: Int64
+		lineageTag: 8989945b-2e80-4d0d-a2b4-6ee3d2501805
+		summarizeBy: sum
+		sourceColumn: Qty
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Last Movement'
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: Date
+		lineageTag: 5c9cd228-60d1-4856-af70-f3dd60b8d28a
+		summarizeBy: none
+		sourceColumn: Last Movement
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'SAP Storage'
+		dataType: string
+		sourceProviderType: Varchar2
+		lineageTag: e05da856-6f11-4313-a159-f8a028226ed5
+		summarizeBy: none
+		sourceColumn: SAP Storage
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Picked Date'
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: Date
+		lineageTag: 11469139-ab10-470e-882d-1bbd8423f3fb
+		summarizeBy: none
+		sourceColumn: Picked Date
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Picked Pallets On Site' = m
+		mode: directQuery
+		source =
+				let
+				    Source = Oracle.Database(LTG_BlueYonder_Server_Prod, [HierarchicalNavigation=true, Query="select #(lf)iv.STOLOC ""Location"",#(lf)dm.lngdsc ""Area"",#(lf)iv.LODNUM ""LPN"",#(lf)iv.PRTNUM ""SKU"",#(lf)case#(lf)    when iv.PRT_CLIENT_ID = 'CID000001' then 'Mars'#(lf)    when iv.PRT_CLIENT_ID = 'CID013634' then 'Mondelez'#(lf)    else iv.PRT_CLIENT_ID#(lf)    end ""Client"",#(lf)iv.LOTNUM ""Batch"",#(lf)iv.INV_ATTR_STR2 ""SAP Storage"", --25/09/25 added by request 4990 --#(lf)iv.EXPIRE_DTE ""Expiry"",#(lf)iv.FTPCOD ""Footprint"",#(lf)pfd.untqty  ""Footprint Qty of SKU"",#(lf)--iv.SHIP_LINE_ID ,#(lf)sl.ordnum   ""Order Number"",#(lf)spv.car_move_id     ""Load ID"",#(lf)iv.untqty    ""Qty"",#(lf)--iv.WRKREF ,#(lf)--iv.WRKREF_DTL ,#(lf)iv.LSTMOV-1/24   ""Last Movement"",#(lf)spv.pckdte-1/24 ""Picked Date"" --25/09/25 added by request 4990 --#(lf)from all_inventory_view iv#(lf)left join locmst lm on iv.stoloc = lm.stoloc#(lf)left join shipment_line sl on iv.ship_line_id =sl.ship_line_id#(lf)left join prtftp_dtl pfd on iv.prtnum = pfd.prtnum and iv.prt_client_id = pfd.prt_client_id and iv.ftpcod = pfd.ftpcod and pfd.wh_id = 'GB_5024' and pfd.uomcod = 'PA'#(lf)left join shipping_pckwrk_view spv on iv.wrkref_dtl = spv.wrkref_dtl#(lf)left join dscmst dm#(lf)on lm.arecod||'|GB_5024' = dm.colval and dm.colnam = 'arecod|wh_id'#(lf)#(lf)where iv.ship_line_id is not null#(lf)and lm.arecod not in ('DSPCH')"])
+				in
+				    Source
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

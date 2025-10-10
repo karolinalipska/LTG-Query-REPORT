@@ -1,0 +1,321 @@
+table 'Dynamic Calendar'
+	lineageTag: e70c09f8-47f0-4904-9533-9d6d65388faa
+
+	measure Selected_Period = "P " & ROUND(SELECTEDVALUE('Dynamic Calendar'[PeriodID],0),0)
+		lineageTag: cfb136b8-520c-4a7c-ab31-3b04d8c71294
+
+	measure Selected_Year = SELECTEDVALUE('Dynamic Calendar'[Year],"Multi")
+		lineageTag: a1090d84-7253-4ef4-80d4-576a49ff0895
+
+	measure Selected_Week = "WK "&SELECTEDVALUE('Dynamic Calendar'[WeekID],1)
+		lineageTag: 3643d618-c311-449a-8308-71909197bee8
+
+	measure MinSelected_P = "P"&MIN([PeriodID])
+		lineageTag: ee54e6e4-955d-4a7e-aa7f-e4292d106b39
+
+	measure MaxSelected_P = "P"&MAX([PeriodID])
+		lineageTag: 1daa331a-b621-421c-9abe-bdd304a381d7
+
+	column Date
+		dataType: dateTime
+		isKey
+		formatString: Long Date
+		lineageTag: 9d65342e-87bc-435e-8245-d0e347f192b0
+		summarizeBy: none
+		sourceColumn: Date
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column DayID
+		dataType: double
+		lineageTag: 4b73a1d1-f640-4435-87c1-ecc2ee1e0685
+		summarizeBy: count
+		sourceColumn: DayID
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column YearID
+		dataType: string
+		lineageTag: 289e89fa-d005-4697-bb13-9913753fe5a5
+		summarizeBy: none
+		sourceColumn: YearID
+
+		annotation SummarizationSetBy = Automatic
+
+	column 28Days
+		dataType: string
+		lineageTag: 5cf41d28-a8ae-478a-bc0a-42864d02bb49
+		summarizeBy: none
+		sourceColumn: 28Days
+
+		annotation SummarizationSetBy = Automatic
+
+	column WeekID
+		dataType: int64
+		formatString: 0
+		lineageTag: 34273faa-d751-4aa6-9668-372572adaea6
+		summarizeBy: count
+		sourceColumn: WeekID
+
+		annotation SummarizationSetBy = Automatic
+
+	column PeriodID
+		dataType: int64
+		formatString: 0
+		lineageTag: 3bec7b1a-9712-4041-91ae-5057eafc9bd8
+		isDefaultLabel
+		summarizeBy: sum
+		sourceColumn: PeriodID
+
+		annotation SummarizationSetBy = User
+
+	column Year
+		dataType: string
+		lineageTag: 03901043-49bf-47fd-a2ff-3dfcca61aa7e
+		summarizeBy: none
+		sourceColumn: Year
+
+		annotation SummarizationSetBy = Automatic
+
+	column Month
+		dataType: int64
+		formatString: 0
+		lineageTag: ecf39c87-5f15-4673-8f04-63667c548ec5
+		summarizeBy: sum
+		sourceColumn: Month
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Month Name'
+		dataType: string
+		lineageTag: 48f836e8-1f4c-445b-ace8-4726be98f1a0
+		summarizeBy: none
+		sourceColumn: Month Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Day Number'
+		dataType: int64
+		formatString: 0
+		lineageTag: 45fc663b-659c-4a5a-bde4-f1e8b3bab2a2
+		summarizeBy: sum
+		sourceColumn: Day Number
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'End of Week'
+		dataType: string
+		lineageTag: a20a1627-6b6e-4e9b-b6ef-64408c2393f7
+		summarizeBy: none
+		sourceColumn: End of Week
+
+		annotation SummarizationSetBy = Automatic
+
+	column Quarter
+		dataType: int64
+		formatString: 0
+		lineageTag: bfaba4a5-af54-4ce9-a23d-fcc9ce5c2c60
+		summarizeBy: sum
+		sourceColumn: Quarter
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Week of Year'
+		dataType: string
+		lineageTag: b5002fdd-8d20-4e6c-a1c7-c24fffd697c4
+		summarizeBy: none
+		sourceColumn: Week of Year
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Day of Week'
+		dataType: double
+		lineageTag: 922ab8b5-1214-4a18-a2b8-4170eb9b99fd
+		summarizeBy: sum
+		sourceColumn: Day of Week
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Day Name'
+		dataType: string
+		lineageTag: ef7459bb-d7bb-41a8-8737-d52e59c430da
+		summarizeBy: none
+		sourceColumn: Day Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Month Abbreviation'
+		dataType: string
+		lineageTag: df3ff060-cc26-4cd7-8a6b-39993fc65072
+		summarizeBy: none
+		sourceColumn: Month Abbreviation
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'WE Date Abbreviation'
+		dataType: string
+		lineageTag: 8e81ac17-85da-4272-b4df-b9fc053b40be
+		summarizeBy: none
+		sourceColumn: WE Date Abbreviation
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'WE Abbreviation'
+		dataType: string
+		lineageTag: 33b1ef97-911a-4c5a-9913-7d9a0ba45c5f
+		summarizeBy: none
+		sourceColumn: WE Abbreviation
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Year Week End'
+		dataType: string
+		lineageTag: 7d12193e-29f7-4805-b821-43bb46343e36
+		summarizeBy: none
+		sourceColumn: Year Week End
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Week of Year 2 Digits'
+		dataType: string
+		lineageTag: 28cd026a-193a-4f06-a913-4f550ed0d67e
+		summarizeBy: none
+		sourceColumn: Week of Year 2 Digits
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Year Week Num'
+		dataType: string
+		lineageTag: 4408d89d-f3ac-45b2-9f12-00f0e6d2e3c8
+		summarizeBy: none
+		sourceColumn: Year Week Num
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Date and Day Name'
+		dataType: string
+		lineageTag: 7dcdd9ba-3b39-452f-bbc0-964c601ccabb
+		summarizeBy: none
+		sourceColumn: Date and Day Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column PeriodID_Ref
+		dataType: string
+		lineageTag: 4705d52b-2042-4cbb-8405-3f6351bf9d1b
+		summarizeBy: none
+		sourceColumn: PeriodID_Ref
+		sortByColumn: PerRefOrder
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Date dd-mm-yyyy'
+		dataType: string
+		lineageTag: e76787b3-ac49-4651-9bab-c09177d04fb4
+		summarizeBy: none
+		sourceColumn: Date dd-mm-yyyy
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Date yyyymm'
+		dataType: string
+		lineageTag: 230bfdcf-c5c9-4188-996a-f83224ca9737
+		summarizeBy: none
+		sourceColumn: Date yyyymm
+
+		annotation SummarizationSetBy = Automatic
+
+	column PerRefOrder = 100 * 'Dynamic Calendar'[YearID] + 'Dynamic Calendar'[PeriodID]
+		lineageTag: ca72324c-adfa-40aa-8126-0f10b0def757
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Year & Period' = "Y" & 'Dynamic Calendar'[YearID] & " - P" & 'Dynamic Calendar'[PeriodID]
+		lineageTag: d9cca2b2-f709-49a5-bc62-f4f5e1c3f008
+		summarizeBy: none
+		sortByColumn: PerRefOrder
+
+		annotation SummarizationSetBy = Automatic
+
+	column YearNEW
+		dataType: int64
+		formatString: 0
+		lineageTag: b389bbb9-16a0-4d96-88e4-36fa5b38824d
+		summarizeBy: sum
+		sourceColumn: YearNEW
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Period & Week' = "P" & 'Dynamic Calendar'[PeriodID00] & "W" & 'Dynamic Calendar'[WeekID00]
+		lineageTag: caf63633-2481-4805-912e-490e61d99b29
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column PeriodID00 = FORMAT('Dynamic Calendar'[PeriodID],"0#")
+		lineageTag: 77b58abd-6b7a-4c89-9d57-ee2409bbcece
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column WeekID00 = FORMAT('Dynamic Calendar'[WeekID],"0#")
+		lineageTag: 8cabd878-2f71-448a-aa37-5666973dbb4d
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Dynamic Calendar-c1dbd676-ac0b-4640-af53-b3089a048664' = m
+		mode: import
+		source =
+				let
+				    Source = #date(2022, 1, 2),
+				    ListDate = List.Dates(Source, Number.From(DateTime.LocalNow())- Number.From(Source) ,#duration(1,0,0,0)),
+				    DateKey = Table.FromList(ListDate, Splitter.SplitByNothing(), null, null, ExtraValues.Error),
+				    DateDateKey = Table.TransformColumnTypes(DateKey,{{"Column1", type date}}),
+				    DayID = Table.AddIndexColumn(DateKey, "DayID", 1,1),
+				    YearID = Table.AddColumn(DayID, "YearID", each Number.RoundDown(([DayID]-1)/364)+1),
+				    #"28Days" = Table.AddColumn(YearID, "28Days", each if Number.Mod([DayID],28)=0 then 28 else Number.Mod([DayID],28)),
+				    WeekID = Table.AddColumn(#"28Days", "WeekID", each if [28Days]<=7 then 1 else if [28Days]<=14 then 2 else if [28Days]<=21 then 3 else if [28Days]<=28 then 4 else 0),
+				    PeriodID = Table.AddColumn(WeekID, "PeriodID", each if [DayID]>364 then Number.RoundUp(([DayID]-Number.RoundDown(364*([YearID]-1)))/28) else Number.RoundUp([DayID]/28)),
+				    #"Added Custom" = Table.AddColumn(PeriodID, "PeriodID_Ref", each Text.From([YearID])&"."&Text.From([PeriodID])),
+				    #"Renamed Columns" = Table.RenameColumns(#"Added Custom",{{"Column1", "Date"}}),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Renamed Columns",{{"Date", type date}}),
+				    #"Inserted Year" = Table.AddColumn(#"Changed Type","Year", each Date.Year([Date]), Int64.Type),
+				    #"Inserted Month" = Table.AddColumn(#"Inserted Year", "Month", each Date.Month([Date]), Int64.Type),
+				    #"Inserted Month Name" = Table.AddColumn(#"Inserted Month", "Month Name", each Date.MonthName([Date]), type text),
+				    #"Inserted Day Number" = Table.AddColumn(#"Inserted Month Name", "Day Number", each Date.Day([Date]), Int64.Type),
+				    #"Inserted End of Week" = Table.AddColumn(#"Inserted Day Number", "End of Week", each Date.EndOfWeek([Date],0)),
+				    #"Inserted Quarter" = Table.AddColumn(#"Inserted End of Week", "Quarter", each Date.QuarterOfYear([Date]), Int64.Type),
+				     #"Week of Year" = Table.AddColumn(#"Inserted Quarter", "Week of Year", each Date.WeekOfYear([Date])),
+				    #"Inserted Day of Week" = Table.AddColumn(#"Week of Year", "Day of Week", each Date.DayOfWeek([Date]), Int64.Type),
+				    #"Inserted Day Name" = Table.AddColumn(#"Inserted Day of Week", "Day Name", each Date.DayOfWeekName([Date]), type text),
+				    #"Replaced Value" = Table.ReplaceValue(#"Inserted Day Name",0,7,Replacer.ReplaceValue,{"Day of Week"}),
+				    #"Inserted Month Abbreviation" = Table.AddColumn(#"Replaced Value", "Month Abbreviation", each Date.ToText([End of Week], "MMM")),
+				    #"Inserted WE Date Abbreviation" = Table.AddColumn(#"Inserted Month Abbreviation", "WE Date Abbreviation", each Date.Day([End of Week])),
+				    #"Inserted WE Abbreviation" = Table.AddColumn(#"Inserted WE Date Abbreviation", "WE Abbreviation", each Text.PadStart(Text.From([WE Date Abbreviation]),2,"0")),
+				    #"Inserted Year Week End" = Table.AddColumn(#"Inserted WE Abbreviation", "Year Week End", each Text.From([Year])&"-"&[Month Abbreviation]&"-"&Text.From([WE Abbreviation])),
+				    #"Inserted Week of Year 2 Digits" = Table.AddColumn(#"Inserted Year Week End", "Week of Year 2 Digits", each Text.PadStart(Text.From([Week of Year]),2,"0")),
+				    #"Inserted Year Week Num" = Table.AddColumn(#"Inserted Week of Year 2 Digits", "Year Week Num", each Text.From([Year])&Text.From([Week of Year 2 Digits])),
+				    #"Inserted Date and Day Name" = Table.AddColumn(#"Inserted Year Week Num", "Date and Day Name", each Text.From([Date])&" "&[Day Name]),
+				    #"Date dd-mm-yyyy" = Table.AddColumn(#"Inserted Date and Day Name", "Date dd-mm-yyyy", each Text.PadStart(Text.From([Day Number]),2,"0")&"-"&Text.PadStart(Text.From([Month]),2,"0")&"-"&Text.From([Year])),
+				    #"Date yyyymm" = Table.AddColumn(#"Date dd-mm-yyyy" , "Date yyyymm", each Text.PadStart(Text.From([Year])&Text.From([Month]),2,"0")),
+				    #"Sorted Rows" = Table.Sort(#"Date yyyymm",{{"Date", Order.Ascending}}),
+				    #"Inserted Addition" = Table.AddColumn(#"Sorted Rows", "Addition", each [YearID] + 2021, type number),
+				    #"Renamed Columns1" = Table.RenameColumns(#"Inserted Addition",{{"Addition", "YearNEW"}}),
+				    #"Changed Type1" = Table.TransformColumnTypes(#"Renamed Columns1",{{"Year", type text}, {"PeriodID", Int64.Type}, {"WeekID", Int64.Type}, {"YearNEW", Int64.Type}})
+				in
+				    #"Changed Type1"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

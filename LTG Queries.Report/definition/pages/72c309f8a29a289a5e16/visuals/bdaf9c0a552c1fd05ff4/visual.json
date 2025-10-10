@@ -1,0 +1,195 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
+  "name": "bdaf9c0a552c1fd05ff4",
+  "position": {
+    "x": 0,
+    "y": 76.838905775075986,
+    "z": 1000,
+    "height": 642.91793313069911,
+    "width": 654.58966565349544,
+    "tabOrder": 1000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Picked Date Vs Appoinemnt Date"
+                    }
+                  },
+                  "Property": "Appointment Date"
+                }
+              },
+              "queryRef": "Picked Date Vs Appoinemnt Date.Appointment Date",
+              "nativeQueryRef": "Appointment Date"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Picked Date Vs Appoinemnt Date"
+                    }
+                  },
+                  "Property": "Picked Date"
+                }
+              },
+              "queryRef": "Picked Date Vs Appoinemnt Date.Picked Date",
+              "nativeQueryRef": "Picked Date"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Picked Date Vs Appoinemnt Date"
+                        }
+                      },
+                      "Property": "Mars Case Picked"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(Picked Date Vs Appoinemnt Date.Mars Case Picked)",
+              "nativeQueryRef": "Mars Case Picked"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Picked Date Vs Appoinemnt Date"
+                        }
+                      },
+                      "Property": "Mondelez Case Picked"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(Picked Date Vs Appoinemnt Date.Mondelez Case Picked)",
+              "nativeQueryRef": "Mondelez Case Picked"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "columnHeaders": [
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "values": [
+        {
+          "properties": {
+            "wordWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnFormatting": [
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            },
+            "labelPrecision": {
+              "expr": {
+                "Literal": {
+                  "Value": "0L"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(Picked Date Vs Appoinemnt Date.Mars Case Picked)"
+          }
+        },
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            },
+            "labelPrecision": {
+              "expr": {
+                "Literal": {
+                  "Value": "0L"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(Picked Date Vs Appoinemnt Date.Mondelez Case Picked)"
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Details'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualHeader": [
+        {
+          "properties": {
+            "background": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 2,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

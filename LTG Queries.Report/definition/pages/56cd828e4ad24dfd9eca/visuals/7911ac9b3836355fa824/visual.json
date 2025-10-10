@@ -1,0 +1,461 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
+  "name": "7911ac9b3836355fa824",
+  "position": {
+    "x": 0,
+    "y": 334.58966565349544,
+    "z": 1000,
+    "height": 385.16717325227967,
+    "width": 1280,
+    "tabOrder": 1000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Load Status"
+                    }
+                  },
+                  "Property": "Load"
+                }
+              },
+              "queryRef": "Load Status.Load",
+              "nativeQueryRef": "Load"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Load Status"
+                    }
+                  },
+                  "Property": "Appointment"
+                }
+              },
+              "queryRef": "Load Status.Appointment",
+              "nativeQueryRef": "Appointment"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Load Status"
+                    }
+                  },
+                  "Property": "Haulier"
+                }
+              },
+              "queryRef": "Load Status.Haulier",
+              "nativeQueryRef": "Haulier"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Load Status"
+                    }
+                  },
+                  "Property": "Load type"
+                }
+              },
+              "queryRef": "Load Status.Load type",
+              "nativeQueryRef": "Load type"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Load Status"
+                    }
+                  },
+                  "Property": "Client"
+                }
+              },
+              "queryRef": "Load Status.Client",
+              "nativeQueryRef": "Client"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Load Status"
+                    }
+                  },
+                  "Property": "(Stops) Address"
+                }
+              },
+              "queryRef": "Load Status.(Stops) Address",
+              "nativeQueryRef": "(Stops) Address"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Load Status"
+                    }
+                  },
+                  "Property": "Check For"
+                }
+              },
+              "queryRef": "Load Status.Check For",
+              "nativeQueryRef": "Check For"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Load Status"
+                    }
+                  },
+                  "Property": "App Start"
+                }
+              },
+              "queryRef": "Load Status.App Start",
+              "nativeQueryRef": "App Start"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Load Status"
+                    }
+                  },
+                  "Property": "App Date"
+                }
+              },
+              "queryRef": "Load Status.App Date",
+              "nativeQueryRef": "App Date"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Load Status"
+                    }
+                  },
+                  "Property": "Choc/Gum"
+                }
+              },
+              "queryRef": "Load Status.Choc/Gum",
+              "nativeQueryRef": "Choc/Gum"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Load Status"
+                    }
+                  },
+                  "Property": "Sandwich"
+                }
+              },
+              "queryRef": "Load Status.Sandwich",
+              "nativeQueryRef": "Sandwich"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Load Status"
+                        }
+                      },
+                      "Property": "Total Pall"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(Load Status.Total Pall)",
+              "nativeQueryRef": "Total Pall"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Load Status"
+                    }
+                  },
+                  "Property": "Double Stack"
+                }
+              },
+              "queryRef": "Load Status.Double Stack",
+              "nativeQueryRef": "Double Stack"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Load Status"
+                        }
+                      },
+                      "Property": "Shorts"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(Load Status.Shorts)",
+              "nativeQueryRef": "Shorts"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Load Status"
+                        }
+                      },
+                      "Property": "Replen Case Qty"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(Load Status.Replen Case Qty)",
+              "nativeQueryRef": "Replen Case Qty"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Load Status"
+                        }
+                      },
+                      "Property": "Replen No"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(Load Status.Replen No)",
+              "nativeQueryRef": "Replen No"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Load Status"
+                        }
+                      },
+                      "Property": "Total Case Pick"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(Load Status.Total Case Pick)",
+              "nativeQueryRef": "Total Case Pick"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Load Status"
+                        }
+                      },
+                      "Property": "Case Pick Remaining"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(Load Status.Case Pick Remaining)",
+              "nativeQueryRef": "Case Pick Remaining"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Load Status"
+                        }
+                      },
+                      "Property": "Pallets WRAP-IN"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(Load Status.Pallets WRAP-IN)",
+              "nativeQueryRef": "Pallets WRAP-IN"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Load Status"
+                        }
+                      },
+                      "Property": "Pallets MIN01"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(Load Status.Pallets MIN01)",
+              "nativeQueryRef": "Pallets MIN01"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Load Status"
+                    }
+                  },
+                  "Property": "Ready To Release"
+                }
+              },
+              "queryRef": "Load Status.Ready To Release",
+              "nativeQueryRef": "Ready To Release"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Load Status"
+                    }
+                  },
+                  "Property": "Released date"
+                }
+              },
+              "queryRef": "Load Status.Released date",
+              "nativeQueryRef": "Released date"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Load Status"
+                    }
+                  },
+                  "Property": "Time Left"
+                }
+              },
+              "queryRef": "Load Status.Time Left",
+              "nativeQueryRef": "Time Left"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Load Status"
+                    }
+                  },
+                  "Property": "Gravity Lane"
+                }
+              },
+              "queryRef": "Load Status.Gravity Lane",
+              "nativeQueryRef": "Gravity Lane"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "columnHeaders": [
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "values": [
+        {
+          "properties": {
+            "wordWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Details'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualHeader": [
+        {
+          "properties": {
+            "background": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 2,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}
