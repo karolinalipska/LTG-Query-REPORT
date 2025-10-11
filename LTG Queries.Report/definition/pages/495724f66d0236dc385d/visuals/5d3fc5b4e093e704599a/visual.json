@@ -1,13 +1,12 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
-  "name": "f65390d944c181f42f7d",
+  "name": "5d3fc5b4e093e704599a",
   "position": {
     "x": 0,
-    "y": 76.838905775075986,
-    "z": 2000,
-    "height": 257.75075987841944,
-    "width": 1280,
-    "tabOrder": 2000
+    "y": 359.87841945288756,
+    "z": 1000,
+    "height": 359.87841945288756,
+    "width": 1280
   },
   "visual": {
     "visualType": "tableEx",
@@ -20,47 +19,84 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Load Status"
+                      "Entity": "Outbound Summary"
                     }
                   },
-                  "Property": "App Date"
+                  "Property": "Wave"
                 }
               },
-              "queryRef": "Load Status.App Date",
-              "nativeQueryRef": "App Date"
+              "queryRef": "Outbound Summary.Wave",
+              "nativeQueryRef": "Wave"
             },
             {
               "field": {
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Load Status"
+                      "Entity": "Outbound Summary"
+                    }
+                  },
+                  "Property": "Wave Status"
+                }
+              },
+              "queryRef": "Outbound Summary.Wave Status",
+              "nativeQueryRef": "Wave Status"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Outbound Summary"
+                    }
+                  },
+                  "Property": "Appointment"
+                }
+              },
+              "queryRef": "Outbound Summary.Appointment",
+              "nativeQueryRef": "Appointment"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Outbound Summary"
+                    }
+                  },
+                  "Property": "Haulier"
+                }
+              },
+              "queryRef": "Outbound Summary.Haulier",
+              "nativeQueryRef": "Haulier"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Outbound Summary"
                     }
                   },
                   "Property": "Client"
                 }
               },
-              "queryRef": "Load Status.Client",
+              "queryRef": "Outbound Summary.Client",
               "nativeQueryRef": "Client"
             },
             {
               "field": {
-                "Aggregation": {
+                "Column": {
                   "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Load Status"
-                        }
-                      },
-                      "Property": "Load"
+                    "SourceRef": {
+                      "Entity": "Outbound Summary"
                     }
                   },
-                  "Function": 2
+                  "Property": "Appt Start"
                 }
               },
-              "queryRef": "Load Status.Load",
-              "nativeQueryRef": "Count of Load"
+              "queryRef": "Outbound Summary.Appt Start",
+              "nativeQueryRef": "Appt Start"
             },
             {
               "field": {
@@ -69,7 +105,7 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Load Status"
+                          "Entity": "Outbound Summary"
                         }
                       },
                       "Property": "Total Pall"
@@ -78,7 +114,7 @@
                   "Function": 0
                 }
               },
-              "queryRef": "Sum(Load Status.Total Pall)",
+              "queryRef": "Sum(Outbound Summary.Total Pall)",
               "nativeQueryRef": "Total Pall"
             },
             {
@@ -88,7 +124,7 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Load Status"
+                          "Entity": "Outbound Summary"
                         }
                       },
                       "Property": "Shorts"
@@ -97,7 +133,7 @@
                   "Function": 0
                 }
               },
-              "queryRef": "Sum(Load Status.Shorts)",
+              "queryRef": "Sum(Outbound Summary.Shorts)",
               "nativeQueryRef": "Shorts"
             },
             {
@@ -107,7 +143,7 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Load Status"
+                          "Entity": "Outbound Summary"
                         }
                       },
                       "Property": "Replen Case Qty"
@@ -116,7 +152,7 @@
                   "Function": 0
                 }
               },
-              "queryRef": "Sum(Load Status.Replen Case Qty)",
+              "queryRef": "Sum(Outbound Summary.Replen Case Qty)",
               "nativeQueryRef": "Replen Case Qty"
             },
             {
@@ -126,7 +162,7 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Load Status"
+                          "Entity": "Outbound Summary"
                         }
                       },
                       "Property": "Replen No"
@@ -135,7 +171,7 @@
                   "Function": 0
                 }
               },
-              "queryRef": "Sum(Load Status.Replen No)",
+              "queryRef": "Sum(Outbound Summary.Replen No)",
               "nativeQueryRef": "Replen No"
             },
             {
@@ -145,7 +181,7 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Load Status"
+                          "Entity": "Outbound Summary"
                         }
                       },
                       "Property": "Total Case Pick"
@@ -154,7 +190,7 @@
                   "Function": 0
                 }
               },
-              "queryRef": "Sum(Load Status.Total Case Pick)",
+              "queryRef": "Sum(Outbound Summary.Total Case Pick)",
               "nativeQueryRef": "Total Case Pick"
             },
             {
@@ -164,7 +200,7 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Load Status"
+                          "Entity": "Outbound Summary"
                         }
                       },
                       "Property": "Case Pick Remaining"
@@ -173,11 +209,56 @@
                   "Function": 0
                 }
               },
-              "queryRef": "Sum(Load Status.Case Pick Remaining)",
+              "queryRef": "Sum(Outbound Summary.Case Pick Remaining)",
               "nativeQueryRef": "Case Pick Remaining"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Outbound Summary"
+                    }
+                  },
+                  "Property": "Trailer Closed"
+                }
+              },
+              "queryRef": "Outbound Summary.Trailer Closed",
+              "nativeQueryRef": "Trailer Closed"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Outbound Summary"
+                    }
+                  },
+                  "Property": "Trailer Dispatched"
+                }
+              },
+              "queryRef": "Outbound Summary.Trailer Dispatched",
+              "nativeQueryRef": "Trailer Dispatched"
             }
           ]
         }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Outbound Summary"
+                  }
+                },
+                "Property": "Appt Start"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ]
       }
     },
     "objects": {
@@ -203,7 +284,100 @@
                   "Value": "false"
                 }
               }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'"
+                }
+              }
             }
+          }
+        }
+      ],
+      "columnFormatting": [
+        {
+          "properties": {
+            "labelPrecision": {
+              "expr": {
+                "Literal": {
+                  "Value": "0L"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(Outbound Summary.Total Pall)"
+          }
+        },
+        {
+          "properties": {
+            "labelPrecision": {
+              "expr": {
+                "Literal": {
+                  "Value": "0L"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(Outbound Summary.Shorts)"
+          }
+        },
+        {
+          "properties": {
+            "labelPrecision": {
+              "expr": {
+                "Literal": {
+                  "Value": "0L"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(Outbound Summary.Replen Case Qty)"
+          }
+        },
+        {
+          "properties": {
+            "labelPrecision": {
+              "expr": {
+                "Literal": {
+                  "Value": "0L"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(Outbound Summary.Replen No)"
+          }
+        },
+        {
+          "properties": {
+            "labelPrecision": {
+              "expr": {
+                "Literal": {
+                  "Value": "0L"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(Outbound Summary.Total Case Pick)"
+          }
+        },
+        {
+          "properties": {
+            "labelPrecision": {
+              "expr": {
+                "Literal": {
+                  "Value": "0L"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(Outbound Summary.Case Pick Remaining)"
           }
         }
       ],
@@ -213,13 +387,13 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "97.06991494962743D"
+                  "Value": "73.31611531448578D"
                 }
               }
             }
           },
           "selector": {
-            "metadata": "Sum(Load Status.Total Pall)"
+            "metadata": "Sum(Outbound Summary.Shorts)"
           }
         },
         {
@@ -227,162 +401,41 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "96.65958601639215D"
+                  "Value": "76.82975991941375D"
                 }
               }
             }
           },
           "selector": {
-            "metadata": "Sum(Load Status.Shorts)"
-          }
-        }
-      ],
-      "columnFormatting": [
-        {
-          "properties": {
-            "alignment": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Center'"
-                }
-              }
-            },
-            "labelPrecision": {
-              "expr": {
-                "Literal": {
-                  "Value": "0L"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Load Status.Load"
+            "metadata": "Sum(Outbound Summary.Replen Case Qty)"
           }
         },
         {
           "properties": {
-            "labelPrecision": {
+            "value": {
               "expr": {
                 "Literal": {
-                  "Value": "0L"
-                }
-              }
-            },
-            "alignment": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Center'"
+                  "Value": "67.84801701003762D"
                 }
               }
             }
           },
           "selector": {
-            "metadata": "Sum(Load Status.Total Pall)"
+            "metadata": "Sum(Outbound Summary.Total Case Pick)"
           }
         },
         {
           "properties": {
-            "alignment": {
+            "value": {
               "expr": {
                 "Literal": {
-                  "Value": "'Center'"
-                }
-              }
-            },
-            "labelPrecision": {
-              "expr": {
-                "Literal": {
-                  "Value": "0L"
+                  "Value": "82.42248337096125D"
                 }
               }
             }
           },
           "selector": {
-            "metadata": "Sum(Load Status.Shorts)"
-          }
-        },
-        {
-          "properties": {
-            "alignment": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Center'"
-                }
-              }
-            },
-            "labelPrecision": {
-              "expr": {
-                "Literal": {
-                  "Value": "0L"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Sum(Load Status.Replen Case Qty)"
-          }
-        },
-        {
-          "properties": {
-            "alignment": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Center'"
-                }
-              }
-            },
-            "labelPrecision": {
-              "expr": {
-                "Literal": {
-                  "Value": "0L"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Sum(Load Status.Replen No)"
-          }
-        },
-        {
-          "properties": {
-            "alignment": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Center'"
-                }
-              }
-            },
-            "labelPrecision": {
-              "expr": {
-                "Literal": {
-                  "Value": "0L"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Sum(Load Status.Total Case Pick)"
-          }
-        },
-        {
-          "properties": {
-            "alignment": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Center'"
-                }
-              }
-            },
-            "labelPrecision": {
-              "expr": {
-                "Literal": {
-                  "Value": "0L"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Sum(Load Status.Case Pick Remaining)"
+            "metadata": "Sum(Outbound Summary.Case Pick Remaining)"
           }
         }
       ]
@@ -394,7 +447,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Summary'"
+                  "Value": "'Details'"
                 }
               }
             }
@@ -425,26 +478,68 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "b26fd6a07c89a0aa2676",
+        "name": "6f18eea33073ca7d5024",
         "field": {
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "Load Status"
+                "Entity": "Outbound Summary"
               }
             },
-            "Property": "App Date"
+            "Property": "Wave"
           }
         },
         "type": "Categorical"
       },
       {
-        "name": "352c35b2d740c431a030",
+        "name": "a62c27bf9aab150ae3bc",
         "field": {
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "Load Status"
+                "Entity": "Outbound Summary"
+              }
+            },
+            "Property": "Wave Status"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "aaf80104be2a06a6670b",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Outbound Summary"
+              }
+            },
+            "Property": "Appointment"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "ea76c1a92b377a8177c6",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Outbound Summary"
+              }
+            },
+            "Property": "Haulier"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "fc1eb16450862c18a024",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Outbound Summary"
               }
             },
             "Property": "Client"
@@ -453,33 +548,28 @@
         "type": "Categorical"
       },
       {
-        "name": "81c765801eb8b1004099",
+        "name": "fd56847deb1d9965b0c3",
         "field": {
-          "Aggregation": {
+          "Column": {
             "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Load Status"
-                  }
-                },
-                "Property": "Load"
+              "SourceRef": {
+                "Entity": "Outbound Summary"
               }
             },
-            "Function": 2
+            "Property": "Appt Start"
           }
         },
-        "type": "Advanced"
+        "type": "Categorical"
       },
       {
-        "name": "affb6dbe848db8007ca0",
+        "name": "391523b55617338d6b94",
         "field": {
           "Aggregation": {
             "Expression": {
               "Column": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "Load Status"
+                    "Entity": "Outbound Summary"
                   }
                 },
                 "Property": "Total Pall"
@@ -491,14 +581,14 @@
         "type": "Advanced"
       },
       {
-        "name": "8a1192a9e48dee364279",
+        "name": "c3b5b5c417730ac87551",
         "field": {
           "Aggregation": {
             "Expression": {
               "Column": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "Load Status"
+                    "Entity": "Outbound Summary"
                   }
                 },
                 "Property": "Shorts"
@@ -510,14 +600,14 @@
         "type": "Advanced"
       },
       {
-        "name": "796996b38c3637c2be8b",
+        "name": "5e213851028928dce86c",
         "field": {
           "Aggregation": {
             "Expression": {
               "Column": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "Load Status"
+                    "Entity": "Outbound Summary"
                   }
                 },
                 "Property": "Replen Case Qty"
@@ -529,14 +619,14 @@
         "type": "Advanced"
       },
       {
-        "name": "7f8e35cfdcb00c1b41b1",
+        "name": "a7b12fc5005c77b12007",
         "field": {
           "Aggregation": {
             "Expression": {
               "Column": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "Load Status"
+                    "Entity": "Outbound Summary"
                   }
                 },
                 "Property": "Replen No"
@@ -548,14 +638,14 @@
         "type": "Advanced"
       },
       {
-        "name": "bdf2b317d87dd64d705e",
+        "name": "f36bb811ba0d9d086730",
         "field": {
           "Aggregation": {
             "Expression": {
               "Column": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "Load Status"
+                    "Entity": "Outbound Summary"
                   }
                 },
                 "Property": "Total Case Pick"
@@ -567,14 +657,14 @@
         "type": "Advanced"
       },
       {
-        "name": "0241f66071d7807e7130",
+        "name": "b91d5a26da023731e958",
         "field": {
           "Aggregation": {
             "Expression": {
               "Column": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "Load Status"
+                    "Entity": "Outbound Summary"
                   }
                 },
                 "Property": "Case Pick Remaining"
@@ -584,6 +674,34 @@
           }
         },
         "type": "Advanced"
+      },
+      {
+        "name": "98156b2709d56e7cba0b",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Outbound Summary"
+              }
+            },
+            "Property": "Trailer Closed"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "93c18e240bd0dae0a440",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Outbound Summary"
+              }
+            },
+            "Property": "Trailer Dispatched"
+          }
+        },
+        "type": "Categorical"
       }
     ]
   }

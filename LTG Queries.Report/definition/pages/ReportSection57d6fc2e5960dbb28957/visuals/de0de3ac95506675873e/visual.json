@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
-  "name": "44785f4ad655d7e7c109",
+  "name": "de0de3ac95506675873e",
   "position": {
     "x": 117.68996960486322,
-    "y": 385.6534954407295,
-    "z": 4000,
+    "y": 458.11550151975683,
+    "z": 6001,
     "height": 46.68693009118541,
     "width": 282.06686930091189,
-    "tabOrder": 4000
+    "tabOrder": 6001
   },
   "visual": {
     "visualType": "actionButton",
@@ -182,7 +182,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Load Status'"
+                  "Value": "'Outbound Summary'"
                 }
               }
             },
@@ -348,7 +348,7 @@
             "navigationSection": {
               "expr": {
                 "Literal": {
-                  "Value": "'56cd828e4ad24dfd9eca'"
+                  "Value": "'495724f66d0236dc385d'"
                 }
               }
             },

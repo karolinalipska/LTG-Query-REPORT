@@ -1,0 +1,173 @@
+table 'Outbound Summary'
+	lineageTag: 0dae59e6-d4c2-44e8-86f2-d4a0fd517ab0
+
+	column Wave
+		dataType: string
+		sourceProviderType: Varchar2
+		lineageTag: bc041891-2a17-4875-b7c0-491936e5c945
+		summarizeBy: none
+		sourceColumn: Wave
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Wave Status'
+		dataType: string
+		sourceProviderType: Varchar2
+		lineageTag: 2bb69fec-0b43-4869-ba62-f32bdedd7aa1
+		summarizeBy: none
+		sourceColumn: Wave Status
+
+		annotation SummarizationSetBy = Automatic
+
+	column Appointment
+		dataType: string
+		sourceProviderType: Varchar2
+		lineageTag: 566a8f2c-a2c6-432c-ab0f-1c526820601a
+		summarizeBy: none
+		sourceColumn: Appointment
+
+		annotation SummarizationSetBy = Automatic
+
+	column Haulier
+		dataType: string
+		sourceProviderType: Varchar2
+		lineageTag: 801a6f9f-8b53-4dfe-baab-082192e4741a
+		summarizeBy: none
+		sourceColumn: Haulier
+
+		annotation SummarizationSetBy = Automatic
+
+	column Client
+		dataType: string
+		sourceProviderType: Varchar2
+		lineageTag: 48eb0981-35ef-4f99-b4d8-e03f3d74f987
+		summarizeBy: none
+		sourceColumn: Client
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Appt Start'
+		dataType: string
+		sourceProviderType: Varchar2
+		lineageTag: 8ff53a31-1bad-412a-81af-e2fd7273b910
+		summarizeBy: none
+		sourceColumn: Appt Start
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Appt Date'
+		dataType: string
+		sourceProviderType: Varchar2
+		lineageTag: 55b67fcd-3822-4c16-a625-993983ad7b2a
+		summarizeBy: none
+		sourceColumn: Appt Date
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Total Pall'
+		dataType: double
+		sourceProviderType: Decimal(38, 127)
+		lineageTag: d4eb5fdb-cc4d-4476-873c-294c75a8b962
+		summarizeBy: sum
+		sourceColumn: Total Pall
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Shorts
+		dataType: double
+		sourceProviderType: Decimal(38, 127)
+		lineageTag: cfec7455-65c2-4d46-a876-1fd4e0c261a3
+		summarizeBy: sum
+		sourceColumn: Shorts
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Replen Case Qty'
+		dataType: double
+		sourceProviderType: Decimal(38, 127)
+		lineageTag: 693818fd-93dc-4577-bb49-75cbdf94aa98
+		summarizeBy: sum
+		sourceColumn: Replen Case Qty
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Replen No'
+		dataType: double
+		sourceProviderType: Decimal(38, 127)
+		lineageTag: 10263a51-d014-476c-9826-604f75141f87
+		summarizeBy: sum
+		sourceColumn: Replen No
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Total Case Pick'
+		dataType: double
+		sourceProviderType: Decimal(38, 127)
+		lineageTag: 11b91475-8403-483a-b8fe-7709939f90dd
+		summarizeBy: sum
+		sourceColumn: Total Case Pick
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Case Pick Remaining'
+		dataType: double
+		sourceProviderType: Decimal(38, 127)
+		lineageTag: 3a857b59-f61e-467d-9fb5-a680edb0ab0f
+		summarizeBy: sum
+		sourceColumn: Case Pick Remaining
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Trailer Closed'
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: Date
+		lineageTag: cecfd423-586e-4417-a824-1717f48b25cf
+		summarizeBy: none
+		sourceColumn: Trailer Closed
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Trailer Dispatched'
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: Date
+		lineageTag: 78331f32-b5d0-4418-ac45-ce58cb21dff6
+		summarizeBy: none
+		sourceColumn: Trailer Dispatched
+
+		annotation SummarizationSetBy = Automatic
+
+	column Status
+		dataType: string
+		sourceProviderType: Varchar2
+		lineageTag: e16013c5-81e7-44aa-94df-f69dcb8a691b
+		summarizeBy: none
+		sourceColumn: Status
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Outbound Summary' = m
+		mode: directQuery
+		source =
+				let
+				    Source = Oracle.Database(LTG_BlueYonder_Server_Prod, [HierarchicalNavigation=true, Query="select #(lf)""Wave"",#(lf)""Wave Status"",#(lf)""Appointment"",#(lf)""Haulier"",#(lf)""Client"",#(lf)""Appt Start"",#(lf)""Appt Date"",#(lf)""Total Pall"",#(lf)""Shorts"",#(lf)""Replen Case Qty"",#(lf)""Replen No"",#(lf)""Total Case Pick"",#(lf)""Case Pick Remaining"",#(lf)""Trailer Closed"",#(lf)""Trailer Dispatched"",#(lf)case#(lf)    when ""Trailer Dispatched"" is not null then 'Completed Despatched'#(lf)    when ""Trailer Closed"" is not null and ""Trailer Dispatched"" is null then 'Completed Not Despatched'#(lf)    else ""Wave Status"" #(lf)    end ""Status""#(lf)from#(lf)(#(lf)select#(lf)""Wave"",#(lf)""Wave Status"",#(lf)""Appointment"",#(lf)""Haulier"",#(lf)""Client"",#(lf)""Appt Start"",#(lf)""Appt Date"",#(lf)""Total Pall"",#(lf)0 ""Shorts"",#(lf)0 ""Replen Case Qty"",#(lf)""Replen No"",#(lf)""Total Case Pick"",#(lf)0 ""Case Pick Remaining"",#(lf)""Trailer Closed"",#(lf)""Trailer Dispatched""#(lf)from#(lf)(#(lf)select car_move_id ""Load"",#(lf)        schbat ""Wave"",#(lf)        lngdsc ""Wave Status"",#(lf)        host_ext_id ""Appointment"",#(lf)        carnam ""Haulier"",#(lf)        case when client_id = 'CID000001' then 'MARS'#(lf)             when client_id = 'CID001842' then 'KP'#(lf)             when client_id = 'CID013634' then 'MONDELEZ'#(lf)             else client_id#(lf)        end ""Client"",#(lf)        to_char(start_dte-1 / 24, 'YYYY-MM-DD HH24:MI') ""Appt Start"",#(lf)        to_char(start_dte-1 / 24, 'YYYY-MM-DD') ""Appt Date"",#(lf)        total_full_plts + total_est_case_plts ""Total Pall"",#(lf)        total_replens ""Replen No"",#(lf)        total_loose_cases ""Total Case Pick"",#(lf)        close_dte         ""Trailer Closed"",#(lf)        dispatch_dte      ""Trailer Dispatched""#(lf)   from (select #(lf)                w.wh_id,#(lf)                w.schbat,#(lf)                w.batsts,#(lf)                w.lngdsc,#(lf)                w.car_move_id,#(lf)                w.host_ext_id,#(lf)                w.start_dte,#(lf)                w.carnam,#(lf)                w.client_id,#(lf)                w.close_dte,#(lf)                w.dispatch_dte,#(lf)                total_full_plts,#(lf)                total_loose_cases,#(lf)                total_est_case_plts,#(lf)                ceil(total_replens / replen_percent) total_replens#(lf)           from (select pb.wh_id,#(lf)                        pb.schbat,#(lf)                        pb.batsts,#(lf)                        dm.lngdsc,#(lf)                        cm.car_move_id,#(lf)                        ch.carnam,#(lf)                        cm.trlr_id,#(lf)                        tr.close_dte-1/24   close_dte,#(lf)                        tr.dispatch_dte-1/24 dispatch_dte,#(lf)                        sl.client_id,#(lf)                        cm.host_ext_id,#(lf)                        a.start_dte#(lf)                   from pckbat pb#(lf)                  inner#(lf)                   join shipment_line sl#(lf)                     on pb.wh_id = sl.wh_id#(lf)                    and pb.schbat = sl.schbat#(lf)                    and sl.pckqty > 0#(lf)                  inner#(lf)                   join shipment s#(lf)                     on sl.wh_id = s.wh_id#(lf)                    and s.ship_id = sl.ship_id#(lf)                  inner#(lf)                   join ord o#(lf)                     on sl.wh_id = o.wh_id#(lf)                    and sl.prt_client_id = o.client_id#(lf)                    and sl.ordnum = o.ordnum#(lf)                    and o.ordtyp not in ('JIT')#(lf)                  inner#(lf)                   join stop st#(lf)                     on s.stop_id = st.stop_id#(lf)                  inner#(lf)                   join car_move cm#(lf)                     on st.car_move_id = cm.car_move_id#(lf)                     left join trlr tr#(lf)                     on cm.trlr_id = tr.trlr_id#(lf)                  inner#(lf)                   join appt a#(lf)                     on cm.wh_id = a.wh_id#(lf)                    and cm.car_move_id = a.car_move_id#(lf)                   left#(lf)                   join carhdr ch#(lf)                     on cm.carcod = ch.carcod#(lf)                     left join#(lf)                     dscmst dm on pb.batsts = dm.colval and dm.colnam = 'batsts'#(lf)                  where pb.wh_id = 'GB_5024'#(lf)                    and pb.batsts in ('AINP', 'PLAN', 'SCH')#(lf)                  group by pb.wh_id,#(lf)                        pb.schbat,#(lf)                        pb.batsts,#(lf)                        dm.lngdsc,#(lf)                        cm.car_move_id,#(lf)                        cm.host_ext_id,#(lf)                        a.start_dte,#(lf)                        ch.carnam,#(lf)                        cm.trlr_id,#(lf)                        tr.close_dte-1/24,#(lf)                        tr.dispatch_dte-1/24,#(lf)                        sl.client_id#(lf)                  order by a.start_dte) w#(lf)           left outer#(lf)           join (select wh_id,#(lf)                        schbat,#(lf)                        sum(full_plts) total_full_plts,#(lf)                        sum(loose_cases) total_loose_cases,#(lf)                        sum(replen) total_replens,#(lf)                        ceil(sum(est_case_vol / 1920000)) total_est_case_plts#(lf)                   from (select distinct pb.wh_id,#(lf)                                pb.schbat,#(lf)                                sl.prtnum,#(lf)                                sum(sl.pckqty) pckqty,#(lf)                                max(pf.untpal) full_pal_qty,#(lf)                                floor(sum(sl.pckqty) / max(pf.untpal)) full_plts,#(lf)                                sum(sl.pckqty) - floor(sum(sl.pckqty) / max(pf.untpal)) *max(pf.untpal) loose_cases,#(lf)                                case when sum(sl.pckqty) - floor(sum(sl.pckqty) / max(pf.untpal)) *max(pf.untpal) > 0 then 1#(lf)                                     else 0#(lf)                                end replen,#(lf)                                (sum(sl.pckqty) - floor(sum(sl.pckqty) / max(pf.untpal)) *max(pf.untpal)) *(sum(pf.caslen*pf.caswid*pf.cashgt)) est_case_vol#(lf)                           from pckbat pb#(lf)                          inner#(lf)                           join shipment_line sl#(lf)                             on pb.wh_id = sl.wh_id#(lf)                            and pb.schbat = sl.schbat#(lf)                            and sl.pckqty > 0#(lf)                          inner#(lf)                           join shipment s#(lf)                             on sl.wh_id = s.wh_id#(lf)                            and s.ship_id = sl.ship_id#(lf)                          inner#(lf)                           join ord o#(lf)                             on sl.wh_id = o.wh_id#(lf)                            and sl.prt_client_id = o.client_id#(lf)                            and sl.ordnum = o.ordnum#(lf)                            and o.ordtyp not in ('JIT')#(lf)                          inner#(lf)                           join prtftp_view pf#(lf)                             on sl.wh_id = pf.wh_id#(lf)                            and sl.prt_client_id = pf.prt_client_id#(lf)                            and sl.prtnum = pf.prtnum#(lf)                            and pf.defftp_flg = 1#(lf)                                ---where pb.wh_id = 'GB_5024'#(lf)                                ----and pb.batsts in ('AINP', 'PLAN', 'SCH')#(lf)#(lf)                          group by pb.wh_id,#(lf)                                pb.schbat,#(lf)                                sl.prtnum)#(lf)                  group by wh_id,#(lf)                        schbat) p#(lf)             on w.wh_id = p.wh_id#(lf)            and w.schbat = p.schbat#(lf)           left outer#(lf)           join (select wh_id_tmpl,#(lf)                        rtflt1 replen_percent#(lf)                   from poldat#(lf)                  where polcod = 'DHL-USR'#(lf)                    and polvar = 'AUTO-WAVE-ALLOCATION'#(lf)                    and polval = 'REPLENISHMENT'#(lf)                    and rownum < 2) p3#(lf)             on p3.wh_id_tmpl = w.wh_id#(lf))#(lf))pl#(lf)union#(lf)select#(lf)""Wave"",#(lf)""Wave Status"",#(lf)""Appointment"",#(lf)""Haulier"",#(lf)""Client"",#(lf)""Appt Start"",#(lf)""Appt Date"",#(lf)""Total Pall"",#(lf)""Shorts"",#(lf)""Replen Case Qty"",#(lf)""Replen No"",#(lf)""Total Case Pick"",#(lf)""Case Pick Remaining"",#(lf)""Trailer Closed"",#(lf)""Trailer Dispatched""#(lf)from#(lf)(#(lf)select #(lf)        sql.schbat as ""Wave"",#(lf)        sql.lngdsc ""Wave Status"",#(lf)        sql.host_ext_id as ""Appointment"",#(lf)        sql.Haulier as ""Haulier"",#(lf)        sql.Client as ""Client"",#(lf)        sql.App_start as ""Appt Start"",#(lf)        sql.App_Date ""Appt Date"",#(lf)        sql.Total_pallets as ""Total Pall"",#(lf)        sql.Shorts as ""Shorts"",#(lf)        sql.""Replen Case Qty"" as ""Replen Case Qty"",#(lf)        sql.Replen as ""Replen No"",#(lf)        sql.Total_Case_Pick as ""Total Case Pick"",#(lf)        sql.Case_Pick_Remaining as ""Case Pick Remaining"" ,#(lf)        sql.close_dte   ""Trailer Closed"",#(lf)        sql.dispatch_dte  ""Trailer Dispatched""#(lf)   from (select pb.schbat,#(lf)                dm.lngdsc,#(lf)                tr.close_dte -1/24      close_dte,#(lf)                tr.dispatch_dte -1/24   dispatch_dte,#(lf)                car_move.host_ext_id,#(lf)                carhdr.carnam as Haulier,#(lf)                case when ord.client_id = 'CID000001' then 'MARS'#(lf)                     when ord.client_id = 'CID013634' then 'MONDELEZ'#(lf)                     when ord.client_id = 'CID001842' then 'KP'#(lf)                     else 'New Client'#(lf)                end as Client,#(lf)                to_char(appt.start_dte-1 / 24, 'YYYY-MM-DD HH24:MI') App_start,#(lf)                to_char(appt.start_dte-1 / 24, 'YYYY-MM-DD') App_Date,#(lf)                (select ceil(sum(ol1.ordqty / pr1.untpal)) pallets#(lf)                   from shipment_line sl1,#(lf)                        ord_line ol1,#(lf)                        prtftp_view pr1#(lf)                  where ol1.ordnum = sl1.ordnum#(lf)                    and ol1.ordlin = sl1.ordlin#(lf)                    and ol1.prtnum = pr1.prtnum#(lf)                    and ol1.wh_id = pr1.wh_id#(lf)                    and ol1.prt_client_id = pr1.prt_client_id#(lf)                    and sl1.schbat = pb.schbat) Total_pallets,#(lf)                nvl((select sum(pckqty)#(lf)                       from rplwrk#(lf)                      where rplwrk.schbat = pb.schbat#(lf)                        and rplwrk.rplsts in ('F', 'H', 'S', 'U', 'I')), 0) Shorts,#(lf)                nvl((select sum(pckqty)#(lf)                       from rplwrk#(lf)                      where rplwrk.schbat = pb.schbat#(lf)                        and rplwrk.rplsts not in ('F', 'H', 'S', 'U', 'I')), 0) ""Replen Case Qty"",#(lf)                (select count(*)#(lf)                   from rplwrk,#(lf)                        rplwrk rp2#(lf)                  where rp2.rplref = rplwrk.parref#(lf)                    and rp2.schbat = pb.schbat) Replen,#(lf)                nvl((select sum(pckqty)#(lf)                       from pckwrk_view#(lf)                      where schbat = pb.schbat#(lf)                        and lodlvl = 'S'), 0) + nvl((select sum(pckqty)#(lf)                                                       from rplwrk#(lf)                                                      where rplwrk.schbat = pb.schbat#(lf)                                                        and rplwrk.rplsts not in ('F', 'H', 'S', 'U', 'I')), 0) Total_Case_Pick,#(lf)                nvl((select sum(pckqty) - sum(appqty)#(lf)                       from pckwrk_view#(lf)                      where schbat = pb.schbat#(lf)                        and lodlvl = 'S'), 0) + nvl((select sum(pckqty)#(lf)                                                       from rplwrk#(lf)                                                      where rplwrk.schbat = pb.schbat#(lf)                                                        and rplwrk.rplsts not in ('F', 'H', 'S', 'U', 'I')), 0) Case_Pick_Remaining#(lf)           from pckbat pb#(lf)          inner#(lf)           join shipment_line sl#(lf)             on pb.wh_id = sl.wh_id#(lf)            and sl.schbat = pb.schbat#(lf)          inner#(lf)           join shipment s#(lf)             on sl.wh_id = s.wh_id#(lf)            and s.ship_id = sl.ship_id#(lf)          inner#(lf)           join ord#(lf)             on ord.ordnum = sl.ordnum#(lf)           left outer#(lf)           join pckwrk_view pwv#(lf)             on pb.wh_id = pwv.wh_id#(lf)            and pb.schbat = pwv.schbat#(lf)           left outer#(lf)           join rplwrk rw#(lf)             on pb.wh_id = rw.wh_id#(lf)            and pb.schbat = rw.schbat#(lf)           left#(lf)           join stop#(lf)             on s.stop_id = stop.stop_id#(lf)           left#(lf)           join car_move#(lf)             on car_move.car_move_id = stop.car_move_id#(lf)           left join trlr tr#(lf)           on car_move.trlr_id = tr.trlr_id#(lf)           left#(lf)           join appt#(lf)             on appt.car_move_id = car_move.car_move_id#(lf)           left#(lf)           join carhdr#(lf)             on car_move.carcod = carhdr.carcod#(lf)           left join dscmst dm#(lf)           on pb.batsts = dm.colval and dm.colnam = 'batsts'#(lf)          where pb.batsts not in ('AINP', 'PLAN', 'SCH')#(lf)            and ord.ordtyp <> 'JIT'#(lf)            and appt.start_dte-1 / 24 >= trunc(sysdate-1/24)#(lf)            --and ord.client_id = 'CID013634'#(lf)            --and s.shpsts = 'C'#(lf)          group by #(lf)                pb.schbat,#(lf)                pb.batcod,#(lf)                dm.lngdsc,#(lf)                tr.close_dte-1/24,#(lf)                tr.dispatch_dte-1/24,#(lf)                car_move.host_ext_id,#(lf)                carhdr.carnam,#(lf)                     case when ord.client_id = 'CID000001' then 'MARS'#(lf)                          when ord.client_id = 'CID013634' then 'MONDELEZ'#(lf)                          when ord.client_id = 'CID001842' then 'KP'#(lf)                          else 'New Client' end,#(lf)                          to_char(appt.start_dte-1 / 24, 'YYYY-MM-DD HH24:MI'),#(lf)                          to_char(appt.start_dte-1 / 24, 'YYYY-MM-DD')#(lf)                          ) sql#(lf)               order by sql.App_start#(lf)               )npl#(lf)               order by 6 asc#(lf)               )"])
+				in
+				    Source
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
