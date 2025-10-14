@@ -1,0 +1,146 @@
+table 'Returns Details'
+	lineageTag: 15bcbb9f-7143-45c4-bc2f-fa76e92d52f9
+
+	column 'Processed On'
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: Date
+		lineageTag: 879a8623-9994-4e76-9505-d049a98fc32f
+		summarizeBy: none
+		sourceColumn: Processed On
+
+		annotation SummarizationSetBy = Automatic
+
+	column Client
+		dataType: string
+		sourceProviderType: Varchar2
+		lineageTag: 9b6891eb-a1ac-40f1-b7a8-a9cb2f78f04a
+		summarizeBy: none
+		sourceColumn: Client
+
+		annotation SummarizationSetBy = Automatic
+
+	column Activity
+		dataType: string
+		sourceProviderType: Varchar2
+		lineageTag: 84d24c59-ab42-4915-821b-67ed192b963d
+		summarizeBy: none
+		sourceColumn: Activity
+
+		annotation SummarizationSetBy = Automatic
+
+	column SSCC
+		dataType: string
+		sourceProviderType: Varchar2
+		lineageTag: 1e51f513-1aa7-42c1-a5e8-711ee2431cff
+		summarizeBy: none
+		sourceColumn: SSCC
+
+		annotation SummarizationSetBy = Automatic
+
+	column Item
+		dataType: string
+		sourceProviderType: Varchar2
+		lineageTag: e44eae58-1452-44bd-9e3c-92ce0332dc96
+		summarizeBy: none
+		sourceColumn: Item
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Item Description'
+		dataType: string
+		sourceProviderType: Varchar2
+		lineageTag: c5d607a7-5539-4a18-a002-bbe4e5bde76c
+		summarizeBy: none
+		sourceColumn: Item Description
+
+		annotation SummarizationSetBy = Automatic
+
+	column Batch
+		dataType: string
+		sourceProviderType: Varchar2
+		lineageTag: 4eacb10f-27da-4c70-9cec-14924c586427
+		summarizeBy: none
+		sourceColumn: Batch
+
+		annotation SummarizationSetBy = Automatic
+
+	column Qty
+		dataType: double
+		sourceProviderType: Decimal(38, 127)
+		lineageTag: a58a4f01-abc0-48a2-a796-9c3ba4f31061
+		summarizeBy: sum
+		sourceColumn: Qty
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'STO Number'
+		dataType: string
+		sourceProviderType: Varchar2
+		lineageTag: d46c19a3-e859-440f-ba97-0f09c422221a
+		summarizeBy: none
+		sourceColumn: STO Number
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'To location In'
+		dataType: string
+		sourceProviderType: Varchar2
+		lineageTag: 627d3414-cc91-4340-99d3-6b90aa7e59b2
+		summarizeBy: none
+		sourceColumn: To location In
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Moved To Return-OUT On'
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: Date
+		lineageTag: d5771e55-554c-4d10-8ac9-ed734aaefb19
+		summarizeBy: none
+		sourceColumn: Moved To Return-OUT On
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Moved To Return-OUT By'
+		dataType: string
+		sourceProviderType: Varchar2
+		lineageTag: 7813fff4-25d9-4648-a726-29227dcb3136
+		summarizeBy: none
+		sourceColumn: Moved To Return-OUT By
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Current SSCC Location'
+		dataType: string
+		sourceProviderType: Varchar2
+		lineageTag: 3c599237-d0d1-40d4-99f4-1e7634e6abec
+		summarizeBy: none
+		sourceColumn: Current SSCC Location
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Date Only'
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: Date
+		lineageTag: 7cd13703-7f0e-4804-ac36-7ed0874ae4de
+		summarizeBy: none
+		sourceColumn: Date Only
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Returns Details' = m
+		mode: directQuery
+		source =
+				let
+				    Source = Oracle.Database(LTG_BlueYonder_Server_Prod, [Query="with cte1 as#(lf)(#(lf)select#(lf)        trndte -1 / 24 datetimeIN,#(lf)        prt_client_id,        #(lf)        actcod,#(lf)        lodnum,#(lf)        subnum,#(lf)        prtnum,#(lf)        sum(TRNQTY) TRNQTY,#(lf)        lotnum,#(lf)        tostol    tostolIN#(lf)   from dlytrn#(lf)   where#(lf)tostol = 'RETURNS-IN'#(lf)    and actcod in ('RCV', 'ASN_NONTRUST', 'PUT_UNDR')#(lf)    and trunc(trndte-1/24) >= trunc(sysdate-1/24)-28#(lf)    group by#(lf)    trndte -1 / 24,#(lf)        prt_client_id,#(lf)        actcod,#(lf)        lodnum,#(lf)        subnum,#(lf)        prtnum,#(lf)        lotnum,#(lf)        tostol#(lf)    ),#(lf)cte2 as#(lf)(#(lf)select distinct#(lf)    lodnum,#(lf)    subnum,#(lf)    frstol#(lf)    from dlytrn #(lf)    where fr_arecod = 'EXPR'#(lf)    and trunc(trndte-1/24) >= trunc(sysdate-1/24)-28#(lf)),#(lf)cte3 as#(lf)(#(lf)select distinct#(lf)        trndte -1 / 24 datetimeOUT,#(lf)        actcod,#(lf)        lodnum,#(lf)        subnum,#(lf)        prtnum,#(lf)        lotnum,#(lf)        tostol    tostolOUT,#(lf)        adrmst.usr_dsp,#(lf)        rank() over (partition by lodnum order by trndte -1 / 24 desc) ranking#(lf)   from dlytrn#(lf)   left join adrmst on dlytrn.usr_id = adrmst.adrnam#(lf)   and adrmst.adrtyp = 'USR'#(lf)   where#(lf)tostol = 'RETURNS-OUT'#(lf)    and actcod in ('FL_XFR')#(lf)    and trunc(trndte-1/24) >= trunc(sysdate-1/24)-28#(lf)),#(lf)cte4 as#(lf)(#(lf)select#(lf)        il.stoloc,#(lf)        il.lodnum,#(lf)        isb.subnum#(lf)   from invlod il#(lf)   left join invsub isb on il.lodnum = isb.lodnum#(lf)),#(lf)cte5 as#(lf)(#(lf)select #(lf)pm.PRTNUM ,#(lf)pm.PRT_CLIENT_ID ,#(lf)pm.WH_ID_TMPL,#(lf)pm.PRT_CLASS_NAME,#(lf)dm.lngdsc ""Business Segment"",#(lf)pd.lngdsc ""Item Description""#(lf)from prtmst pm#(lf)left join dscmst dm on pm.prt_class_name = dm.colval#(lf)and dm.colnam = 'prt_class_name'#(lf)left join prtdsc pd#(lf)on pm.prtnum||'|'||pm.prt_client_id||'|'||pm.wh_id_tmpl = pd.colval#(lf)where pm.wh_id_tmpl = 'GB_5024'#(lf))#(lf)    select#(lf)    cte1.datetimeIN    ""Processed On"",#(lf)    trunc(cte1.datetimeIN) ""Date Only"",#(lf)    case #(lf)        when cte1.prt_client_id = 'CID000001' then 'Mars'#(lf)        when cte1.prt_client_id = 'CID013634' then 'Mondelez'#(lf)        else cte1.prt_client_id end ""Client"",#(lf)    cte1.actcod ""Activity"",#(lf)    cte1.lodnum ""SSCC"",#(lf)    cte1.prtnum ""Item"",#(lf)    cte5.""Item Description"",#(lf)    cte1.lotnum ""Batch"",#(lf)    cte1.trnqty ""Qty"",#(lf)    cte2.frstol ""STO Number"",#(lf)    cte1.tostolIN ""To location In"",#(lf)    cte3.datetimeOUT  ""Moved To Return-OUT On"",#(lf)    cte3.usr_dsp      ""Moved To Return-OUT By"",#(lf)    nvl(cte4.stoloc,'GONE') ""Current SSCC Location""#(lf)    from cte1#(lf)    left join cte2 on cte1.lodnum = cte2.lodnum and cte1.subnum = cte2.subnum#(lf)    left join cte3 on cte1.lodnum = cte3.lodnum and cte1.subnum = cte3.subnum and cte3.ranking = 1#(lf)    left join cte4 on cte1.lodnum = cte4.lodnum and cte1.subnum = cte4.subnum#(lf)    left join cte5 on cte1.prtnum = cte5.prtnum and cte1.prt_client_id = cte5.prt_client_id#(lf)  order by 1 asc  ", CreateNavigationProperties=false])
+				in
+				    Source
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

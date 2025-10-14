@@ -354,7 +354,14 @@
             "tooltip": {
               "expr": {
                 "Literal": {
-                  "Value": "'See the details of Unpicked Pallets'"
+                  "Value": "'See The Details Of Unpicked Pallets'"
+                }
+              }
+            },
+            "showDefaultTooltip": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }

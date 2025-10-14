@@ -24,7 +24,7 @@ queryGroup 'Dataflow Parameters'
 
 annotation __PBI_TimeIntelligenceEnabled = 0
 
-annotation PBI_QueryOrder = ["Dynamic Calendar","LTG_BlueYonder_Server_Prod","LTG_WCS_Server_Prod","LTG_WCS_Database (T)","LTG_WCS_Database (P)","EMG_BlueYonder_Server_PPT","EMG_BlueYonder_Server_Prod","EMG_WCS_Server","EMG_WCS_Database (P)","EMG_WCS_Database (T)","EMG_Nulogy_Server","EMG_Nulogy_Database","Gateway Data Warehouse Server","Gateway Data Warehouse Database","workspaceID","dataflowID","Unpicked Pallet","Picked Pallets On Site","Picked Date Vs Appoinemnt Date","Load Status","Mondelez Orders Status","Crane 10 SKU Spread","Outbound Summary"]
+annotation PBI_QueryOrder = ["Dynamic Calendar","LTG_BlueYonder_Server_Prod","LTG_WCS_Server_Prod","LTG_WCS_Database (T)","LTG_WCS_Database (P)","EMG_BlueYonder_Server_PPT","EMG_BlueYonder_Server_Prod","EMG_WCS_Server","EMG_WCS_Database (P)","EMG_WCS_Database (T)","EMG_Nulogy_Server","EMG_Nulogy_Database","Gateway Data Warehouse Server","Gateway Data Warehouse Database","workspaceID","dataflowID","Unpicked Pallet","Picked Pallets On Site","Picked Date Vs Appoinemnt Date","Load Status","Mondelez Orders Status","Crane 10 SKU Spread","Outbound Summary","Returns Details"]
 
 annotation PBI_ProTooling = ["DevMode"]
 
@@ -36,6 +36,7 @@ ref table 'Load Status'
 ref table 'Mondelez Orders Status'
 ref table 'Crane 10 SKU Spread'
 ref table 'Outbound Summary'
+ref table 'Returns Details'
 
 ref cultureInfo en-US
 

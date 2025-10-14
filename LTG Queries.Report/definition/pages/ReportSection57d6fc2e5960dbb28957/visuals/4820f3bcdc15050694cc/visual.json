@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
-  "name": "2d37bbafaf14e29532f6",
+  "name": "4820f3bcdc15050694cc",
   "position": {
-    "x": 863.70820668693011,
-    "y": 313.19148936170217,
-    "z": 3000,
-    "height": 46.68693009118541,
-    "width": 282.06686930091189,
-    "tabOrder": 3000
+    "x": 491.900826446281,
+    "y": 458.04958677685948,
+    "z": 6002,
+    "height": 46.545454545454547,
+    "width": 281.38842975206609,
+    "tabOrder": 6002
   },
   "visual": {
     "visualType": "actionButton",
@@ -182,7 +182,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Picked Date Vs Appointment Date'"
+                  "Value": "'Returns Details'"
                 }
               }
             },
@@ -348,14 +348,21 @@
             "navigationSection": {
               "expr": {
                 "Literal": {
-                  "Value": "'72c309f8a29a289a5e16'"
+                  "Value": "'4c948b6b11c6ad5d273b'"
                 }
               }
             },
             "tooltip": {
               "expr": {
                 "Literal": {
-                  "Value": "'When Case Pick Was Picked Vs Appointment Date'"
+                  "Value": "'See The Details Of Pallets Processed Via Returns'"
+                }
+              }
+            },
+            "showDefaultTooltip": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }

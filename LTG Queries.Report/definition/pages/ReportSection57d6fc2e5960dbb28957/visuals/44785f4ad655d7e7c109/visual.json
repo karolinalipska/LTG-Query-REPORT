@@ -355,7 +355,7 @@
             "tooltip": {
               "expr": {
                 "Literal": {
-                  "Value": "'See the details of load Status with Summary'"
+                  "Value": "'See The Details Of Load Status With Summary'"
                 }
               }
             }
