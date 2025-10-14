@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
   "name": "86af1c9ef6e23a718ade",
   "position": {
-    "x": 941.51975683890578,
+    "x": 1022.2492401215806,
     "y": 75.866261398176292,
     "z": 2000,
     "height": 643.89057750759878,
-    "width": 338.48024316109422,
+    "width": 257.75075987841944,
     "tabOrder": 2000
   },
   "visual": {
@@ -93,7 +93,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "98.42362044285592D"
+                  "Value": "67.43239783299379D"
                 }
               }
             }
@@ -107,7 +107,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "124.22963849885808D"
+                  "Value": "77.62492438519175D"
                 }
               }
             }
@@ -166,5 +166,61 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "feb4a2efd67d82a9dc70",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Unpicked Pallet"
+              }
+            },
+            "Property": "Date Only"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "5a979f9a6e7eeb75194a",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Unpicked Pallet"
+                  }
+                },
+                "Property": "Unpicked LPN"
+              }
+            },
+            "Function": 2
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "c1aba3a65c05dc0c0241",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Unpicked Pallet"
+                  }
+                },
+                "Property": "Qty"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }
