@@ -1,0 +1,442 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
+  "name": "68eccaf2897202091827",
+  "position": {
+    "x": 0,
+    "y": 79.756838905775084,
+    "z": 1000,
+    "height": 640,
+    "width": 1280
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Pallets To Rework Out"
+                    }
+                  },
+                  "Property": "Client"
+                }
+              },
+              "queryRef": "Pallets To Rework Out.Client",
+              "nativeQueryRef": "Client"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Pallets To Rework Out"
+                    }
+                  },
+                  "Property": "Transaction Date"
+                }
+              },
+              "queryRef": "Pallets To Rework Out.Transaction Date",
+              "nativeQueryRef": "Transaction Date"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Pallets To Rework Out"
+                    }
+                  },
+                  "Property": "SKU"
+                }
+              },
+              "queryRef": "Pallets To Rework Out.SKU",
+              "nativeQueryRef": "SKU"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Pallets To Rework Out"
+                    }
+                  },
+                  "Property": "SKU Description"
+                }
+              },
+              "queryRef": "Pallets To Rework Out.SKU Description",
+              "nativeQueryRef": "SKU Description"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Pallets To Rework Out"
+                    }
+                  },
+                  "Property": "SSCC"
+                }
+              },
+              "queryRef": "Pallets To Rework Out.SSCC",
+              "nativeQueryRef": "SSCC"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Pallets To Rework Out"
+                    }
+                  },
+                  "Property": "Batches"
+                }
+              },
+              "queryRef": "Pallets To Rework Out.Batches",
+              "nativeQueryRef": "Batches"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Pallets To Rework Out"
+                    }
+                  },
+                  "Property": "Moved Qty"
+                }
+              },
+              "queryRef": "Sum(Pallets To Rework Out.Moved Qty)",
+              "nativeQueryRef": "Moved Qty1"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Pallets To Rework Out"
+                    }
+                  },
+                  "Property": "Full Pallet Qty"
+                }
+              },
+              "queryRef": "Sum(Pallets To Rework Out.Full Pallet Qty)",
+              "nativeQueryRef": "Full Pallet Qty1"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Pallets To Rework Out"
+                    }
+                  },
+                  "Property": "User"
+                }
+              },
+              "queryRef": "Pallets To Rework Out.User",
+              "nativeQueryRef": "User"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Pallets To Rework Out"
+                    }
+                  },
+                  "Property": "To Location"
+                }
+              },
+              "queryRef": "Pallets To Rework Out.To Location",
+              "nativeQueryRef": "To Location"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "columnHeaders": [
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "values": [
+        {
+          "properties": {
+            "wordWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnFormatting": [
+        {
+          "properties": {
+            "labelPrecision": {
+              "expr": {
+                "Literal": {
+                  "Value": "0L"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(Pallets To Rework Out.Moved Qty)"
+          }
+        },
+        {
+          "properties": {
+            "labelPrecision": {
+              "expr": {
+                "Literal": {
+                  "Value": "0L"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(Pallets To Rework Out.Full Pallet Qty)"
+          }
+        }
+      ],
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "62.43768523183758D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(Pallets To Rework Out.Moved Qty)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "68.6838843687403D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(Pallets To Rework Out.Full Pallet Qty)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "110.92570358565436D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Pallets To Rework Out.Batches"
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Details'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualHeader": [
+        {
+          "properties": {
+            "background": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 2,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "cc243e04ca59ac066743",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Pallets To Rework Out"
+              }
+            },
+            "Property": "Client"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "020742b36ad9a642e4d9",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Pallets To Rework Out"
+              }
+            },
+            "Property": "Transaction Date"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "290526097c2542c8d044",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Pallets To Rework Out"
+              }
+            },
+            "Property": "SKU"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "d44efe588e046c760c07",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Pallets To Rework Out"
+              }
+            },
+            "Property": "SKU Description"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "544bcfef437d1e38352b",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Pallets To Rework Out"
+              }
+            },
+            "Property": "SSCC"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "57e34ea93db450aba248",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Pallets To Rework Out"
+              }
+            },
+            "Property": "Batches"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "6c3af4413b04e47e8c62",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Pallets To Rework Out"
+              }
+            },
+            "Property": "User"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "f3f6c327481614cb0dce",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Pallets To Rework Out"
+              }
+            },
+            "Property": "To Location"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "9cf0ace70c41e010743e",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Pallets To Rework Out"
+              }
+            },
+            "Property": "Full Pallet Qty"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "f9df645b4012ac0994cd",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Pallets To Rework Out"
+              }
+            },
+            "Property": "Moved Qty"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}

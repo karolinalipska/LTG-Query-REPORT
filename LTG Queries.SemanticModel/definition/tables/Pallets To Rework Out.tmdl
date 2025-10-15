@@ -1,0 +1,119 @@
+table 'Pallets To Rework Out'
+	lineageTag: 979c692a-97c5-4adb-84da-f68cbf230a0c
+
+	column 'Transaction Date'
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: Date
+		lineageTag: 951b0c79-3d1f-4c6d-812f-0e7b627e4a12
+		summarizeBy: none
+		sourceColumn: Transaction Date
+
+		annotation SummarizationSetBy = Automatic
+
+	column Client
+		dataType: string
+		sourceProviderType: Varchar2
+		lineageTag: c7565b46-2e53-4704-b6d4-567b0c5ba78b
+		summarizeBy: none
+		sourceColumn: Client
+
+		annotation SummarizationSetBy = Automatic
+
+	column SKU
+		dataType: string
+		sourceProviderType: Varchar2
+		lineageTag: 114a5b84-c6a5-4dc0-a6ee-534c5471eca9
+		summarizeBy: none
+		sourceColumn: SKU
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'SKU Description'
+		dataType: string
+		sourceProviderType: Varchar2
+		lineageTag: e4dd993f-e1a6-47b1-89cc-e8b39ae8c8a2
+		summarizeBy: none
+		sourceColumn: SKU Description
+
+		annotation SummarizationSetBy = Automatic
+
+	column SSCC
+		dataType: string
+		sourceProviderType: Varchar2
+		lineageTag: 5b3bd8fc-5a34-4c26-b099-864785987641
+		summarizeBy: none
+		sourceColumn: SSCC
+
+		annotation SummarizationSetBy = Automatic
+
+	column Batches
+		dataType: string
+		sourceProviderType: Varchar2
+		lineageTag: 367b41f5-ac50-4905-8fed-efba03654f31
+		summarizeBy: none
+		sourceColumn: Batches
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Moved Qty'
+		dataType: double
+		sourceProviderType: Decimal(38, 127)
+		lineageTag: a49188ee-453b-41a0-9549-9b3e6a57fc08
+		summarizeBy: sum
+		sourceColumn: Moved Qty
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column User
+		dataType: string
+		sourceProviderType: Varchar2
+		lineageTag: bbe50214-352b-4faa-ae7b-b58a5bf9a0cf
+		summarizeBy: none
+		sourceColumn: User
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'To Location'
+		dataType: string
+		sourceProviderType: Varchar2
+		lineageTag: 6d8db003-938a-4a80-a762-fe413f0452ed
+		summarizeBy: none
+		sourceColumn: To Location
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Full Pallet Qty'
+		dataType: double
+		sourceProviderType: Decimal(38, 127)
+		lineageTag: 95fc0249-90dd-474f-b1bd-a86a9734cca4
+		summarizeBy: sum
+		sourceColumn: Full Pallet Qty
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Under/Over
+		dataType: string
+		sourceProviderType: Varchar2
+		lineageTag: 44eb4510-5d1a-4233-bc61-bb0e7a9bdb0e
+		summarizeBy: none
+		sourceColumn: Under/Over
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Pallets To Rework Out' = m
+		mode: directQuery
+		source =
+				let
+				    Source = Oracle.Database(LTG_BlueYonder_Server_Prod, [Query=" with cte1 as#(lf) (#(lf) SELECT DISTINCT#(lf)    d.trndte - 1 / 24 ""Transaction Date"",#(lf)    d.frstol,#(lf)    d.tostol,#(lf)    d.lodnum,#(lf)    d.prt_client_id,#(lf)    d.prtnum,#(lf)    listagg(d.lotnum,', ') ""Batches"",#(lf)    am.usr_dsp,#(lf)    sum(d.trnqty) ""Moved Qty""#(lf)FROM#(lf)    dlytrn d#(lf)       left join adrmst am on d.usr_id = am.adrnam#(lf)   and am.adrtyp = 'USR'#(lf)WHERE#(lf)    tostol LIKE '%REWORK-OUT'#(lf)    and frstol like 'RDT%'#(lf)    and actcod in('GENMOV','PL_XFR','FL_XFR')#(lf)    group by#(lf)    d.trndte - 1 / 24 ,#(lf)    d.frstol ,#(lf)    d.tostol,#(lf)    d.lodnum,#(lf)    d.prt_client_id,#(lf)    d.prtnum,#(lf)    am.usr_dsp#(lf)),#(lf)cte2 as#(lf)(#(lf)select #(lf)pm.PRTNUM ,#(lf)pm.PRT_CLIENT_ID ,#(lf)pm.WH_ID_TMPL,#(lf)pm.PRT_CLASS_NAME,#(lf)dm.lngdsc ""Business Segment"",#(lf)pd.lngdsc ""SKU Description"",#(lf)pfv.untpal#(lf)from prtmst pm#(lf)left join dscmst dm on pm.prt_class_name = dm.colval#(lf)and dm.colnam = 'prt_class_name'#(lf)left join prtdsc pd#(lf)on pm.prtnum||'|'||pm.prt_client_id||'|'||pm.wh_id_tmpl = pd.colval#(lf)left join prtftp_view pfv #(lf)on pm.prtnum = pfv.prtnum #(lf)and pm.prt_client_id = pfv.prt_client_id #(lf)and pm.wh_id_tmpl = pfv.wh_id#(lf)and pfv.defftp_flg = 1#(lf)where pm.wh_id_tmpl = 'GB_5024'#(lf))#(lf)select#(lf)cte1.""Transaction Date"",#(lf)case #(lf)        when cte1.prt_client_id = 'CID000001' then 'Mars'#(lf)        when cte1.prt_client_id = 'CID013634' then 'Mondelez'#(lf)        else cte1.prt_client_id end ""Client"",#(lf)cte1.prtnum ""SKU"",#(lf)cte2.""SKU Description"",#(lf)cte1.lodnum ""SSCC"",#(lf)cte1.""Batches"",#(lf)cte1.""Moved Qty"",#(lf)cte1.usr_dsp ""User"",#(lf)cte1.tostol ""To Location"",#(lf)cte2.untpal ""Full Pallet Qty"",#(lf)case#(lf)    when cte1.""Moved Qty"" < cte2.untpal then 'Under'#(lf)    when cte1.""Moved Qty"" > cte2.untpal then 'Over'#(lf)    else null#(lf)    end ""Under/Over""#(lf)from cte1#(lf)left join cte2 on cte1.prtnum = cte2.prtnum and cte1.prt_client_id = cte2.prt_client_id#(lf)where cte1.""Moved Qty"" <> cte2.untpal", CreateNavigationProperties=false])
+				in
+				    Source
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
