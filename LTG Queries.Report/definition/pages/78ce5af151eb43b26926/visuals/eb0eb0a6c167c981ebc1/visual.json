@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
   "name": "eb0eb0a6c167c981ebc1",
   "position": {
     "x": 785.89665653495445,
     "y": 5.8358662613981762,
-    "z": 2001,
+    "z": 3000,
     "height": 63.221884498480243,
     "width": 319.02735562310033,
-    "tabOrder": 2001
+    "tabOrder": 2000
   },
   "visual": {
     "visualType": "advancedSlicerVisual",
@@ -131,23 +131,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "5320faf78430cb1b46e0",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Pallets To Rework Out"
-              }
-            },
-            "Property": "Under/Over"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

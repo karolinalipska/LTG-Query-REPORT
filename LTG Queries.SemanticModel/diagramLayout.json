@@ -4,14 +4,14 @@
     {
       "ordinal": 0,
       "scrollPosition": {
-        "x": 546.23759586274946,
-        "y": 0
+        "x": 1710.1163948905687,
+        "y": 1993.3507038564389
       },
       "nodes": [
         {
           "location": {
             "x": 1704,
-            "y": 2528.4811100510447
+            "y": 2574.6409902625819
           },
           "nodeIndex": "Dynamic Calendar",
           "size": {
@@ -23,7 +23,7 @@
         {
           "location": {
             "x": 0,
-            "y": 41.823996258382749
+            "y": 87.98387646992
           },
           "nodeIndex": "Load Status",
           "nodeLineageTag": "d27dba8f-9cbf-4a32-bcd1-2433178afcd2",
@@ -36,7 +36,7 @@
         {
           "location": {
             "x": 259.00873744418794,
-            "y": 44.320990173115831
+            "y": 90.480870384653088
           },
           "nodeIndex": "Picked Date Vs Appoinemnt Date",
           "nodeLineageTag": "6b2a634b-0cdf-48e5-b818-d6d813b339b4",
@@ -49,7 +49,7 @@
         {
           "location": {
             "x": 523.9677754969025,
-            "y": 38.253815893266733
+            "y": 84.413696104803989
           },
           "nodeIndex": "Picked Pallets On Site",
           "nodeLineageTag": "3be5764e-b982-4ba4-9cc6-e3f938b097d9",
@@ -62,7 +62,7 @@
         {
           "location": {
             "x": 799.63735464496517,
-            "y": 39.443876014972034
+            "y": 85.60375622650929
           },
           "nodeIndex": "Unpicked Pallet",
           "nodeLineageTag": "72ffd3a2-5ed3-4ec3-a068-7c4daefc309f",
@@ -75,7 +75,7 @@
         {
           "location": {
             "x": 1088.6316458240697,
-            "y": 36.927904169229635
+            "y": 83.087784380766891
           },
           "nodeIndex": "Mondelez Orders Status",
           "nodeLineageTag": "04082249-25d5-4105-a749-916915fd7140",
@@ -88,7 +88,7 @@
         {
           "location": {
             "x": 1449.2198627007863,
-            "y": 40.52116164484903
+            "y": 86.681041856386287
           },
           "nodeIndex": "Crane 10 SKU Spread",
           "nodeLineageTag": "cd2971d4-9f85-47b3-b319-bbe391122c6e",
@@ -101,12 +101,51 @@
         {
           "location": {
             "x": 1995.457458563536,
-            "y": 1422.5859043306507
+            "y": 1468.7457845421879
           },
           "nodeIndex": "Outbound Summary",
           "nodeLineageTag": "0dae59e6-d4c2-44e8-86f2-d4a0fd517ab0",
           "size": {
             "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2279.457458563536,
+            "y": 1456.4364831524447
+          },
+          "nodeIndex": "Pallets To Rework Out",
+          "nodeLineageTag": "979c692a-97c5-4adb-84da-f68cbf230a0c",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2563.457458563536,
+            "y": 1456.4364831524447
+          },
+          "nodeIndex": "Returns Details",
+          "nodeLineageTag": "15bcbb9f-7143-45c4-bc2f-fa76e92d52f9",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2847.457458563536,
+            "y": 1511.9725310678298
+          },
+          "nodeIndex": "Mondelez ASN Usage",
+          "nodeLineageTag": "c8082447-2233-4494-b18e-e1291d554c5e",
+          "size": {
+            "height": 152,
             "width": 234
           },
           "zIndex": 0

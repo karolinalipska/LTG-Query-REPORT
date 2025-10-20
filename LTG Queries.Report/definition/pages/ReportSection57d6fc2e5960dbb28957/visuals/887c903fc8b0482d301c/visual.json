@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
   "name": "887c903fc8b0482d301c",
   "position": {
     "x": 57.399103139013455,
@@ -7,7 +7,7 @@
     "z": 1000,
     "height": 45.91928251121076,
     "width": 1167.4977578475336,
-    "tabOrder": 2000
+    "tabOrder": 1000
   },
   "visualGroup": {
     "displayName": "Summary Btn",

@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
   "name": "86af1c9ef6e23a718ade",
   "position": {
     "x": 1022.2492401215806,
@@ -7,7 +7,7 @@
     "z": 2000,
     "height": 643.89057750759878,
     "width": 257.75075987841944,
-    "tabOrder": 2000
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "tableEx",
@@ -166,61 +166,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "feb4a2efd67d82a9dc70",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Unpicked Pallet"
-              }
-            },
-            "Property": "Date Only"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "5a979f9a6e7eeb75194a",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Unpicked Pallet"
-                  }
-                },
-                "Property": "Unpicked LPN"
-              }
-            },
-            "Function": 2
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "c1aba3a65c05dc0c0241",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Unpicked Pallet"
-                  }
-                },
-                "Property": "Qty"
-              }
-            },
-            "Function": 0
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

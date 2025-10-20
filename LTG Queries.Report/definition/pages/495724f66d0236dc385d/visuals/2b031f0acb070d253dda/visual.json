@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
   "name": "2b031f0acb070d253dda",
   "position": {
     "x": 0,
     "y": 76.838905775075986,
-    "z": 3002,
+    "z": 4000,
     "height": 283.03951367781156,
     "width": 662.370820668693,
-    "tabOrder": 3002
+    "tabOrder": 3000
   },
   "visual": {
     "visualType": "hundredPercentStackedColumnChart",
@@ -393,56 +393,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "79d2bf79082e680478c8",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Outbound Summary"
-                  }
-                },
-                "Property": "Wave"
-              }
-            },
-            "Function": 2
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "041ed1a211ecb4091879",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Outbound Summary"
-              }
-            },
-            "Property": "Appt Date"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "aec5e63e806720641090",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Outbound Summary"
-              }
-            },
-            "Property": "Status"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

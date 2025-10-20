@@ -1,13 +1,12 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
   "name": "c04545d5a9c3132d423f",
   "position": {
     "x": 0,
     "y": 75.866261398176292,
     "z": 1000,
     "height": 643.89057750759878,
-    "width": 1022.2492401215806,
-    "tabOrder": 1000
+    "width": 1022.2492401215806
   },
   "visual": {
     "visualType": "tableEx",
@@ -300,168 +299,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "76685f0d60b0c9d0702b",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Unpicked Pallet"
-              }
-            },
-            "Property": "Transaction Date"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "23aaa6070a9dba1d932d",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Unpicked Pallet"
-              }
-            },
-            "Property": "Unpicked LPN"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "ec4efaaa59ee09b6cc2b",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Unpicked Pallet"
-              }
-            },
-            "Property": "New LPN"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "8b1234e0ecd3be8672d8",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Unpicked Pallet"
-              }
-            },
-            "Property": "Client ID"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "0a85c66a4075050cb98b",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Unpicked Pallet"
-              }
-            },
-            "Property": "SKU"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "f808024daeab1819583b",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Unpicked Pallet"
-              }
-            },
-            "Property": "SAP Storage"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "bf54a3a58510005cd700",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Unpicked Pallet"
-                  }
-                },
-                "Property": "Qty"
-              }
-            },
-            "Function": 0
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "6e5401ad456b4d8ad4ea",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Unpicked Pallet"
-              }
-            },
-            "Property": "Order Number"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "8494aa3a2c45db62603a",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Unpicked Pallet"
-              }
-            },
-            "Property": "Pick Date"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "01d95863206eeb052090",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Unpicked Pallet"
-              }
-            },
-            "Property": "CAR_MOVE_ID"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "46e291d04e1eb848331e",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Unpicked Pallet"
-              }
-            },
-            "Property": "New LPN Current Location"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

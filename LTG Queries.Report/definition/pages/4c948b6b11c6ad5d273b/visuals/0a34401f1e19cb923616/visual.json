@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
   "name": "0a34401f1e19cb923616",
   "position": {
     "x": 0,
     "y": 76.165289256198349,
-    "z": 3001,
+    "z": 3000,
     "height": 190.41322314049586,
     "width": 1280,
-    "tabOrder": 3001
+    "tabOrder": 3000
   },
   "visual": {
     "visualType": "pivotTable",
@@ -146,75 +146,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "7863f224bb9cba553647",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Returns Details"
-                  }
-                },
-                "Property": "Qty"
-              }
-            },
-            "Function": 0
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "f4d6f7cb8091c10e1e23",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Returns Details"
-                  }
-                },
-                "Property": "SSCC"
-              }
-            },
-            "Function": 2
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "9c42bf0d9a2eb00a7295",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Returns Details"
-              }
-            },
-            "Property": "Date Only"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "9450b131001e6cdc0a1d",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Returns Details"
-              }
-            },
-            "Property": "Client"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

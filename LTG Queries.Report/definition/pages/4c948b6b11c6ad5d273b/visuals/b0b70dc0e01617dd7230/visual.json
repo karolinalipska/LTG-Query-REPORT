@@ -1,13 +1,12 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
   "name": "b0b70dc0e01617dd7230",
   "position": {
     "x": 0,
     "y": 266.57851239669424,
     "z": 1000,
     "height": 452.76033057851242,
-    "width": 1280,
-    "tabOrder": 1000
+    "width": 1280
   },
   "visual": {
     "visualType": "tableEx",
@@ -249,154 +248,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "bbf024011456ac50d604",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Returns Details"
-              }
-            },
-            "Property": "SSCC"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "b6a8caa4909e10e1bc23",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Returns Details"
-              }
-            },
-            "Property": "Item"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "c866ee1c7549ad9cd6eb",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Returns Details"
-              }
-            },
-            "Property": "Item Description"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "2f9e256cbe9eab6d30ae",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Returns Details"
-                  }
-                },
-                "Property": "Qty"
-              }
-            },
-            "Function": 0
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "84e4c8c476a5c2c0db0a",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Returns Details"
-              }
-            },
-            "Property": "Client"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "f37138ef93409349cd0e",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Returns Details"
-              }
-            },
-            "Property": "STO Number"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "5f043fb7ad11a26206e3",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Returns Details"
-              }
-            },
-            "Property": "Processed On"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "8965d740d28643341579",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Returns Details"
-              }
-            },
-            "Property": "Moved To Return-OUT On"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "22b8118f1a7407b4c006",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Returns Details"
-              }
-            },
-            "Property": "Moved To Return-OUT By"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "01e72d277ad900d8d7c4",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Returns Details"
-              }
-            },
-            "Property": "Current SSCC Location"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

@@ -1,0 +1,45 @@
+table 'Mondelez ASN Usage'
+	lineageTag: c8082447-2233-4494-b18e-e1291d554c5e
+
+	column 'Inbound Type'
+		dataType: string
+		sourceProviderType: Varchar2
+		lineageTag: 17369096-7a34-4988-a759-50f23ac02ece
+		summarizeBy: none
+		sourceColumn: Inbound Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column Date
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: Date
+		lineageTag: 93cee35f-3b5b-43e1-aa17-b038dfaf7512
+		summarizeBy: none
+		sourceColumn: Date
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Distinct Trailer Count'
+		dataType: double
+		sourceProviderType: Decimal(38, 127)
+		lineageTag: 95d6bbeb-6ba8-4bf2-94bb-d82068724e56
+		summarizeBy: sum
+		sourceColumn: Distinct Trailer Count
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition 'Mondelez ASN Usage' = m
+		mode: directQuery
+		source =
+				let
+				    Source = Oracle.Database(LTG_BlueYonder_Server_Prod, [HierarchicalNavigation=true, Query="SELECT #(lf)    lngdsc    ""Inbound Type"",#(lf)    trunc(close_dte) AS ""Date"",#(lf)    COUNT(DISTINCT trlr_id) AS ""Distinct Trailer Count""#(lf)FROM (#(lf)    SELECT #(lf)        ri.trknum,#(lf)        ri.client_id,#(lf)        ri.supnum,#(lf)        ri.invnum,#(lf)        ri.invtyp,#(lf)        ri.completed_date,#(lf)        rt.trlr_id,#(lf)        tr.close_dte - 1/24 AS close_dte,#(lf)        tr.arrdte - 1/24 AS arrdte,#(lf)        dm.lngdsc#(lf)    FROM rcvinv ri#(lf)    LEFT JOIN rcvtrk rt ON ri.trknum = rt.trknum#(lf)    LEFT JOIN dscmst dm ON ri.invtyp = dm.colval AND dm.colnam = 'invtyp'#(lf)    LEFT JOIN trlr tr ON rt.trlr_id = tr.trlr_id#(lf)    WHERE ri.client_id = 'CID013634'#(lf)    AND tr.close_dte IS NOT NULL#(lf))#(lf)GROUP BY #(lf)    lngdsc,#(lf)    trunc(close_dte)#(lf)ORDER BY #(lf)    lngdsc, #(lf)    trunc(close_dte)"])
+				in
+				    Source
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

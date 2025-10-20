@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
   "name": "de41edf112e60942dd18",
   "position": {
     "x": 401.7021276595745,
     "y": 0,
-    "z": 3000,
+    "z": 2000,
     "height": 63.221884498480243,
     "width": 466.86930091185411,
-    "tabOrder": 3000
+    "tabOrder": 2000
   },
   "visual": {
     "visualType": "advancedSlicerVisual",
@@ -99,23 +99,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "3b79a7517272910203e1",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Returns Details"
-              }
-            },
-            "Property": "Client"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }
