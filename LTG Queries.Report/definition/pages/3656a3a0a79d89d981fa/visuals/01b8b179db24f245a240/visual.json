@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
   "name": "01b8b179db24f245a240",
   "position": {
     "x": 0,
@@ -70,6 +70,20 @@
               },
               "queryRef": "Picked Pallets On Site.SKU",
               "nativeQueryRef": "SKU"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Picked Pallets On Site"
+                    }
+                  },
+                  "Property": "Business Segment"
+                }
+              },
+              "queryRef": "Picked Pallets On Site.Business Segment",
+              "nativeQueryRef": "Business Segment"
             },
             {
               "field": {
@@ -363,6 +377,20 @@
           "selector": {
             "metadata": "Picked Pallets On Site.SAP Storage"
           }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "102.43768683786071D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Picked Pallets On Site.Business Segment"
+          }
         }
       ],
       "values": [
@@ -413,5 +441,238 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "89e78914f81510673718",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Picked Pallets On Site"
+              }
+            },
+            "Property": "Location"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "463ebb7aec33e84e882e",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Picked Pallets On Site"
+              }
+            },
+            "Property": "Area"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "34ada96cd77938692cff",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Picked Pallets On Site"
+              }
+            },
+            "Property": "LPN"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "97a9274e5b124afc12e1",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Picked Pallets On Site"
+              }
+            },
+            "Property": "SKU"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "6f709733f6a348f135b3",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Picked Pallets On Site"
+              }
+            },
+            "Property": "Client"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "1f07fe5146f23380415d",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Picked Pallets On Site"
+              }
+            },
+            "Property": "Batch"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "d5afd448db6ea364af39",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Picked Pallets On Site"
+              }
+            },
+            "Property": "SAP Storage"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "6bf3bd25ea2544a208c1",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Picked Pallets On Site"
+              }
+            },
+            "Property": "Expiry"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "caccc908bf395c0732e4",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Picked Pallets On Site"
+              }
+            },
+            "Property": "Footprint"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "bbfd881cdbdf27470304",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Picked Pallets On Site"
+              }
+            },
+            "Property": "Footprint Qty of SKU"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "362c62e1b12da54f9462",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Picked Pallets On Site"
+              }
+            },
+            "Property": "Order Number"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "e4c9f336c7002fe817a3",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Picked Pallets On Site"
+              }
+            },
+            "Property": "Load ID"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "c229cd0b82fbad3d9035",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Picked Pallets On Site"
+                  }
+                },
+                "Property": "Qty"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "a9f56e932a306cc77293",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Picked Pallets On Site"
+              }
+            },
+            "Property": "Last Movement"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "24094f859eb093a69187",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Picked Pallets On Site"
+              }
+            },
+            "Property": "Picked Date"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "c45bd5c0add628c46399",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Picked Pallets On Site"
+              }
+            },
+            "Property": "Business Segment"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
   }
 }
