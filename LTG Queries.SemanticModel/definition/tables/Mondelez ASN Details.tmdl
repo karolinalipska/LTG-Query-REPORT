@@ -1,0 +1,145 @@
+table 'Mondelez ASN Details'
+	lineageTag: 7740267a-f044-4ced-82e4-afd9b2cae300
+
+	column 'Close Date Only'
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: Date
+		lineageTag: 113c1f81-2e66-4db0-b318-6950ec88f938
+		summarizeBy: none
+		sourceColumn: Close Date Only
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Inbound Type'
+		dataType: string
+		sourceProviderType: Varchar2
+		lineageTag: 8e6af547-5f2f-48c2-b6dd-1cf4a3912c4f
+		summarizeBy: none
+		sourceColumn: Inbound Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'BY trailer ID'
+		dataType: string
+		sourceProviderType: Varchar2
+		lineageTag: 6d0ce879-4bcb-4785-b558-85d94a643f89
+		summarizeBy: none
+		sourceColumn: BY trailer ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Supplier Name'
+		dataType: string
+		sourceProviderType: Varchar2
+		lineageTag: 853d2bb4-af30-4823-823a-5114007814a7
+		summarizeBy: none
+		sourceColumn: Supplier Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Inbound Shipment Used'
+		dataType: string
+		sourceProviderType: Varchar2
+		lineageTag: 8eac2df2-e993-4f53-ab1c-938aa0010dfc
+		summarizeBy: none
+		sourceColumn: Inbound Shipment Used
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'ASN Number Provided'
+		dataType: string
+		sourceProviderType: Varchar2
+		lineageTag: cde88eaf-2e70-447a-9821-f2f8843d3431
+		summarizeBy: none
+		sourceColumn: ASN Number Provided
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Trailer Arrived'
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: Date
+		lineageTag: 53174869-4a59-440a-be21-a3955d91baf1
+		summarizeBy: none
+		sourceColumn: Trailer Arrived
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Trailer Closed'
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: Date
+		lineageTag: 23e78bf3-04ea-41ef-87a5-ec281eab259e
+		summarizeBy: none
+		sourceColumn: Trailer Closed
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'ASN not Provided'
+		dataType: double
+		sourceProviderType: Decimal(38, 127)
+		lineageTag: 1184a518-ab27-47bf-a668-b144ce568743
+		summarizeBy: sum
+		sourceColumn: ASN not Provided
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'ASN Received on Correct ASN'
+		dataType: double
+		sourceProviderType: Decimal(38, 127)
+		lineageTag: 9e1c447e-468a-4ae2-8566-2a86dd6acfc8
+		summarizeBy: sum
+		sourceColumn: ASN Received on Correct ASN
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'PO Received on Correct ASN'
+		dataType: double
+		sourceProviderType: Decimal(38, 127)
+		lineageTag: 6e65cdfb-c76c-474a-bc3b-47d96676b714
+		summarizeBy: sum
+		sourceColumn: PO Received on Correct ASN
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'PO Received/ASN Provided'
+		dataType: double
+		sourceProviderType: Decimal(38, 127)
+		lineageTag: 550274be-e326-4617-a39e-8938ce9e161a
+		summarizeBy: sum
+		sourceColumn: PO Received/ASN Provided
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'PO Received on Wrong ASN'
+		dataType: double
+		sourceProviderType: Decimal(38, 127)
+		lineageTag: d69c1e9b-021c-4a44-a3ef-15b6ab0f4d77
+		summarizeBy: sum
+		sourceColumn: PO Received on Wrong ASN
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition 'Mondelez ASN Details' = m
+		mode: directQuery
+		source =
+				let
+				    Source = Oracle.Database(LTG_BlueYonder_Server_Prod, [HierarchicalNavigation=true, Query="select#(lf)query.""Close Date Only"",#(lf)query.""Inbound Type"",#(lf)query.""BY trailer ID"",#(lf)query.""Supplier Name"",#(lf)query.""Inbound Shipment Used"",#(lf)query.""ASN Number Provided"",#(lf)query.""Trailer Arrived"",#(lf)query.""Trailer Closed"",#(lf)case when query.""Receive Stat"" = 'ASN not Provided' then count(distinct lodnum) end ""ASN not Provided"",#(lf)case when query.""Receive Stat"" = 'ASN Received on Correct ASN' then count(distinct lodnum) end ""ASN Received on Correct ASN"",#(lf)case when query.""Receive Stat"" = 'PO Received on Correct ASN' then count(distinct lodnum) end ""PO Received on Correct ASN"",#(lf)case when query.""Receive Stat"" = 'PO Received/ASN Provided' then count(distinct lodnum) end ""PO Received/ASN Provided"",#(lf)case when query.""Receive Stat"" = 'PO Received on Wrong ASN' then count(distinct lodnum) end ""PO Received on Wrong ASN""#(lf)from#(lf)(#(lf)with rec as#(lf)(#(lf)select#(lf)dt.trndte-1/24 ""Received Date"",#(lf)dt.actcod,#(lf)case when dt.actcod = 'ASN_NONTRUST' then 'ASN received' else 'PO received' end ""Received As"",#(lf)dt.lodnum,#(lf)dt.fr_arecod,#(lf)dt.frstol#(lf)from dlytrn dt#(lf)where dt.fr_arecod = 'EXPR'#(lf)and dt.prt_client_id = 'CID013634'#(lf)and trunc(dt.trndte-1/24) >= trunc(sysdate-1/24) -3#(lf)and dt.lodnum||subnum#(lf)not in#(lf)(#(lf)select#(lf)lodnum||subnum#(lf)from dlytrn#(lf)where actcod = 'RVRCP')#(lf)),#(lf)asn as#(lf)(#(lf)select#(lf)dt.trndte-1/24   ""ASN Date"",#(lf)dt.actcod,#(lf)dt.to_lodnum,#(lf)dt.to_arecod,#(lf)dt.tostol,#(lf)usr_id#(lf)from dlytrn dt#(lf)where dt.to_arecod = 'EXPR'#(lf)and dt.prt_client_id = 'CID013634'#(lf)and dt.actcod = 'IDNTFY'#(lf)and (usr_id like 'sl%' or usr_id = 'NOUSER')#(lf)--and trunc(dt.trndte-1/24) >= trunc(sysdate-1/24) -10#(lf)),#(lf)rid as#(lf)(#(lf)SELECT #(lf)        ri.trknum,#(lf)        ri.client_id,#(lf)        ri.supnum,#(lf)        ri.invnum,#(lf)        ri.invtyp,#(lf)        ri.completed_date,#(lf)        rt.trlr_id,#(lf)        tr.close_dte - 1/24 AS close_dte,#(lf)        tr.arrdte - 1/24 AS arrdte,#(lf)        dm.lngdsc,#(lf)        am.adrnam#(lf)    FROM rcvinv ri#(lf)    LEFT JOIN rcvtrk rt ON ri.trknum = rt.trknum#(lf)    LEFT JOIN dscmst dm ON ri.invtyp = dm.colval AND dm.colnam = 'invtyp'#(lf)    LEFT JOIN trlr tr ON rt.trlr_id = tr.trlr_id#(lf)    left join supmst sp on ri.supnum = sp.supnum#(lf)    left join adrmst am on sp.adr_id = am.adr_id#(lf)    WHERE ri.client_id = 'CID013634'#(lf)    AND tr.close_dte IS NOT NULL#(lf)    )#(lf)select #(lf)rec.""Received Date"",#(lf)rec.lodnum,#(lf)asn.""ASN Date"" ""ASN Date"",#(lf)rec.actcod,#(lf)rec.""Received As"",#(lf)case #(lf)    when rec.frstol <> asn.tostol and rid.lngdsc = 'Mondelez PO' then 'PO Received/ASN Provided'#(lf)    when rec.frstol <> asn.tostol and rid.lngdsc = 'Mondelez ASN' then 'PO Received on Wrong ASN'#(lf)    when rec.frstol = asn.tostol and rec.""Received As"" = 'ASN received' then 'ASN Received on Correct ASN'#(lf)    when rec.frstol = asn.tostol and rec.""Received As"" = 'PO received' then 'PO Received on Correct ASN'#(lf)    when asn.tostol is null then 'ASN not Provided'#(lf)end ""Receive Stat"",#(lf)rec.frstol ""Inbound Shipment Used"",#(lf)asn.tostol ""ASN Number Provided"",#(lf)rid.trlr_id ""BY trailer ID"",#(lf)rid.supnum,#(lf)rid.adrnam  ""Supplier Name"",#(lf)rid.invnum,#(lf)rid.lngdsc    ""Inbound Type"",#(lf)rid.arrdte    ""Trailer Arrived"",#(lf)rid.close_dte  ""Trailer Closed"",#(lf)trunc(rid.close_dte) ""Close Date Only""#(lf)from rec#(lf)left join asn#(lf)on rec.lodnum = asn.to_lodnum#(lf)left join rid on rec.frstol = rid.trknum#(lf)where trunc(rid.close_dte) >= trunc(sysdate-1/24) -3#(lf))query#(lf)group by#(lf)query.""Close Date Only"",#(lf)query.""Inbound Type"",#(lf)query.""BY trailer ID"",#(lf)query.""Supplier Name"",#(lf)query.""Inbound Shipment Used"",#(lf)query.""ASN Number Provided"",#(lf)query.""Trailer Arrived"",#(lf)query.""Trailer Closed"",#(lf)query.""Receive Stat"""])
+				in
+				    Source
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

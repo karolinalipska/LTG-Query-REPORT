@@ -1,0 +1,863 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
+  "name": "30ac30971627125f745a",
+  "position": {
+    "x": 0,
+    "y": 79.702602230483279,
+    "z": 1001,
+    "height": 640,
+    "width": 1280,
+    "tabOrder": 2001
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mondelez ASN Details"
+                    }
+                  },
+                  "Property": "Inbound Type"
+                }
+              },
+              "queryRef": "Mondelez ASN Details.Inbound Type",
+              "nativeQueryRef": "Inbound Type"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mondelez ASN Details"
+                    }
+                  },
+                  "Property": "BY trailer ID"
+                }
+              },
+              "queryRef": "Mondelez ASN Details.BY trailer ID",
+              "nativeQueryRef": "BY trailer ID"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mondelez ASN Details"
+                    }
+                  },
+                  "Property": "Supplier Name"
+                }
+              },
+              "queryRef": "Mondelez ASN Details.Supplier Name",
+              "nativeQueryRef": "Supplier Name"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mondelez ASN Details"
+                    }
+                  },
+                  "Property": "Inbound Shipment Used"
+                }
+              },
+              "queryRef": "Mondelez ASN Details.Inbound Shipment Used",
+              "nativeQueryRef": "Inbound Shipment Used"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mondelez ASN Details"
+                    }
+                  },
+                  "Property": "ASN Number Provided"
+                }
+              },
+              "queryRef": "Mondelez ASN Details.ASN Number Provided",
+              "nativeQueryRef": "ASN Number Provided"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Mondelez ASN Details"
+                        }
+                      },
+                      "Property": "ASN Received on Correct ASN"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(Mondelez ASN Details.ASN Received on Correct ASN)",
+              "nativeQueryRef": "ASN Received on Correct ASN"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Mondelez ASN Details"
+                        }
+                      },
+                      "Property": "PO Received on Correct ASN"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(Mondelez ASN Details.PO Received on Correct ASN)",
+              "nativeQueryRef": "PO Received on Correct ASN"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Mondelez ASN Details"
+                        }
+                      },
+                      "Property": "PO Received on Wrong ASN"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(Mondelez ASN Details.PO Received on Wrong ASN)",
+              "nativeQueryRef": "PO Received on Wrong ASN"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Mondelez ASN Details"
+                        }
+                      },
+                      "Property": "ASN not Provided"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(Mondelez ASN Details.ASN not Provided)",
+              "nativeQueryRef": "ASN not Provided"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Mondelez ASN Details"
+                        }
+                      },
+                      "Property": "PO Received/ASN Provided"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(Mondelez ASN Details.PO Received/ASN Provided)",
+              "nativeQueryRef": "PO Received/ASN Provided"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mondelez ASN Details"
+                    }
+                  },
+                  "Property": "Trailer Arrived"
+                }
+              },
+              "queryRef": "Mondelez ASN Details.Trailer Arrived",
+              "nativeQueryRef": "Trailer Arrived"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mondelez ASN Details"
+                    }
+                  },
+                  "Property": "Trailer Closed"
+                }
+              },
+              "queryRef": "Mondelez ASN Details.Trailer Closed",
+              "nativeQueryRef": "Trailer Closed"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "columnHeaders": [
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "81.98480509660402D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "Mondelez ASN Details"
+                          }
+                        },
+                        "Property": "Receive Stat"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'ASN not Provided'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "135.47720945228147D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "Mondelez ASN Details"
+                          }
+                        },
+                        "Property": "Receive Stat"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'ASN Received on Correct ASN'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "128.4498480243161D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "Mondelez ASN Details"
+                          }
+                        },
+                        "Property": "Receive Stat"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'PO Received on Correct ASN'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "121.42249938391043D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "Mondelez ASN Details"
+                          }
+                        },
+                        "Property": "Receive Stat"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'PO Received/ASN Provided'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "116.60222961035791D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mondelez ASN Details.Inbound Type"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "109.12268024779829D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mondelez ASN Details.ASN Number Provided"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "85.69102899879938D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(Mondelez ASN Details.ASN Received on Correct ASN)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "80.06521306290392D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(Mondelez ASN Details.PO Received on Correct ASN)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "64.57108280927774D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(Mondelez ASN Details.ASN not Provided)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "94.69524080623061D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(Mondelez ASN Details.PO Received/ASN Provided)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "72.25969611457234D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(Mondelez ASN Details.PO Received on Wrong ASN)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "273.98141409629073D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mondelez ASN Details.Supplier Name"
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {}
+        }
+      ],
+      "columnFormatting": [
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Left'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mondelez ASN Details.ASN Number Provided"
+          }
+        },
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            },
+            "labelPrecision": {
+              "expr": {
+                "Literal": {
+                  "Value": "0L"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(Mondelez ASN Details.ASN Received on Correct ASN)"
+          }
+        },
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            },
+            "labelPrecision": {
+              "expr": {
+                "Literal": {
+                  "Value": "0L"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(Mondelez ASN Details.PO Received on Correct ASN)"
+          }
+        },
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            },
+            "labelPrecision": {
+              "expr": {
+                "Literal": {
+                  "Value": "0L"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(Mondelez ASN Details.PO Received on Wrong ASN)"
+          }
+        },
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            },
+            "labelPrecision": {
+              "expr": {
+                "Literal": {
+                  "Value": "0L"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(Mondelez ASN Details.ASN not Provided)"
+          }
+        },
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            },
+            "labelPrecision": {
+              "expr": {
+                "Literal": {
+                  "Value": "0L"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(Mondelez ASN Details.PO Received/ASN Provided)"
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'ASN Details By Pallets Received'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualHeader": [
+        {
+          "properties": {
+            "background": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 2,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualTooltip": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "f76ce86a7d39bc38efcf",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mondelez ASN Details"
+              }
+            },
+            "Property": "Inbound Type"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "e019674f60e107715e7b",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mondelez ASN Details"
+              }
+            },
+            "Property": "BY trailer ID"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "dd994d950944671e59a8",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mondelez ASN Details"
+              }
+            },
+            "Property": "Supplier Name"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "bc2cd735a2eea805979a",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mondelez ASN Details"
+              }
+            },
+            "Property": "Inbound Shipment Used"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "40da01002e39ea7c964d",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mondelez ASN Details"
+              }
+            },
+            "Property": "ASN Number Provided"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "27b13d1a86c3cc21a08f",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Mondelez ASN Details"
+                  }
+                },
+                "Property": "ASN not Provided"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "b49358259888e5b868b4",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mondelez ASN Details"
+              }
+            },
+            "Property": "Trailer Arrived"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "e7bc36d610a5ed2df70d",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mondelez ASN Details"
+              }
+            },
+            "Property": "Trailer Closed"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "ddd7c81b0560a9f7a40a",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Mondelez ASN Details"
+                  }
+                },
+                "Property": "ASN Received on Correct ASN"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "6713f4326486e5730b90",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Mondelez ASN Details"
+                  }
+                },
+                "Property": "PO Received on Correct ASN"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "894c4ef92a4c26b4fede",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Mondelez ASN Details"
+                  }
+                },
+                "Property": "PO Received/ASN Provided"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "cb43e64d1789a6a5fb31",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Mondelez ASN Details"
+                  }
+                },
+                "Property": "PO Received on Wrong ASN"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}
