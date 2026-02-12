@@ -1,0 +1,679 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "name": "7efb7656ece7b49ece31",
+  "position": {
+    "x": 0,
+    "y": 79.702602230483279,
+    "z": 1000,
+    "height": 640,
+    "width": 1280,
+    "tabOrder": 1000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Part Pallets in Stock from Returns"
+                    }
+                  },
+                  "Property": "Client ID"
+                }
+              },
+              "queryRef": "Part Pallets in Stock from Returns.Client ID",
+              "nativeQueryRef": "Client ID"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Part Pallets in Stock from Returns"
+                    }
+                  },
+                  "Property": "SKU"
+                }
+              },
+              "queryRef": "Part Pallets in Stock from Returns.SKU",
+              "nativeQueryRef": "SKU"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Part Pallets in Stock from Returns"
+                    }
+                  },
+                  "Property": "SKU Description"
+                }
+              },
+              "queryRef": "Part Pallets in Stock from Returns.SKU Description",
+              "nativeQueryRef": "SKU Description"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Part Pallets in Stock from Returns"
+                        }
+                      },
+                      "Property": "Received Qty"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(Part Pallets in Stock from Returns.Received Qty)",
+              "nativeQueryRef": "Received Qty"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Part Pallets in Stock from Returns"
+                    }
+                  },
+                  "Property": "MD Qty"
+                }
+              },
+              "queryRef": "Sum(Part Pallets in Stock from Returns.MD Qty)",
+              "nativeQueryRef": "MD Qty1"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Part Pallets in Stock from Returns"
+                        }
+                      },
+                      "Property": "Qty In Stock"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(Part Pallets in Stock from Returns.Qty In Stock)",
+              "nativeQueryRef": "Qty In Stock"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Part Pallets in Stock from Returns"
+                    }
+                  },
+                  "Property": "SSCC"
+                }
+              },
+              "queryRef": "Part Pallets in Stock from Returns.SSCC",
+              "nativeQueryRef": "SSCC"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Part Pallets in Stock from Returns"
+                    }
+                  },
+                  "Property": "Expiry Date"
+                }
+              },
+              "queryRef": "Part Pallets in Stock from Returns.Expiry Date",
+              "nativeQueryRef": "Expiry Date"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Part Pallets in Stock from Returns"
+                    }
+                  },
+                  "Property": "Batch"
+                }
+              },
+              "queryRef": "Part Pallets in Stock from Returns.Batch",
+              "nativeQueryRef": "Batch"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Part Pallets in Stock from Returns"
+                    }
+                  },
+                  "Property": "Location"
+                }
+              },
+              "queryRef": "Part Pallets in Stock from Returns.Location",
+              "nativeQueryRef": "Location"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "columnHeaders": [
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "81.98480509660402D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "Mondelez ASN Details"
+                          }
+                        },
+                        "Property": "Receive Stat"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'ASN not Provided'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "135.47720945228147D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "Mondelez ASN Details"
+                          }
+                        },
+                        "Property": "Receive Stat"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'ASN Received on Correct ASN'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "128.4498480243161D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "Mondelez ASN Details"
+                          }
+                        },
+                        "Property": "Receive Stat"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'PO Received on Correct ASN'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "121.42249938391043D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "Mondelez ASN Details"
+                          }
+                        },
+                        "Property": "Receive Stat"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'PO Received/ASN Provided'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "118.85107626642636D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Part Pallets in Stock from Returns.Expiry Date"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "191.76900398310488D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Part Pallets in Stock from Returns.Location"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "120.2887537993921D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Part Pallets in Stock from Returns.Batch"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "299.37081875092423D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Part Pallets in Stock from Returns.SKU Description"
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {}
+        }
+      ],
+      "columnFormatting": [
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            },
+            "labelPrecision": {
+              "expr": {
+                "Literal": {
+                  "Value": "0L"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(Part Pallets in Stock from Returns.Received Qty)"
+          }
+        },
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            },
+            "labelPrecision": {
+              "expr": {
+                "Literal": {
+                  "Value": "0L"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(Part Pallets in Stock from Returns.MD Qty)"
+          }
+        },
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            },
+            "labelPrecision": {
+              "expr": {
+                "Literal": {
+                  "Value": "0L"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(Part Pallets in Stock from Returns.Qty In Stock)"
+          }
+        },
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Part Pallets in Stock from Returns.Expiry Date"
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Part Pallets In Stock Generated in Returns'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualHeader": [
+        {
+          "properties": {
+            "background": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 2,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualTooltip": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "05a6cc3bfc368177e47d",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Part Pallets in Stock from Returns"
+              }
+            },
+            "Property": "SKU"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "183f693e99a7f3512e1a",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Part Pallets in Stock from Returns"
+              }
+            },
+            "Property": "SKU Description"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "aa18b7ea6c7374bee5c8",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Part Pallets in Stock from Returns"
+                  }
+                },
+                "Property": "Received Qty"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "0379fe7e2bcf24acd946",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Part Pallets in Stock from Returns"
+                  }
+                },
+                "Property": "Qty In Stock"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "c3012835d2132a22eb2e",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Part Pallets in Stock from Returns"
+              }
+            },
+            "Property": "SSCC"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "dd05af7975cfdc5a61b5",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Part Pallets in Stock from Returns"
+              }
+            },
+            "Property": "Expiry Date"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "df2ed0cb439a952bd3da",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Part Pallets in Stock from Returns"
+              }
+            },
+            "Property": "Batch"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "ba0dd9ea184b2d13ae82",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Part Pallets in Stock from Returns"
+              }
+            },
+            "Property": "Location"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "2b468882d3bf0485916d",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Part Pallets in Stock from Returns"
+              }
+            },
+            "Property": "Client ID"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "d0342bf94d6138b97e25",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Part Pallets in Stock from Returns"
+              }
+            },
+            "Property": "MD Qty"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}

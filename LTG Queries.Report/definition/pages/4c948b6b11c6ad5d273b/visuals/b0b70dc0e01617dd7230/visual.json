@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
   "name": "b0b70dc0e01617dd7230",
   "position": {
     "x": 0,
@@ -212,6 +212,22 @@
             "metadata": "Sum(Returns Details.Qty)"
           }
         }
+      ],
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "300.0425478731922D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Returns Details.Item Description"
+          }
+        }
       ]
     },
     "visualContainerObjects": {
@@ -248,5 +264,154 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "4cf7b1187aae74100f92",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Returns Details"
+              }
+            },
+            "Property": "Client"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "6c033cc31633cdc444e3",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Returns Details"
+              }
+            },
+            "Property": "SSCC"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "e3f1a225246eb9011ba9",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Returns Details"
+              }
+            },
+            "Property": "Item"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "77ea5e3495b5a69b3616",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Returns Details"
+              }
+            },
+            "Property": "Item Description"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "eb7706c66ba9600947f7",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Returns Details"
+                  }
+                },
+                "Property": "Qty"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "8a58e95e1f391b8d6506",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Returns Details"
+              }
+            },
+            "Property": "STO Number"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "c5c3b8d69263fecb7a26",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Returns Details"
+              }
+            },
+            "Property": "Processed On"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "0a4dd90373832cd56114",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Returns Details"
+              }
+            },
+            "Property": "Moved To Return-OUT On"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "6bf66d83a97111b39c70",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Returns Details"
+              }
+            },
+            "Property": "Moved To Return-OUT By"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "1faa2b3e3837072bf56e",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Returns Details"
+              }
+            },
+            "Property": "Current SSCC Location"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
   }
 }

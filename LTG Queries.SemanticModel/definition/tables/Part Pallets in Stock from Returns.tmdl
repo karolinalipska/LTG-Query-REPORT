@@ -1,0 +1,121 @@
+table 'Part Pallets in Stock from Returns'
+	lineageTag: 318b737d-e0b6-4def-9793-ba9bf821b36e
+
+	column Location
+		dataType: string
+		sourceProviderType: Varchar2
+		lineageTag: 7ee18e43-b222-47e3-99e7-009976c575cd
+		summarizeBy: none
+		sourceColumn: Location
+
+		annotation SummarizationSetBy = Automatic
+
+	column SSCC
+		dataType: string
+		sourceProviderType: Varchar2
+		lineageTag: f6198b03-964b-45f5-bf60-c5b75339e081
+		summarizeBy: none
+		sourceColumn: SSCC
+
+		annotation SummarizationSetBy = Automatic
+
+	column SKU
+		dataType: string
+		sourceProviderType: Varchar2
+		lineageTag: 2a86e0ad-8388-4db6-8feb-eecc585aeb5e
+		summarizeBy: none
+		sourceColumn: SKU
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Client ID'
+		dataType: string
+		sourceProviderType: Varchar2
+		lineageTag: 37539171-fcd8-4d20-b13b-feacf24240e7
+		summarizeBy: none
+		sourceColumn: Client ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Batch
+		dataType: string
+		sourceProviderType: Varchar2
+		lineageTag: 5e42eaff-2d62-458b-bdb3-6aed93f9cb74
+		summarizeBy: none
+		sourceColumn: Batch
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Expiry Date'
+		dataType: string
+		sourceProviderType: Varchar2
+		lineageTag: 8bdf4cb0-6b00-4537-bb01-4fcd305a32d6
+		summarizeBy: none
+		sourceColumn: Expiry Date
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Qty In Stock'
+		dataType: double
+		sourceProviderType: Decimal(38, 127)
+		lineageTag: 9cca1786-5d66-44d6-a3b4-d1bd0de4d8bd
+		summarizeBy: sum
+		sourceColumn: Qty In Stock
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'MD Qty'
+		dataType: double
+		sourceProviderType: Decimal(38, 127)
+		lineageTag: fee56770-3804-465c-a986-a9d7d2458db5
+		summarizeBy: sum
+		sourceColumn: MD Qty
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'SKU Description'
+		dataType: string
+		sourceProviderType: Varchar2
+		lineageTag: 13dab8da-771c-4be6-a9b4-876cac520416
+		summarizeBy: none
+		sourceColumn: SKU Description
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Received Qty'
+		dataType: double
+		sourceProviderType: Decimal(38, 127)
+		lineageTag: 576b06df-99e3-4be4-93b7-7300240871ca
+		summarizeBy: sum
+		sourceColumn: Received Qty
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Received At'
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: Date
+		lineageTag: 187d11af-c3d6-49d7-96b1-52e7e03a20f1
+		summarizeBy: none
+		sourceColumn: Received At
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Part Pallets in Stock from Returns' = m
+		mode: directQuery
+		source =
+				let
+				    Source = Oracle.Database(LTG_BlueYonder_Server_Prod, [HierarchicalNavigation=true, Query="with inv as#(lf)(#(lf)select #(lf)iv.STOLOC ""Location"",#(lf)iv.LODNUM ""SSCC"",#(lf)iv.PRTNUM ""SKU"",#(lf)iv.PRT_CLIENT_ID ""Client ID"",#(lf)listagg(distinct iv.LOTNUM ,', ') ""Batch"",#(lf)listagg(distinct iv.expire_dte ,', ') ""Expiry Date"",#(lf)sum(iv.UNTQTY)           ""Qty In Stock"" ,#(lf)pr.untpal    ""MD Qty"",#(lf)pr.lngdsc    ""SKU Description""#(lf)from all_inventory_view iv#(lf)left join locmst lm#(lf)on iv.stoloc = lm.stoloc#(lf)left join#(lf)(#(lf)select#(lf)pfv.prtnum,#(lf)pfv.wh_id,#(lf)pfv.prt_client_id,#(lf)pfv.untpal,#(lf)pd.lngdsc#(lf)from prtftp_view pfv#(lf)left join prtdsc pd#(lf)on pfv.prtnum||'|'||pfv.prt_client_id||'|'||pfv.wh_id = pd.colval#(lf)where pfv.defftp_flg = 1 and pfv.wh_id = 'GB_5024'#(lf))pr#(lf)on iv.prtnum = pr.prtnum and iv.prt_client_id = pr.prt_client_id#(lf)where iv.lodnum not like 'PERM%'#(lf)and iv.lodnum not like '550%'#(lf)and iv.wrkref is null#(lf)and lm.arecod in ('WCS','WIDE')#(lf)and iv.untqty <> pr.untpal#(lf)group by#(lf)iv.STOLOC,#(lf)iv.LODNUM,#(lf)iv.PRTNUM,#(lf)iv.PRT_CLIENT_ID,#(lf)pr.untpal,#(lf)pr.lngdsc#(lf)),#(lf)ret as#(lf)(#(lf)select #(lf)        max(dlytrn.trndte -1 / 24) datetime,#(lf)        dlytrn.lodnum,#(lf)        dlytrn.tostol to_returns,#(lf)        sum(dlytrn.trnqty) trnqty#(lf)   from dlytrn#(lf)     where dlytrn.tostol like '%RETURNS%'#(lf)    and actcod in ('RCV', 'ASN_NONTRUST', 'PUT_UNDR')#(lf)        and dlytrn.prt_client_id in ('CID000001','CID013634')#(lf)    and dlytrn.lodnum||dlytrn.subnum#(lf)    not in#(lf)    (select lodnum||subnum#(lf)    from#(lf)    dlytrn#(lf)    where actcod = 'RVRCP')#(lf)    GROUP by#(lf)        dlytrn.lodnum,#(lf)        dlytrn.tostol#(lf)    )#(lf)select#(lf)inv.*,#(lf)ret.trnqty ""Received Qty"",#(lf)ret.datetime ""Received At""#(lf)from inv#(lf)join ret #(lf)on inv.""SSCC"" = ret.lodnum#(lf)and ret.trnqty <> inv.""MD Qty"""])
+				in
+				    Source
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
