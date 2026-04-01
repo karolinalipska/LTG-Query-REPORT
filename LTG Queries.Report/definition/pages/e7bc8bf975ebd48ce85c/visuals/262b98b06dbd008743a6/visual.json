@@ -1,12 +1,12 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
   "name": "262b98b06dbd008743a6",
   "position": {
     "x": 106,
     "y": 0.11969111969112056,
     "z": 2000,
     "height": 53,
-    "width": 400,
+    "width": 220,
     "tabOrder": 1000
   },
   "visual": {
@@ -123,7 +123,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Mondelez Order Status'"
+                  "Value": "'Order Status'"
                 }
               }
             },

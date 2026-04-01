@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
-  "name": "d85d0e3b7b76e8840cb6",
+  "name": "7c93ff20eed76ca90198",
   "position": {
-    "x": 773.25227963525845,
+    "x": 343.27272727272725,
     "y": 0,
-    "z": 3001,
-    "height": 70.030395136778125,
-    "width": 339.45288753799394,
-    "tabOrder": 3001
+    "z": 2001,
+    "height": 69.818181818181813,
+    "width": 481.74545454545455,
+    "tabOrder": 2001
   },
   "visual": {
     "visualType": "advancedSlicerVisual",
@@ -20,14 +20,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Picked Pallets On Site"
+                      "Entity": "Orders Status"
                     }
                   },
-                  "Property": "When Picked"
+                  "Property": "Client"
                 }
               },
-              "queryRef": "Picked Pallets On Site.When Picked",
-              "nativeQueryRef": "When Picked"
+              "queryRef": "Orders Status.Client",
+              "nativeQueryRef": "Client"
             }
           ]
         }
@@ -84,7 +84,7 @@
             "maxTiles": {
               "expr": {
                 "Literal": {
-                  "Value": "3L"
+                  "Value": "5L"
                 }
               }
             }
@@ -178,7 +178,7 @@
             "paddingSelection": {
               "expr": {
                 "Literal": {
-                  "Value": "'Normal'"
+                  "Value": "'Narrow'"
                 }
               }
             }
@@ -221,6 +221,38 @@
                 }
               }
             }
+          }
+        }
+      ],
+      "shadowCustom": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
+        }
+      ],
+      "glowCustom": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
           }
         }
       ]
@@ -340,15 +372,15 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "cf81cedfda788e1fef1d",
+        "name": "805a58f94c3154699144",
         "field": {
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "Picked Pallets On Site"
+                "Entity": "Orders Status"
               }
             },
-            "Property": "When Picked"
+            "Property": "Client"
           }
         },
         "type": "Categorical"

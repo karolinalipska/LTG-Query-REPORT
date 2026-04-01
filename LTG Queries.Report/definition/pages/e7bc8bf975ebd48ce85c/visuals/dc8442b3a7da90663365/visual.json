@@ -1,11 +1,11 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
   "name": "dc8442b3a7da90663365",
   "position": {
     "x": 0,
-    "y": 81.702127659574472,
+    "y": 76.838905775075986,
     "z": 1000,
-    "height": 638.05471124620067,
+    "height": 642.91793313069911,
     "width": 1280
   },
   "visual": {
@@ -19,7 +19,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Mondelez Orders Status"
+                      "Entity": "Orders Status"
                     }
                   },
                   "Property": "Order Number"
@@ -33,7 +33,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Mondelez Orders Status"
+                      "Entity": "Orders Status"
                     }
                   },
                   "Property": "Order Entry Date"
@@ -47,7 +47,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Mondelez Orders Status"
+                      "Entity": "Orders Status"
                     }
                   },
                   "Property": "Order Fulfilment - Order Status"
@@ -63,7 +63,7 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Mondelez Orders Status"
+                          "Entity": "Orders Status"
                         }
                       },
                       "Property": "Shorts"
@@ -80,7 +80,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Mondelez Orders Status"
+                      "Entity": "Orders Status"
                     }
                   },
                   "Property": "Shipment Line Status"
@@ -94,7 +94,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Mondelez Orders Status"
+                      "Entity": "Orders Status"
                     }
                   },
                   "Property": "Wave"
@@ -108,7 +108,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Mondelez Orders Status"
+                      "Entity": "Orders Status"
                     }
                   },
                   "Property": "Shipment Status"
@@ -122,7 +122,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Mondelez Orders Status"
+                      "Entity": "Orders Status"
                     }
                   },
                   "Property": "Load ID"
@@ -136,7 +136,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Mondelez Orders Status"
+                      "Entity": "Orders Status"
                     }
                   },
                   "Property": "Host External Id"
@@ -150,7 +150,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Mondelez Orders Status"
+                      "Entity": "Orders Status"
                     }
                   },
                   "Property": "Appointment Start"
@@ -164,7 +164,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Mondelez Orders Status"
+                      "Entity": "Orders Status"
                     }
                   },
                   "Property": "Trailer Assigned"
@@ -178,7 +178,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Mondelez Orders Status"
+                      "Entity": "Orders Status"
                     }
                   },
                   "Property": "Trailer Closed"
@@ -192,7 +192,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Mondelez Orders Status"
+                      "Entity": "Orders Status"
                     }
                   },
                   "Property": "Trailer Despatched"
@@ -212,7 +212,7 @@
               "Column": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "Mondelez Orders Status"
+                    "Entity": "Orders Status"
                   }
                 },
                 "Property": "Order Entry Date"
@@ -308,5 +308,196 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "b512eb2ead6787c37b54",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Orders Status"
+              }
+            },
+            "Property": "Order Number"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "299c72fee510aa5075ed",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Orders Status"
+              }
+            },
+            "Property": "Order Entry Date"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "63ead726c17d1d2adbce",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Orders Status"
+              }
+            },
+            "Property": "Order Fulfilment - Order Status"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "509875be0130caf1b611",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Orders Status"
+                  }
+                },
+                "Property": "Shorts"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "3360db83528d73cb4146",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Orders Status"
+              }
+            },
+            "Property": "Shipment Line Status"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "22e32c6f24405a832aff",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Orders Status"
+              }
+            },
+            "Property": "Wave"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "c7ae6235fc7406027d8f",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Orders Status"
+              }
+            },
+            "Property": "Shipment Status"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "85da4fec74397ca337a8",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Orders Status"
+              }
+            },
+            "Property": "Load ID"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "10938956bdd437cc7cd0",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Orders Status"
+              }
+            },
+            "Property": "Host External Id"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "a11d97fa1448c3e36568",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Orders Status"
+              }
+            },
+            "Property": "Appointment Start"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "0e72121d9d39eedb1681",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Orders Status"
+              }
+            },
+            "Property": "Trailer Assigned"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "4eeb3d8279d42d77dffd",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Orders Status"
+              }
+            },
+            "Property": "Trailer Closed"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "b1c41c7e03bce0808c04",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Orders Status"
+              }
+            },
+            "Property": "Trailer Despatched"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
   }
 }
