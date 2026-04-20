@@ -1,0 +1,463 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
+  "name": "7b31e80bd0e58783d431",
+  "position": {
+    "x": 0,
+    "y": 78.559738134206214,
+    "z": 3001,
+    "height": 253.48608837970539,
+    "width": 1280,
+    "tabOrder": 3001
+  },
+  "visual": {
+    "visualType": "pivotTable",
+    "query": {
+      "queryState": {
+        "Columns": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "MergeE430ShortsLive"
+                    }
+                  },
+                  "Property": "CombineDate"
+                }
+              },
+              "queryRef": "MergeE430ShortsLive.CombineDate",
+              "nativeQueryRef": "CombineDate",
+              "active": true,
+              "format": "dd/MM/yy"
+            }
+          ]
+        },
+        "Rows": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "MergeE430ShortsLive"
+                    }
+                  },
+                  "Property": "Client Name"
+                }
+              },
+              "queryRef": "MergeE430ShortsLive.Client Name",
+              "nativeQueryRef": "Client Name",
+              "active": true
+            }
+          ]
+        },
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "MergeE430ShortsLive"
+                        }
+                      },
+                      "Property": "ORDQTY"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(MergeE430ShortsLive.ORDQTY)",
+              "nativeQueryRef": "Ordered Qty",
+              "displayName": "Ordered Qty",
+              "format": "#,0"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "MergeE430ShortsLive"
+                        }
+                      },
+                      "Property": "SHPQTY"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(MergeE430ShortsLive.SHPQTY)",
+              "nativeQueryRef": "Shipped Qty",
+              "displayName": "Shipped Qty",
+              "format": "#,0"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "MergeE430ShortsLive"
+                        }
+                      },
+                      "Property": "Diff"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(MergeE430ShortsLive.Diff)",
+              "nativeQueryRef": "Short Qty",
+              "displayName": "Short Qty",
+              "format": "#,0"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "MergeE430ShortsLive"
+                        }
+                      },
+                      "Property": "Policy Cancelation"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(MergeE430ShortsLive.Policy Cancelation)",
+              "nativeQueryRef": "Policy Cancelation",
+              "format": "#,0"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "columnHeaders": [
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            },
+            "columnAdjustment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'growToFit'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "85.7612128243093D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(MergeE430ShortsLive.Diff)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "98.5695543638091D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(MergeE430ShortsLive.ORDQTY)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "95.47463175122749D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(MergeE430ShortsLive.SHPQTY)"
+          }
+        }
+      ],
+      "columnFormatting": [
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(MergeE430ShortsLive.ORDQTY)"
+          }
+        },
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(MergeE430ShortsLive.SHPQTY)"
+          }
+        },
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(MergeE430ShortsLive.Diff)"
+          }
+        },
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(MergeE430ShortsLive.Policy Cancelation)"
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {
+            "layout": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Tabular'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "blankRows": [
+        {
+          "properties": {
+            "showBlankRows": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "rowHeaders": [
+        {
+          "properties": {
+            "repeatRowHeaders": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Summary By Date'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualHeader": [
+        {
+          "properties": {
+            "background": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 2,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "stylePreset": [
+        {
+          "properties": {
+            "name": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Default'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "9ced0843c4d589c02894",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "MergeE430ShortsLive"
+              }
+            },
+            "Property": "Client Name"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "c5831a637e417e0dad30",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "MergeE430ShortsLive"
+              }
+            },
+            "Property": "CombineDate"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "1cf34c90b6d80a913b4b",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "MergeE430ShortsLive"
+                  }
+                },
+                "Property": "ORDQTY"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "35cbfc252e992c0c4020",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "MergeE430ShortsLive"
+                  }
+                },
+                "Property": "SHPQTY"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "a22b24a7bb545949e0e9",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "MergeE430ShortsLive"
+                  }
+                },
+                "Property": "Diff"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "1f64300b1381c485ad5b",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "MergeE430ShortsLive"
+                  }
+                },
+                "Property": "Policy Cancelation"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}

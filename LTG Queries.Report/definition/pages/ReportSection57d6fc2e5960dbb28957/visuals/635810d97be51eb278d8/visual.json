@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
-  "name": "6e00de6b0140c4078051",
+  "name": "635810d97be51eb278d8",
   "position": {
-    "x": 492.15805471124622,
-    "y": 383.22188449848028,
-    "z": 5000,
-    "height": 46.68693009118541,
-    "width": 282.06686930091189,
-    "tabOrder": 4000
+    "x": 491.26022913256952,
+    "y": 523.73158756137479,
+    "z": 9004,
+    "height": 47.135842880523732,
+    "width": 282.81505728314238,
+    "tabOrder": 9004
   },
   "visual": {
     "visualType": "actionButton",
@@ -182,7 +182,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Orders Status'"
+                  "Value": "'Orders Lines'"
                 }
               }
             },
@@ -348,14 +348,14 @@
             "navigationSection": {
               "expr": {
                 "Literal": {
-                  "Value": "'e7bc8bf975ebd48ce85c'"
+                  "Value": "'0f70097c128a14d4e57d'"
                 }
               }
             },
             "tooltip": {
               "expr": {
                 "Literal": {
-                  "Value": "'See Orders Status Details'"
+                  "Value": "'See Orders Lines Details'"
                 }
               }
             }

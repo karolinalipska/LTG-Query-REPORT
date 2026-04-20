@@ -2329,6 +2329,405 @@ cultureInfo en-US
 			          }
 			        }
 			      ]
+			    },
+			    "mergee430shortslive.ordnum": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "MergeE430ShortsLive",
+			          "ConceptualProperty": "ORDNUM"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Order Number": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "mergee430shortslive.dispatch_dte_only": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "MergeE430ShortsLive",
+			          "ConceptualProperty": "dispatch_dte_only"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "BY Dispatch Date": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "mergee430shortslive.sr_dispatch_date": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "MergeE430ShortsLive",
+			          "ConceptualProperty": "SR.Dispatch Date"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Shorts Dispatch Date": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "mergee430shortslive.prtnum": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "MergeE430ShortsLive",
+			          "ConceptualProperty": "PRTNUM"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Item No": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "mergee430shortslive.item_desc": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "MergeE430ShortsLive",
+			          "ConceptualProperty": "Item Desc"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Item Description": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "mergee430shortslive.customer": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "MergeE430ShortsLive",
+			          "ConceptualProperty": "CUSTOMER"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Customer": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "mergee430shortslive.business_segment": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "MergeE430ShortsLive",
+			          "ConceptualProperty": "BUSINESS_SEGMENT"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Business Segment": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "mergee430shortslive.sr_short_ownership": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "MergeE430ShortsLive",
+			          "ConceptualProperty": "SR.Short Ownership"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Short Ownership": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "mergee430shortslive.sr_sub_cause": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "MergeE430ShortsLive",
+			          "ConceptualProperty": "SR.Sub Cause"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Sub Cause": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "mergee430shortslive.sr_route_cause": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "MergeE430ShortsLive",
+			          "ConceptualProperty": "SR.Route Cause"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Root Cause": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "mergee430shortslive.sr_comments": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "MergeE430ShortsLive",
+			          "ConceptualProperty": "SR.Comments"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Comments": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "order_lines.ordnum": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Order Lines",
+			          "ConceptualProperty": "ORDNUM"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Order Number": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "order_lines.ordlin": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Order Lines",
+			          "ConceptualProperty": "ORDLIN"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Order Line": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "order_lines.prtnum": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Order Lines",
+			          "ConceptualProperty": "PRTNUM"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Item No": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "order_lines.ordinv": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Order Lines",
+			          "ConceptualProperty": "ORDINV"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Order By": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "order_lines.rule_nam": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Order Lines",
+			          "ConceptualProperty": "RULE_NAM"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Rule Name": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "order_lines.invsts_prg": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Order Lines",
+			          "ConceptualProperty": "INVSTS_PRG"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Inventory Status Expected": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "order_lines.cancelled_flg": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Order Lines",
+			          "ConceptualProperty": "CANCELLED_FLG"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Cancelled Flag": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "order_lines.reacod_cmnt": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Order Lines",
+			          "ConceptualProperty": "REACOD_CMNT"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Comments": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {

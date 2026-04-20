@@ -1,0 +1,596 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
+  "name": "f3920c1e10064b2c786c",
+  "position": {
+    "x": 0,
+    "y": 321.57119476268412,
+    "z": 1000,
+    "height": 398.03600654664484,
+    "width": 1280,
+    "tabOrder": 2000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Order Lines"
+                    }
+                  },
+                  "Property": "Client Name"
+                }
+              },
+              "queryRef": "Order Lines.Client Name",
+              "nativeQueryRef": "Client Name"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Order Lines"
+                    }
+                  },
+                  "Property": "ORDNUM"
+                }
+              },
+              "queryRef": "Order Lines.ORDNUM",
+              "nativeQueryRef": "Order Number",
+              "displayName": "Order Number"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Order Lines"
+                    }
+                  },
+                  "Property": "ORDLIN"
+                }
+              },
+              "queryRef": "Order Lines.ORDLIN",
+              "nativeQueryRef": "Order Line",
+              "displayName": "Order Line"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Order Lines"
+                    }
+                  },
+                  "Property": "Entry Date"
+                }
+              },
+              "queryRef": "Order Lines.Entry Date",
+              "nativeQueryRef": "Entry Date"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Order Lines"
+                    }
+                  },
+                  "Property": "PRTNUM"
+                }
+              },
+              "queryRef": "Order Lines.PRTNUM",
+              "nativeQueryRef": "Item No",
+              "displayName": "Item No"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Order Lines"
+                        }
+                      },
+                      "Property": "ORDQTY"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(Order Lines.ORDQTY)",
+              "nativeQueryRef": "Ordered Qty",
+              "displayName": "Ordered Qty",
+              "format": "#,0"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Order Lines"
+                        }
+                      },
+                      "Property": "PCKQTY"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(Order Lines.PCKQTY)",
+              "nativeQueryRef": "Picked Qty",
+              "displayName": "Picked Qty",
+              "format": "#,0"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Order Lines"
+                        }
+                      },
+                      "Property": "SHPQTY"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(Order Lines.SHPQTY)",
+              "nativeQueryRef": "Shipped Qty",
+              "displayName": "Shipped Qty",
+              "format": "#,0"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Order Lines"
+                    }
+                  },
+                  "Property": "ORDINV"
+                }
+              },
+              "queryRef": "Order Lines.ORDINV",
+              "nativeQueryRef": "Order By",
+              "displayName": "Order By"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Order Lines"
+                    }
+                  },
+                  "Property": "RULE_NAM"
+                }
+              },
+              "queryRef": "Order Lines.RULE_NAM",
+              "nativeQueryRef": "Rule Name",
+              "displayName": "Rule Name"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Order Lines"
+                    }
+                  },
+                  "Property": "INVSTS_PRG"
+                }
+              },
+              "queryRef": "Order Lines.INVSTS_PRG",
+              "nativeQueryRef": "Inventory Status Expected",
+              "displayName": "Inventory Status Expected"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Order Lines"
+                    }
+                  },
+                  "Property": "CANCELLED_FLG"
+                }
+              },
+              "queryRef": "Sum(Order Lines.CANCELLED_FLG)",
+              "nativeQueryRef": "Cancelled Flag",
+              "displayName": "Cancelled Flag"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Order Lines"
+                    }
+                  },
+                  "Property": "REACOD_CMNT"
+                }
+              },
+              "queryRef": "Order Lines.REACOD_CMNT",
+              "nativeQueryRef": "Comments",
+              "displayName": "Comments"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Order Lines"
+                  }
+                },
+                "Property": "ORDLIN"
+              }
+            },
+            "direction": "Descending"
+          }
+        ]
+      }
+    },
+    "objects": {
+      "columnHeaders": [
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            },
+            "columnAdjustment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'growToFit'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnFormatting": [
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(Order Lines.ORDQTY)"
+          }
+        },
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(Order Lines.PCKQTY)"
+          }
+        },
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(Order Lines.SHPQTY)"
+          }
+        }
+      ],
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "99.61701722745985D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(Order Lines.ORDQTY)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "91.759410801964D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(Order Lines.PCKQTY)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "97.56955810147299D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(Order Lines.SHPQTY)"
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Details'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualHeader": [
+        {
+          "properties": {
+            "background": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 2,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "39ca6480e18e61a1536e",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Order Lines"
+              }
+            },
+            "Property": "Client Name"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "e54d5375190db0db6b82",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Order Lines"
+              }
+            },
+            "Property": "ORDNUM"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "8d7e13f0a046d0b6c617",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Order Lines"
+              }
+            },
+            "Property": "ORDLIN"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "c5e50b95a25c6acc3d70",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Order Lines"
+                  }
+                },
+                "Property": "ORDQTY"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "6c4b67809ab1a798ca50",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Order Lines"
+                  }
+                },
+                "Property": "PCKQTY"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "7a67f296d25951065250",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Order Lines"
+                  }
+                },
+                "Property": "SHPQTY"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "97a4bdb07bc01b62e0eb",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Order Lines"
+              }
+            },
+            "Property": "ORDINV"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "f914ab7510988bc8a727",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Order Lines"
+              }
+            },
+            "Property": "PRTNUM"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "50724dedc548d9c78e30",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Order Lines"
+              }
+            },
+            "Property": "INVSTS_PRG"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "a76717cf5c45631131de",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Order Lines"
+              }
+            },
+            "Property": "RULE_NAM"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "5e61f61e09744ee31740",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Order Lines"
+              }
+            },
+            "Property": "REACOD_CMNT"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "e06d2643dc9573009090",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Order Lines"
+              }
+            },
+            "Property": "CANCELLED_FLG"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "3d0c1ec63939c5370707",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Order Lines"
+              }
+            },
+            "Property": "Entry Date"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
+  }
+}

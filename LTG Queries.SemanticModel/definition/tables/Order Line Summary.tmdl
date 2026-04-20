@@ -1,0 +1,62 @@
+table 'Order Line Summary'
+	lineageTag: ae9582fc-3716-4736-af47-a91ba1ad9ed2
+
+	column 'No Lines'
+		formatString: 0
+		lineageTag: 5651d688-a31d-4eef-ac43-5de77eb56883
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [No Lines]
+
+		annotation SummarizationSetBy = Automatic
+
+	column ORDNUM
+		lineageTag: 135c4d55-0017-45ef-b0fc-d86b27c4056c
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: Order Lines[ORDNUM]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Line Range'
+		lineageTag: c3a9bc68-917f-4497-8ec4-0903ab72a0fd
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Line Range]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Client Name'
+		lineageTag: 5bf4d8d1-4891-4eb1-b510-69b13aed0c84
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: Order Lines[Client Name]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Order Line Summary' = calculated
+		mode: import
+		source =
+				
+				ADDCOLUMNS(
+				    ADDCOLUMNS(
+				        SUMMARIZE(
+				            'Order Lines',
+				            'Order Lines'[Client Name],
+				            'Order Lines'[ORDNUM]
+				        ),
+				        "No Lines",
+				            CALCULATE(DISTINCTCOUNT('Order Lines'[ORDLIN]))
+				    ),
+				    "Line Range",
+				        SWITCH(
+				            TRUE(),
+				            [No Lines] >= 1 && [No Lines] < 15, "<15",
+				            [No Lines] >= 15 && [No Lines] < 30, "15<30",
+				            [No Lines] >= 30 && [No Lines] < 60, "30<60",
+				            "60+"
+				        )
+				)
+
+	annotation PBI_Id = 422c8eb38ec04929bbbf4c112164fdd8
+

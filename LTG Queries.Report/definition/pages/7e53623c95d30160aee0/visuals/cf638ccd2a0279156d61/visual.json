@@ -1,0 +1,747 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
+  "name": "cf638ccd2a0279156d61",
+  "position": {
+    "x": 0,
+    "y": 332.04582651391161,
+    "z": 1000,
+    "height": 387.56137479541735,
+    "width": 1280,
+    "tabOrder": 3000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "MergeE430ShortsLive"
+                    }
+                  },
+                  "Property": "Client Name"
+                }
+              },
+              "queryRef": "MergeE430ShortsLive.Client Name",
+              "nativeQueryRef": "Client Name"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "MergeE430ShortsLive"
+                    }
+                  },
+                  "Property": "ORDNUM"
+                }
+              },
+              "queryRef": "MergeE430ShortsLive.ORDNUM",
+              "nativeQueryRef": "Order Number",
+              "displayName": "Order Number"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "MergeE430ShortsLive"
+                    }
+                  },
+                  "Property": "dispatch_dte_only"
+                }
+              },
+              "queryRef": "MergeE430ShortsLive.dispatch_dte_only",
+              "nativeQueryRef": "BY Dispatch Date",
+              "displayName": "BY Dispatch Date"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "MergeE430ShortsLive"
+                    }
+                  },
+                  "Property": "SR.Dispatch Date"
+                }
+              },
+              "queryRef": "MergeE430ShortsLive.SR.Dispatch Date",
+              "nativeQueryRef": "Shorts Dispatch Date",
+              "displayName": "Shorts Dispatch Date"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "MergeE430ShortsLive"
+                    }
+                  },
+                  "Property": "CombineDate"
+                }
+              },
+              "queryRef": "MergeE430ShortsLive.CombineDate",
+              "nativeQueryRef": "CombineDate"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "MergeE430ShortsLive"
+                    }
+                  },
+                  "Property": "PRTNUM"
+                }
+              },
+              "queryRef": "MergeE430ShortsLive.PRTNUM",
+              "nativeQueryRef": "Item No",
+              "displayName": "Item No"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "MergeE430ShortsLive"
+                    }
+                  },
+                  "Property": "Item Desc"
+                }
+              },
+              "queryRef": "MergeE430ShortsLive.Item Desc",
+              "nativeQueryRef": "Item Description",
+              "displayName": "Item Description"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "MergeE430ShortsLive"
+                        }
+                      },
+                      "Property": "ORDQTY"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(MergeE430ShortsLive.ORDQTY)",
+              "nativeQueryRef": "Ordered Qty",
+              "displayName": "Ordered Qty",
+              "format": "#,0"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "MergeE430ShortsLive"
+                        }
+                      },
+                      "Property": "SHPQTY"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(MergeE430ShortsLive.SHPQTY)",
+              "nativeQueryRef": "Shipped Qty",
+              "displayName": "Shipped Qty",
+              "format": "#,0"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "MergeE430ShortsLive"
+                        }
+                      },
+                      "Property": "Diff"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(MergeE430ShortsLive.Diff)",
+              "nativeQueryRef": "Short Qty",
+              "displayName": "Short Qty",
+              "format": "#,0"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "MergeE430ShortsLive"
+                        }
+                      },
+                      "Property": "Policy Cancelation"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(MergeE430ShortsLive.Policy Cancelation)",
+              "nativeQueryRef": "Policy Cancelation",
+              "format": "#,0"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "MergeE430ShortsLive"
+                    }
+                  },
+                  "Property": "CUSTOMER"
+                }
+              },
+              "queryRef": "MergeE430ShortsLive.CUSTOMER",
+              "nativeQueryRef": "Customer",
+              "displayName": "Customer"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "MergeE430ShortsLive"
+                    }
+                  },
+                  "Property": "Customer type"
+                }
+              },
+              "queryRef": "MergeE430ShortsLive.Customer type",
+              "nativeQueryRef": "Customer type"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "MergeE430ShortsLive"
+                    }
+                  },
+                  "Property": "BUSINESS_SEGMENT"
+                }
+              },
+              "queryRef": "MergeE430ShortsLive.BUSINESS_SEGMENT",
+              "nativeQueryRef": "Business Segment",
+              "displayName": "Business Segment"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "MergeE430ShortsLive"
+                    }
+                  },
+                  "Property": "SR.Short Ownership"
+                }
+              },
+              "queryRef": "MergeE430ShortsLive.SR.Short Ownership",
+              "nativeQueryRef": "Short Ownership",
+              "displayName": "Short Ownership"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "MergeE430ShortsLive"
+                    }
+                  },
+                  "Property": "SR.Sub Cause"
+                }
+              },
+              "queryRef": "MergeE430ShortsLive.SR.Sub Cause",
+              "nativeQueryRef": "Sub Cause",
+              "displayName": "Sub Cause"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "MergeE430ShortsLive"
+                    }
+                  },
+                  "Property": "SR.Route Cause"
+                }
+              },
+              "queryRef": "MergeE430ShortsLive.SR.Route Cause",
+              "nativeQueryRef": "Root Cause",
+              "displayName": "Root Cause"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "MergeE430ShortsLive"
+                    }
+                  },
+                  "Property": "SR.Comments"
+                }
+              },
+              "queryRef": "MergeE430ShortsLive.SR.Comments",
+              "nativeQueryRef": "Comments",
+              "displayName": "Comments"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "columnHeaders": [
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            },
+            "columnAdjustment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'growToFit'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "85.7612128243093D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(MergeE430ShortsLive.Diff)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "98.5695543638091D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(MergeE430ShortsLive.ORDQTY)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "95.47463175122749D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(MergeE430ShortsLive.SHPQTY)"
+          }
+        }
+      ],
+      "columnFormatting": [
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(MergeE430ShortsLive.ORDQTY)"
+          }
+        },
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(MergeE430ShortsLive.SHPQTY)"
+          }
+        },
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(MergeE430ShortsLive.Diff)"
+          }
+        },
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(MergeE430ShortsLive.Policy Cancelation)"
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Details'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualHeader": [
+        {
+          "properties": {
+            "background": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 2,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "1bfadf9d01b9a063eb61",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "MergeE430ShortsLive"
+              }
+            },
+            "Property": "Client Name"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "7223672b3dbd12b0d8a9",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "MergeE430ShortsLive"
+              }
+            },
+            "Property": "ORDNUM"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "f7acd5c040e5854628e4",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "MergeE430ShortsLive"
+              }
+            },
+            "Property": "dispatch_dte_only"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "eaefd14b062b67e37080",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "MergeE430ShortsLive"
+              }
+            },
+            "Property": "SR.Dispatch Date"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "dee28ff6e9a4b23cd109",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "MergeE430ShortsLive"
+              }
+            },
+            "Property": "CombineDate"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "8c9de848b62dbc2e73b6",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "MergeE430ShortsLive"
+              }
+            },
+            "Property": "PRTNUM"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "09dc972c83b5eb3ad0ce",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "MergeE430ShortsLive"
+              }
+            },
+            "Property": "Item Desc"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "1f8e07d53573b40bbcc9",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "MergeE430ShortsLive"
+                  }
+                },
+                "Property": "ORDQTY"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "d864394bcae857252d20",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "MergeE430ShortsLive"
+                  }
+                },
+                "Property": "SHPQTY"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "16a2e1f88069e1705aec",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "MergeE430ShortsLive"
+                  }
+                },
+                "Property": "Diff"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "d85d18558399ca81e680",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "MergeE430ShortsLive"
+                  }
+                },
+                "Property": "Policy Cancelation"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "118271fd4300823d290c",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "MergeE430ShortsLive"
+              }
+            },
+            "Property": "CUSTOMER"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "5d4257554023ab2808c4",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "MergeE430ShortsLive"
+              }
+            },
+            "Property": "Customer type"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "5e1fc6fc2ab4203e15d1",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "MergeE430ShortsLive"
+              }
+            },
+            "Property": "BUSINESS_SEGMENT"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "230a9dac993dc94b5018",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "MergeE430ShortsLive"
+              }
+            },
+            "Property": "SR.Short Ownership"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "4cc132b1da8951790ddb",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "MergeE430ShortsLive"
+              }
+            },
+            "Property": "SR.Sub Cause"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "05f3467026e830b1b550",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "MergeE430ShortsLive"
+              }
+            },
+            "Property": "SR.Route Cause"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "175ec20e5a1d141559e6",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "MergeE430ShortsLive"
+              }
+            },
+            "Property": "SR.Comments"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
+  }
+}

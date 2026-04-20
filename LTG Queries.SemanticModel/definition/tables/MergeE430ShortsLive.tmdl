@@ -1,0 +1,329 @@
+table MergeE430ShortsLive
+	lineageTag: 0ad96858-8fc6-44c4-8cda-c117203ac7af
+	sourceLineageTag: 05cc001f-524c-4ec7-8039-09d8a41dccbc
+
+	measure 'Diff divided by SHPQTY' = EXTERNALMEASURE("Diff divided by SHPQTY", DOUBLE, "DirectQuery to AS - K04 - EMG Shortage Report")
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: c1414deb-8cfa-4b2c-aeca-4b5779d7050c
+		sourceLineageTag: 9c832a83-7f32-47d9-b51f-2f39f8e66f3c
+		dataCategory: Uncategorized
+
+	measure 'Pct by Short Ownership' = EXTERNALMEASURE("Pct by Short Ownership", STRING, "DirectQuery to AS - K04 - EMG Shortage Report")
+		lineageTag: 5e957f2f-94c9-4f69-9a7d-fb74f1e6efc4
+		sourceLineageTag: 7a3cff86-b8c3-487f-add4-268968415991
+		dataCategory: Uncategorized
+
+	column DQKey
+		dataType: string
+		lineageTag: eec6895b-4fc6-4d28-8189-b404dd03993f
+		sourceLineageTag: f42eb8c7-9b02-4472-8452-8f7e75545fa4
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: DQKey
+
+		annotation SummarizationSetBy = User
+
+	column ORDNUM
+		dataType: string
+		lineageTag: 5bf0e4f5-0d52-418a-9241-ead32ecd048e
+		sourceLineageTag: fe8544e8-57f0-40b8-8e9f-a530a3c8eb86
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: ORDNUM
+
+		annotation SummarizationSetBy = User
+
+	column CLIENT_ID
+		dataType: string
+		lineageTag: 65db3e66-99e9-45be-bc02-48f2678ea9b3
+		sourceLineageTag: 8e299953-10fc-44f0-b154-48a0402b164a
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: CLIENT_ID
+
+		annotation SummarizationSetBy = User
+
+	column ORDQTY
+		dataType: int64
+		formatString: 0
+		lineageTag: 02dd28b6-f7ee-488d-8b61-3ed64da8eb91
+		sourceLineageTag: 6ec487a4-3117-477d-b7fe-77c9cfdc6155
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: ORDQTY
+
+		annotation SummarizationSetBy = User
+
+	column SHPQTY
+		dataType: int64
+		formatString: 0
+		lineageTag: 740f6d23-3910-4fcc-9fe1-561a0b0376a6
+		sourceLineageTag: 3e885e0d-38c4-4121-b620-75fcf30cb5b2
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: SHPQTY
+
+		annotation SummarizationSetBy = User
+
+	column CUSTOMER
+		dataType: string
+		lineageTag: 614b3926-21bb-48bd-b8c7-e9da61973cf3
+		sourceLineageTag: 0675c182-6f28-47b5-a7f7-dcd90c730dd5
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: CUSTOMER
+
+		annotation SummarizationSetBy = User
+
+	column CITY
+		dataType: string
+		lineageTag: 3914e614-4c23-4860-bd3b-6e1d5af43bdd
+		sourceLineageTag: b9e00610-0cd6-4e4c-8f0f-363033d2d4a4
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: CITY
+
+		annotation SummarizationSetBy = User
+
+	column BUSINESS_SEGMENT
+		dataType: string
+		lineageTag: 608a9d41-a10b-4f17-a8cf-85fbc85633bf
+		sourceLineageTag: 5d502607-133e-4525-8beb-b3e7dd5ca37f
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: BUSINESS_SEGMENT
+
+		annotation SummarizationSetBy = User
+
+	column Diff
+		dataType: int64
+		lineageTag: f3713b66-ad2d-41e7-996e-d9600663147b
+		sourceLineageTag: c9167375-1d70-43b4-9a51-4d28cbc3f165
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Diff
+
+		annotation SummarizationSetBy = User
+
+	column PRTNUM
+		dataType: string
+		lineageTag: d8a55dd1-ca52-42e0-aa6a-e38a67e9e0a7
+		sourceLineageTag: 747551af-c053-423b-96e4-5dfda6ea651c
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: PRTNUM
+
+		annotation SummarizationSetBy = User
+
+	column 'Item Desc'
+		dataType: string
+		lineageTag: b69f9f06-1e56-4ff5-abcd-25abcd786d94
+		sourceLineageTag: 6ed37b45-2598-4554-a84b-ec6e78db00a5
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Item Desc
+
+		annotation SummarizationSetBy = User
+
+	column dispatch_dte_only
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: af5510ad-b3af-4bae-857c-05dd9f7d3000
+		sourceLineageTag: 5291992e-e556-4a7b-bff3-744c1d7dfc0b
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: dispatch_dte_only
+
+		annotation SummarizationSetBy = User
+
+	column loading_dte_only
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 1ae03c08-3527-47d1-a730-3d62abdbb9a6
+		sourceLineageTag: 0b97e365-c72d-45d0-acf1-14d9db3f58be
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: loading_dte_only
+
+		annotation SummarizationSetBy = User
+
+	column Join
+		dataType: string
+		lineageTag: 76d3461b-c690-4f3e-8276-0c4a355cec07
+		sourceLineageTag: 4e8daaf8-04b5-431b-be55-5250b7051c18
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Join
+
+		annotation SummarizationSetBy = User
+
+	column 'dispatch_dte_only - Copy'
+		dataType: string
+		lineageTag: d79f6f74-ca1b-47e7-a9ee-2c26e2585759
+		sourceLineageTag: 0ad0cfe4-67bc-4ff3-b32c-8f2317195bfc
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: dispatch_dte_only - Copy
+
+		annotation SummarizationSetBy = User
+
+	column 'SR.Dispatch Date'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: b54f68e0-d694-4cb6-8aee-dc0b82fbff6d
+		sourceLineageTag: 002a099e-bd26-4214-84c5-5712bf411dba
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: SR.Dispatch Date
+
+		annotation SummarizationSetBy = User
+
+	column 'SR.Route Cause'
+		dataType: string
+		lineageTag: f92e532b-c8f6-4a91-9940-d8c79bf96044
+		sourceLineageTag: 50a1ae25-14e1-4f90-bdfc-821b7422e5d6
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: SR.Route Cause
+
+		annotation SummarizationSetBy = User
+
+	column 'SR.Sub Cause'
+		dataType: string
+		lineageTag: fc297442-9d41-4e11-bfd1-a9d97df04e5d
+		sourceLineageTag: 2ea5293a-6a57-49b4-9773-74f121702055
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: SR.Sub Cause
+
+		annotation SummarizationSetBy = User
+
+	column Year
+		dataType: int64
+		formatString: 0
+		lineageTag: 864a8bf7-f20b-4982-a882-49358873e008
+		sourceLineageTag: 8ae9d2d8-c116-4e4f-a66f-79fcfd17a1e4
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Year
+
+		annotation SummarizationSetBy = User
+
+	column 'Week of Year'
+		dataType: int64
+		formatString: 0
+		lineageTag: 4518cfe9-7e50-4d68-ae92-31a834333f72
+		sourceLineageTag: 7048ad71-8eea-4cab-abde-748f3d45d701
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Week of Year
+
+		annotation SummarizationSetBy = User
+
+	column 'Current week'
+		dataType: string
+		lineageTag: 1c785003-0bd6-4af6-b281-f0c839903481
+		sourceLineageTag: a8301e6d-7037-471f-9c90-f0b28b4183b5
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Current week
+
+		annotation SummarizationSetBy = User
+
+	column 'Last week'
+		dataType: string
+		lineageTag: 5c697eca-a567-486d-8361-b7ebf631bb98
+		sourceLineageTag: 24ebac45-c0a0-4e28-8672-7eede2a633e1
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Last week
+
+		annotation SummarizationSetBy = User
+
+	column 'Customer type'
+		dataType: string
+		lineageTag: 548e1477-76b8-4ab5-b430-f0d29438b225
+		sourceLineageTag: c86b51a1-5ba8-4fe8-a3c8-9cc5b131f339
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Customer type
+
+		annotation SummarizationSetBy = User
+
+	column CombineDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 34b75ca3-f97e-4578-bd1b-569f9eec4a3a
+		sourceLineageTag: 44c6e24e-95cd-4251-97bd-644d6a6a6d7c
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: CombineDate
+
+		annotation SummarizationSetBy = User
+
+	column Yesterday
+		dataType: string
+		lineageTag: 94f2f081-aa46-4186-b6dc-4258bb37f4cc
+		sourceLineageTag: 8a0e7642-8962-45c3-be1b-1256062c238e
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Yesterday
+
+		annotation SummarizationSetBy = User
+
+	column 'Data Join New'
+		dataType: string
+		lineageTag: 2f34f82e-c701-4c3d-8c51-81e5862587a5
+		sourceLineageTag: a7c6bffb-eefe-4dc3-b14c-68c09db898f0
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Data Join New
+
+		annotation SummarizationSetBy = User
+
+	column 'SR.Comments'
+		dataType: string
+		lineageTag: 0cdf1bb3-26ce-426e-b39e-6b274f5cb1c3
+		sourceLineageTag: 650405ad-013a-4d5a-9c3a-60a9aeb6f9f1
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: SR.Comments
+
+		annotation SummarizationSetBy = User
+
+	column 'Policy Cancelation'
+		dataType: double
+		lineageTag: 8d999a70-f856-4a35-804d-cb4a3f548e3a
+		sourceLineageTag: 1ab04f43-7ad3-4245-9835-dfb8403c56b2
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Policy Cancelation
+
+		annotation SummarizationSetBy = User
+
+	column 'SR.Short Ownership'
+		dataType: string
+		lineageTag: d2225b45-4744-4f0e-9167-8fa07660c587
+		sourceLineageTag: 530c08f9-6006-4ed7-9d71-49661c6c8fa0
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: SR.Short Ownership
+
+		annotation SummarizationSetBy = User
+
+	column 'Client Name'
+		dataType: string
+		lineageTag: 776df7c5-9117-4e15-8f73-2c195fa99eb3
+		sourceLineageTag: 01cfda53-996a-4dad-8e96-ca6bbc6afb21
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Client Name
+
+		annotation SummarizationSetBy = User
+
+	partition MergeE430ShortsLive = entity
+		mode: directQuery
+		source
+			entityName: MergeE430ShortsLive
+			expressionSource: 'DirectQuery to AS - K04 - EMG Shortage Report'
+

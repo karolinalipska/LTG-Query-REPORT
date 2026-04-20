@@ -1,0 +1,185 @@
+table 'Order Lines'
+	lineageTag: 88505264-a925-4dcd-a01d-6029c4fa5b5b
+
+	measure Average = count('Order Lines'[ORDLIN])/ DISTINCTCOUNTNOBLANK('Order Lines'[ORDNUM])
+		lineageTag: be66670f-7160-46f4-8a55-c9d4e0595a7c
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CLIENT_ID
+		dataType: string
+		isNullable: false
+		sourceProviderType: Varchar2
+		lineageTag: 81689cff-43f0-4a31-9789-8cd08974fcb8
+		summarizeBy: none
+		sourceColumn: CLIENT_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Client Name'
+		dataType: string
+		sourceProviderType: Varchar2
+		lineageTag: cd3fd1c6-e029-4c6e-88c7-dfc74b4114ac
+		summarizeBy: none
+		sourceColumn: Client Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column ORDNUM
+		dataType: string
+		isNullable: false
+		sourceProviderType: Varchar2
+		lineageTag: 5ae39315-49cb-4b60-8910-6d0a51ed4c9c
+		summarizeBy: none
+		sourceColumn: ORDNUM
+
+		annotation SummarizationSetBy = Automatic
+
+	column ORDLIN
+		dataType: string
+		isNullable: false
+		sourceProviderType: Varchar2
+		lineageTag: 730f87e2-934c-4667-bbe9-ef27d9487587
+		summarizeBy: none
+		sourceColumn: ORDLIN
+
+		annotation SummarizationSetBy = Automatic
+
+	column WH_ID
+		dataType: string
+		isNullable: false
+		sourceProviderType: Varchar2
+		lineageTag: b97dbfba-e236-4b9d-8e00-69b07e2e4c2a
+		summarizeBy: none
+		sourceColumn: WH_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column PRT_CLIENT_ID
+		dataType: string
+		sourceProviderType: Varchar2
+		lineageTag: 31bac4b4-7cdf-43e1-a414-4aaa949d9c46
+		summarizeBy: none
+		sourceColumn: PRT_CLIENT_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column PRTNUM
+		dataType: string
+		sourceProviderType: Varchar2
+		lineageTag: 7f21a741-7d61-41ec-b536-9b9d60be4576
+		summarizeBy: none
+		sourceColumn: PRTNUM
+
+		annotation SummarizationSetBy = Automatic
+
+	column RULE_NAM
+		dataType: string
+		sourceProviderType: Varchar2
+		lineageTag: 9dd5b4b8-ea91-492a-af5d-1b2f4a4f47ea
+		summarizeBy: none
+		sourceColumn: RULE_NAM
+
+		annotation SummarizationSetBy = Automatic
+
+	column ORDQTY
+		dataType: int64
+		isNullable: false
+		formatString: 0
+		sourceProviderType: Int64
+		lineageTag: e5900fba-3607-425c-b3d9-d1e8de68613f
+		summarizeBy: sum
+		sourceColumn: ORDQTY
+
+		annotation SummarizationSetBy = Automatic
+
+	column PCKQTY
+		dataType: int64
+		isNullable: false
+		formatString: 0
+		sourceProviderType: Int64
+		lineageTag: a36b7acb-cac8-4920-b637-50642d118929
+		summarizeBy: sum
+		sourceColumn: PCKQTY
+
+		annotation SummarizationSetBy = Automatic
+
+	column SHPQTY
+		dataType: int64
+		formatString: 0
+		sourceProviderType: Int64
+		lineageTag: ffcb1a8c-fb34-4fb4-9f4f-8ce4bcc62f58
+		summarizeBy: sum
+		sourceColumn: SHPQTY
+
+		annotation SummarizationSetBy = Automatic
+
+	column ORDINV
+		dataType: string
+		sourceProviderType: Varchar2
+		lineageTag: 7e34ea81-29c5-4aa6-9eb8-d36c3f0a78b9
+		summarizeBy: none
+		sourceColumn: ORDINV
+
+		annotation SummarizationSetBy = Automatic
+
+	column INVSTS_PRG
+		dataType: string
+		sourceProviderType: Varchar2
+		lineageTag: 01bc5f84-ec75-485b-9275-17886e5618eb
+		summarizeBy: none
+		sourceColumn: INVSTS_PRG
+
+		annotation SummarizationSetBy = Automatic
+
+	column CANCELLED_FLG
+		dataType: int64
+		isNullable: false
+		formatString: 0
+		sourceProviderType: Int16
+		lineageTag: 78bcc5f2-fe71-4921-8a6d-299673dd33e3
+		summarizeBy: sum
+		sourceColumn: CANCELLED_FLG
+
+		annotation SummarizationSetBy = Automatic
+
+	column REACOD_CMNT
+		dataType: string
+		sourceProviderType: Varchar2
+		lineageTag: e0f9963a-16f9-405d-a3f9-3294683828de
+		summarizeBy: none
+		sourceColumn: REACOD_CMNT
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Entry Date'
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: Date
+		lineageTag: ab1edf09-fef0-4f91-9aa4-cd19d12480f1
+		summarizeBy: none
+		sourceColumn: Entry Date
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'ord - ordlin' = 'Order Lines'[ORDNUM]&" - "&'Order Lines'[ORDLIN]
+		dataType: string
+		lineageTag: 8724c387-9e47-47bb-acd5-4e42c00391b9
+		summarizeBy: none
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Order Lines' = m
+		mode: directQuery
+		source =
+				let
+				    Source = Oracle.Database(EMG_BlueYonder_Server_Prod, [HierarchicalNavigation=true, Query="select #(lf)CLIENT_ID ,#(lf)case #(lf)when client_id = 'CID001842' then 'KP' #(lf)when client_id = 'CID000001' then 'Mars' #(lf)when client_id = 'CID001607' then 'General Mills' #(lf)when client_id = 'CID011524' then 'TATA' #(lf)else client_id end ""Client Name"",#(lf)ORDNUM ,#(lf)ORDLIN ,#(lf)WH_ID ,#(lf)PRT_CLIENT_ID ,#(lf)PRTNUM ,#(lf)RULE_NAM ,#(lf)ORDQTY ,#(lf)PCKQTY ,#(lf)SHPQTY ,#(lf)ENTDTE-1/24 ""Entry Date"" ,#(lf)ORDINV ,#(lf)INVSTS_PRG ,#(lf)CANCELLED_FLG,#(lf)REACOD_CMNT#(lf) from ord_line#(lf) where trunc(entdte-1/24) >= to_timestamp('01/01/2026','dd/mm/yyyy')"])
+				in
+				    Source
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

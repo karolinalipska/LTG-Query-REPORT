@@ -100,3 +100,16 @@ expression LTG_BlueYonder_Server_Arch = "czchols5472.prg-dc.dhl.com:1521/O19010H
 
 	annotation PBI_ResultType = Text
 
+expression 'DirectQuery to AS - K04 - EMG Shortage Report' =
+		let
+		    Source = AnalysisServices.Database("powerbi://api.powerbi.com/v1.0/myorg/UKI-EMG-PROD", "K04 - EMG Shortage Report"),
+		    Cubes = Table.Combine(Source[Data]),
+		    Cube = Cubes{[Id="Model", Kind="Cube"]}[Data]
+		in
+		    Cube
+	lineageTag: b4bb090a-8a37-4ed1-bbb6-33c6a85501c4
+
+	annotation PBI_IncludeFutureArtifacts = True
+
+	annotation PBI_RemovedChildren = [{"remoteItemId":{"analysisServicesObject":{"sourceName":null,"sourceLineageTag":"e70c09f8-47f0-4904-9533-9d6d65388faa"}},"objectType":"Table"}]
+
