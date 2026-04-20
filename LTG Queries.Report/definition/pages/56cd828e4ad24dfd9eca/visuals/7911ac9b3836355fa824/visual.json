@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
   "name": "7911ac9b3836355fa824",
   "position": {
     "x": 0,
@@ -185,7 +185,8 @@
                 }
               },
               "queryRef": "Sum(Load Status.Total Pall)",
-              "nativeQueryRef": "Total Pall"
+              "nativeQueryRef": "Total Pall",
+              "format": "#,0"
             },
             {
               "field": {
@@ -218,7 +219,8 @@
                 }
               },
               "queryRef": "Sum(Load Status.Shorts)",
-              "nativeQueryRef": "Shorts"
+              "nativeQueryRef": "Shorts",
+              "format": "#,0"
             },
             {
               "field": {
@@ -237,7 +239,8 @@
                 }
               },
               "queryRef": "Sum(Load Status.Replen Case Qty)",
-              "nativeQueryRef": "Replen Case Qty"
+              "nativeQueryRef": "Replen Case Qty",
+              "format": "#,0"
             },
             {
               "field": {
@@ -256,7 +259,8 @@
                 }
               },
               "queryRef": "Sum(Load Status.Replen No)",
-              "nativeQueryRef": "Replen No"
+              "nativeQueryRef": "Replen No",
+              "format": "#,0"
             },
             {
               "field": {
@@ -275,7 +279,8 @@
                 }
               },
               "queryRef": "Sum(Load Status.Total Case Pick)",
-              "nativeQueryRef": "Total Case Pick"
+              "nativeQueryRef": "Total Case Pick",
+              "format": "#,0"
             },
             {
               "field": {
@@ -294,7 +299,8 @@
                 }
               },
               "queryRef": "Sum(Load Status.Case Pick Remaining)",
-              "nativeQueryRef": "Case Pick Remaining"
+              "nativeQueryRef": "Case Pick Remaining",
+              "format": "#,0"
             },
             {
               "field": {
@@ -313,7 +319,8 @@
                 }
               },
               "queryRef": "Sum(Load Status.Pallets WRAP-IN)",
-              "nativeQueryRef": "Pallets WRAP-IN"
+              "nativeQueryRef": "Pallets WRAP-IN",
+              "format": "#,0"
             },
             {
               "field": {
@@ -332,7 +339,8 @@
                 }
               },
               "queryRef": "Sum(Load Status.Pallets MIN01)",
-              "nativeQueryRef": "Pallets MIN01"
+              "nativeQueryRef": "Pallets MIN01",
+              "format": "#,0"
             },
             {
               "field": {
@@ -392,6 +400,23 @@
             }
           ]
         }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Load Status"
+                  }
+                },
+                "Property": "App Start"
+              }
+            },
+            "direction": "Descending"
+          }
+        ]
       }
     },
     "objects": {
@@ -402,6 +427,13 @@
               "expr": {
                 "Literal": {
                   "Value": "'Center'"
+                }
+              }
+            },
+            "columnAdjustment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'growToFit'"
                 }
               }
             }
@@ -418,6 +450,136 @@
                 }
               }
             }
+          }
+        }
+      ],
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "79.56231291747173D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(Load Status.Total Pall)"
+          }
+        }
+      ],
+      "columnFormatting": [
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(Load Status.Total Pall)"
+          }
+        },
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(Load Status.Shorts)"
+          }
+        },
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(Load Status.Replen Case Qty)"
+          }
+        },
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(Load Status.Replen No)"
+          }
+        },
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(Load Status.Total Case Pick)"
+          }
+        },
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(Load Status.Case Pick Remaining)"
+          }
+        },
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(Load Status.Pallets WRAP-IN)"
+          }
+        },
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(Load Status.Pallets MIN01)"
           }
         }
       ]
@@ -456,5 +618,385 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "e1ae391c13777662eb9a",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Load Status"
+              }
+            },
+            "Property": "Load"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "875ca8360b42a4d0b020",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Load Status"
+              }
+            },
+            "Property": "Appointment"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "f183131933c08a8135b3",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Load Status"
+              }
+            },
+            "Property": "Haulier"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "807e9e20e1e7911ed9d8",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Load Status"
+              }
+            },
+            "Property": "Load type"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "bc1acc547c84319e352c",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Load Status"
+              }
+            },
+            "Property": "Client"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "4001305072282a5e245b",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Load Status"
+              }
+            },
+            "Property": "(Stops) Address"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "a60409f2a0123103ccb6",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Load Status"
+              }
+            },
+            "Property": "Check For"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "e608eff97be8ccc44c87",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Load Status"
+              }
+            },
+            "Property": "App Start"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "e65b5a6472b90c38215d",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Load Status"
+              }
+            },
+            "Property": "App Date"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "4040d8a19597a35e0d53",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Load Status"
+              }
+            },
+            "Property": "Choc/Gum"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "0e6763526e0dd333b107",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Load Status"
+              }
+            },
+            "Property": "Sandwich"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "eee8831fa273dc144070",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Load Status"
+                  }
+                },
+                "Property": "Total Pall"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "9196d943304be17499d8",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Load Status"
+              }
+            },
+            "Property": "Double Stack"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "e9ed1384ce672073d50e",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Load Status"
+                  }
+                },
+                "Property": "Shorts"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "5132ca31603ad9d6c1da",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Load Status"
+                  }
+                },
+                "Property": "Replen Case Qty"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "eab2c5d000c9ddbb30ca",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Load Status"
+                  }
+                },
+                "Property": "Replen No"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "d2937cd47a04541a00d2",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Load Status"
+                  }
+                },
+                "Property": "Total Case Pick"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "f26814919ed3b02394e2",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Load Status"
+                  }
+                },
+                "Property": "Case Pick Remaining"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "a76bb7636c5ba1290de0",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Load Status"
+                  }
+                },
+                "Property": "Pallets WRAP-IN"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "eb58282250cda721097c",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Load Status"
+                  }
+                },
+                "Property": "Pallets MIN01"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "8eff3c03403ad988c27b",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Load Status"
+              }
+            },
+            "Property": "Ready To Release"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "792918475d82c038a86c",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Load Status"
+              }
+            },
+            "Property": "Released date"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "b2d666d06aa4bcb09c0c",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Load Status"
+              }
+            },
+            "Property": "Time Left"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "6907abb6b7bb8d928067",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Load Status"
+              }
+            },
+            "Property": "Gravity Lane"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
   }
 }
