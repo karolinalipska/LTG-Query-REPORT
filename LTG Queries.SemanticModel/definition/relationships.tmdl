@@ -1,0 +1,6 @@
+relationship 0147060d-e900-7bc2-1b66-a03594dc97ee
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'Picked Pallet Weight Check BY'.LODNUM
+	toColumn: 'Picked Pallet Weight Check WCS'.tm_id
+

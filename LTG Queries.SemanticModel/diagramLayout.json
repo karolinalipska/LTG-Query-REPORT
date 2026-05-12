@@ -4,7 +4,7 @@
     {
       "ordinal": 0,
       "scrollPosition": {
-        "x": 1374.4444444444443,
+        "x": 2387.7777777777778,
         "y": 0
       },
       "nodes": [
@@ -166,55 +166,42 @@
         },
         {
           "location": {
-            "x": 1643.3705629024105,
-            "y": 104.33048563091256
+            "x": 3450.457458563536,
+            "y": 164.5
           },
-          "nodeIndex": "Part Pallets In Stock",
-          "nodeLineageTag": "dd039d04-c84c-41a1-bf48-9810f989ee75",
+          "nodeIndex": "Part Pallets in Stock from Returns",
+          "nodeLineageTag": "318b737d-e0b6-4def-9793-ba9bf821b36e",
           "size": {
-            "height": 272,
+            "height": 300,
             "width": 234
           },
-          "zIndex": 12
+          "zIndex": 0
         },
         {
           "location": {
-            "x": 3479.457458563536,
-            "y": 63.066198654845493
+            "x": 3428.9019030079803,
+            "y": 571.61111111111109
           },
-          "nodeIndex": "PP Returns Arch",
-          "nodeLineageTag": "7397a010-ac80-4356-9c7e-649aa74f35f5",
+          "nodeIndex": "Picked Pallet Weight Check BY",
+          "nodeLineageTag": "15a63e05-f3c0-406e-ae86-c434680085c7",
           "size": {
-            "height": 176,
-            "width": 234
+            "height": 248,
+            "width": 304
           },
-          "zIndex": 13
+          "zIndex": 0
         },
         {
           "location": {
-            "x": 3778.457458563536,
-            "y": 63.066198654845493
+            "x": 2990.6796807857586,
+            "y": 575.38888888888891
           },
-          "nodeIndex": "PP Returns PROD",
-          "nodeLineageTag": "1c300085-dfa8-4529-87f1-3988c8235cc0",
+          "nodeIndex": "Picked Pallet Weight Check WCS",
+          "nodeLineageTag": "38f1c7e5-247e-4c03-b903-1829c16bf493",
           "size": {
-            "height": 176,
-            "width": 234
+            "height": 296,
+            "width": 327.33333333333348
           },
-          "zIndex": 14
-        },
-        {
-          "location": {
-            "x": 1649.3906178193895,
-            "y": 497.57746312303789
-          },
-          "nodeIndex": "PP Returns",
-          "nodeLineageTag": "e2379531-cbd5-42c4-a4da-996ee8c7a830",
-          "size": {
-            "height": 200,
-            "width": 234
-          },
-          "zIndex": 15
+          "zIndex": 0
         }
       ],
       "name": "All tables",

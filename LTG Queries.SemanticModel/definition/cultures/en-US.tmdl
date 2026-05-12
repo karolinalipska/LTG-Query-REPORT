@@ -2329,6 +2329,174 @@ cultureInfo en-US
 			          }
 			        }
 			      ]
+			    },
+			    "picked_pallet_weight_check_by.lodnum": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Picked Pallet Weight Check BY",
+			          "ConceptualProperty": "LODNUM"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "LPN": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "picked_pallet_weight_check_wcs.host_weight": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Picked Pallet Weight Check WCS",
+			          "ConceptualProperty": "host_weight"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Weight Expected (grams)": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "picked_pallet_weight_check_by.nottxt": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Picked Pallet Weight Check BY",
+			          "ConceptualProperty": "NOTTXT"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Pick Type": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "picked_pallet_weight_check_wcs.host_location": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Picked Pallet Weight Check WCS",
+			          "ConceptualProperty": "host_location"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "BY Location": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "picked_pallet_weight_check_wcs.location": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Picked Pallet Weight Check WCS",
+			          "ConceptualProperty": "location"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "WCS Location": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "picked_pallet_weight_check_wcs.tm_state": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Picked Pallet Weight Check WCS",
+			          "ConceptualProperty": "tm_state"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "LPN Status": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "picked_pallet_weight_check_wcs.measured_weight": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Picked Pallet Weight Check WCS",
+			          "ConceptualProperty": "measured_weight"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Weight Actual (grams)": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "picked_pallet_weight_check_wcs.weight_diff": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Picked Pallet Weight Check WCS",
+			          "ConceptualProperty": "Weight Diff"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Difference (grams)": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
