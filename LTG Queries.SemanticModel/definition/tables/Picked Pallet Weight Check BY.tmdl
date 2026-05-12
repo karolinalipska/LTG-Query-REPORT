@@ -1,0 +1,83 @@
+table 'Picked Pallet Weight Check BY'
+	lineageTag: 15a63e05-f3c0-406e-ae86-c434680085c7
+
+	column STOLOC
+		dataType: string
+		sourceProviderType: Varchar2
+		lineageTag: 8c32c629-9245-4c15-ba7f-7f14a1675384
+		summarizeBy: none
+		sourceColumn: STOLOC
+
+		annotation SummarizationSetBy = Automatic
+
+	column LODNUM
+		dataType: string
+		sourceProviderType: Varchar2
+		lineageTag: 3c337c37-bf85-43ff-ae29-20b8f7d545b1
+		summarizeBy: none
+		sourceColumn: LODNUM
+
+		annotation SummarizationSetBy = Automatic
+
+	column Client
+		dataType: string
+		sourceProviderType: Varchar2
+		lineageTag: 334b8924-622d-4fcf-9aab-740ce52b6761
+		summarizeBy: none
+		sourceColumn: Client
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Last Moved'
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: Date
+		lineageTag: d0f4b773-3779-4afc-9dbe-05b5e52cee59
+		summarizeBy: none
+		sourceColumn: Last Moved
+
+		annotation SummarizationSetBy = Automatic
+
+	column NOTTXT
+		dataType: string
+		sourceProviderType: Varchar2
+		lineageTag: a855df25-8b9c-4904-90cf-d80f3d70a784
+		summarizeBy: none
+		sourceColumn: NOTTXT
+
+		annotation SummarizationSetBy = Automatic
+
+	column Qty
+		dataType: double
+		sourceProviderType: Decimal(38, 127)
+		lineageTag: c97d3c45-5d36-4383-bbbc-8b1db5b247ed
+		summarizeBy: sum
+		sourceColumn: Qty
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'BY Weight'
+		dataType: double
+		sourceProviderType: Decimal(38, 127)
+		lineageTag: a95f497c-d4d8-4005-9288-f0971f24396f
+		summarizeBy: sum
+		sourceColumn: BY Weight
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition 'Picked Pallet Weight Check BY' = m
+		mode: directQuery
+		source =
+				let
+				    Source = Oracle.Database(LTG_BlueYonder_Server_Prod, [Query="select#(lf)stoloc,#(lf)lodnum,#(lf)""Client"",#(lf)max(lstmov) ""Last Moved"",#(lf)nottxt,#(lf)sum(untqty)  ""Qty"",#(lf)sum(""TotWGT"")""BY Weight""#(lf)from#(lf)(#(lf)select #(lf)iv.STOLOC ,#(lf)iv.LODNUM ,#(lf)iv.PRTNUM ,#(lf)case #(lf)    when iv.PRT_CLIENT_ID = 'CID001842' then 'KP'#(lf)    when iv.PRT_CLIENT_ID = 'CID000001' then 'Mars'#(lf)    when iv.PRT_CLIENT_ID = 'CID001607' then 'GM'#(lf)    when iv.PRT_CLIENT_ID = 'CID011524' then 'TATA'#(lf)    when iv.PRT_CLIENT_ID = 'CID013634' then 'Mondelez'#(lf)    else iv.PRT_CLIENT_ID#(lf)    end ""Client"",#(lf)iv.UNTQTY ,#(lf)iv.SHIP_LINE_ID ,#(lf)iv.lstmov-1/24 lstmov,#(lf)sl.ordnum ,#(lf)ont.nottxt,#(lf)pf.UNTGRSWGT,#(lf)pf.UNTGRSWGT*iv.UNTQTY ""TotWGT""#(lf)from all_inventory_view iv#(lf)join shipment_line sl#(lf)on iv.ship_line_id = sl.ship_line_id#(lf)left join ord_note ont#(lf)on sl.ordnum = ont.ordnum#(lf)and ont.nottyp = 'PI'#(lf)left join#(lf)prtftp_view pf#(lf)on iv.prtnum = pf.prtnum#(lf)and iv.prt_client_id = pf.prt_client_id#(lf)and iv.wh_id = pf.wh_id#(lf)and pf.DEFFTP_FLG = 1#(lf)where iv.stoloc = 'ASRS-PICKED'#(lf))#(lf)group by#(lf)stoloc,lodnum,""Client"",nottxt", CreateNavigationProperties=false, CommandTimeout=#duration(0, 11, 0, 0)])
+				in
+				    Source
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

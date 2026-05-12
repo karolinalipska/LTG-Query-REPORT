@@ -1,0 +1,488 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
+  "name": "b1c7bcb38b89a4e28d40",
+  "position": {
+    "x": 0,
+    "y": 75.866261398176292,
+    "z": 1000,
+    "height": 643.89057750759878,
+    "width": 1280,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Picked Pallet Weight Check BY"
+                    }
+                  },
+                  "Property": "Client"
+                }
+              },
+              "queryRef": "Picked Pallet Weight Check BY.Client",
+              "nativeQueryRef": "Client"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Picked Pallet Weight Check BY"
+                    }
+                  },
+                  "Property": "Last Moved"
+                }
+              },
+              "queryRef": "Picked Pallet Weight Check BY.Last Moved",
+              "nativeQueryRef": "Last Moved"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Picked Pallet Weight Check BY"
+                    }
+                  },
+                  "Property": "LODNUM"
+                }
+              },
+              "queryRef": "Picked Pallet Weight Check BY.LODNUM",
+              "nativeQueryRef": "LPN",
+              "displayName": "LPN"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Picked Pallet Weight Check BY"
+                        }
+                      },
+                      "Property": "Qty"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(Picked Pallet Weight Check BY.Qty)",
+              "nativeQueryRef": "Qty",
+              "format": "#,0"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Picked Pallet Weight Check WCS"
+                    }
+                  },
+                  "Property": "host_weight"
+                }
+              },
+              "queryRef": "Sum(Picked Pallet Weight Check WCS.host_weight)",
+              "nativeQueryRef": "Weight Expected (grams)",
+              "displayName": "Weight Expected (grams)",
+              "format": "#,0"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Picked Pallet Weight Check WCS"
+                    }
+                  },
+                  "Property": "measured_weight"
+                }
+              },
+              "queryRef": "Sum(Picked Pallet Weight Check WCS.measured_weight)",
+              "nativeQueryRef": "Weight Actual (grams)",
+              "displayName": "Weight Actual (grams)",
+              "format": "#,0"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Picked Pallet Weight Check WCS"
+                    }
+                  },
+                  "Property": "Weight Diff"
+                }
+              },
+              "queryRef": "Sum(Picked Pallet Weight Check WCS.Weight Diff)",
+              "nativeQueryRef": "Difference (grams)",
+              "displayName": "Difference (grams)",
+              "format": "0"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Picked Pallet Weight Check BY"
+                    }
+                  },
+                  "Property": "NOTTXT"
+                }
+              },
+              "queryRef": "Picked Pallet Weight Check BY.NOTTXT",
+              "nativeQueryRef": "Pick Type",
+              "displayName": "Pick Type"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Picked Pallet Weight Check WCS"
+                    }
+                  },
+                  "Property": "host_location"
+                }
+              },
+              "queryRef": "Picked Pallet Weight Check WCS.host_location",
+              "nativeQueryRef": "BY Location",
+              "displayName": "BY Location"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Picked Pallet Weight Check WCS"
+                    }
+                  },
+                  "Property": "location"
+                }
+              },
+              "queryRef": "Picked Pallet Weight Check WCS.location",
+              "nativeQueryRef": "WCS Location",
+              "displayName": "WCS Location"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Picked Pallet Weight Check WCS"
+                    }
+                  },
+                  "Property": "tm_state"
+                }
+              },
+              "queryRef": "Picked Pallet Weight Check WCS.tm_state",
+              "nativeQueryRef": "LPN Status",
+              "displayName": "LPN Status"
+            }
+          ],
+          "showAll": true
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Picked Pallet Weight Check BY"
+                  }
+                },
+                "Property": "Last Moved"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ]
+      }
+    },
+    "objects": {
+      "columnHeaders": [
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            },
+            "columnAdjustment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'growToFit'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "values": [
+        {
+          "properties": {
+            "wordWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "114.75563050475375D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(Picked Pallet Weight Check WCS.host_weight)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "118.10289389067525D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(Picked Pallet Weight Check WCS.measured_weight)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "93.9871382636656D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(Picked Pallet Weight Check WCS.Weight Diff)"
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Details'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualHeader": [
+        {
+          "properties": {
+            "background": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 2,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "5f87e24300f697a7e58c",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Picked Pallet Weight Check BY"
+              }
+            },
+            "Property": "LODNUM"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "398e2a206074fb5e7e8f",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Picked Pallet Weight Check BY"
+              }
+            },
+            "Property": "Last Moved"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "653a9da7686ae48c28b8",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Picked Pallet Weight Check BY"
+                  }
+                },
+                "Property": "Qty"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "3334e4b7d678b889353f",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Picked Pallet Weight Check WCS"
+              }
+            },
+            "Property": "host_weight"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "df2eb10b8ba233f08b80",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Picked Pallet Weight Check BY"
+              }
+            },
+            "Property": "NOTTXT"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "a73d6418bc4b00cecba8",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Picked Pallet Weight Check WCS"
+              }
+            },
+            "Property": "host_location"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "e61e077d28280a104ecc",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Picked Pallet Weight Check WCS"
+              }
+            },
+            "Property": "location"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "5ba6916b1398d1fdbc51",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Picked Pallet Weight Check WCS"
+              }
+            },
+            "Property": "tm_state"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "14bb967c22c89f0a8c15",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Picked Pallet Weight Check BY"
+              }
+            },
+            "Property": "Client"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "2957499bacb7850aaf14",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Picked Pallet Weight Check WCS"
+              }
+            },
+            "Property": "measured_weight"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "56688a2671de51676b13",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Picked Pallet Weight Check WCS"
+              }
+            },
+            "Property": "Weight Diff"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}
