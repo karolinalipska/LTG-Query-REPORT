@@ -84,7 +84,7 @@
             "maxTiles": {
               "expr": {
                 "Literal": {
-                  "Value": "3L"
+                  "Value": "6L"
                 }
               }
             }

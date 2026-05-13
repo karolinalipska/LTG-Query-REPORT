@@ -4,7 +4,7 @@
     {
       "ordinal": 0,
       "scrollPosition": {
-        "x": 2946.6666666666665,
+        "x": 3531.1111111111109,
         "y": 0
       },
       "nodes": [
@@ -210,6 +210,32 @@
           "nodeLineageTag": "ae9582fc-3716-4736-af47-a91ba1ad9ed2",
           "size": {
             "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 4309.79079189687,
+            "y": 273.24999999999994
+          },
+          "nodeIndex": "Picked Pallet Weight Check BY",
+          "nodeLineageTag": "15a63e05-f3c0-406e-ae86-c434680085c7",
+          "size": {
+            "height": 248,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 4593.79079189687,
+            "y": 249.24999999999994
+          },
+          "nodeIndex": "Picked Pallet Weight Check WCS",
+          "nodeLineageTag": "38f1c7e5-247e-4c03-b903-1829c16bf493",
+          "size": {
+            "height": 296,
             "width": 234
           },
           "zIndex": 0

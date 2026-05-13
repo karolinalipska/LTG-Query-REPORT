@@ -2,3 +2,9 @@ relationship 631a4186-dc4b-0d4d-50b0-1ca9d754d57f
 	fromColumn: 'Order Lines'.ORDNUM
 	toColumn: 'Order Line Summary'.ORDNUM
 
+relationship 3feb6654-9470-7725-e090-74d7237d1957
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'Picked Pallet Weight Check BY'.LODNUM
+	toColumn: 'Picked Pallet Weight Check WCS'.tm_id
+

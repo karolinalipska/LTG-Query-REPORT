@@ -90,7 +90,7 @@ table 'Picked Pallet Weight Check WCS'
 		mode: directQuery
 		source =
 				let
-				    Source = Sql.Database(LTG_WCS_Server_Prod, #"LTG_WCS_Database (P)", [Query="SELECT #(lf)#(tab)   xt.[create_time]#(lf)      ,xs.[tm_id]#(lf)      ,xs.[sku_id]#(lf)      ,xs.[host_location]#(lf)#(tab)  ,xt.[tm_state]#(lf)#(tab)  ,xt.[location]#(lf)#(tab)  ,xt.[measured_weight]#(lf)#(tab)  ,xt.[host_weight]#(lf)#(tab)  ,xt.[measured_weight]-xt.[host_weight] ""Weight Diff""#(lf) FROM [wcs].[dbo].[x_stock] xs #(lf) left join [wcs].[dbo].[x_tm] xt#(lf) on xs.[tmrecno] = xt.[record_number]#(lf) where xs.[host_location] = 'ASRS-PICKED' and xs.tm_id <> ''", CreateNavigationProperties=false, CommandTimeout=#duration(0, 11, 0, 0)])
+				    Source = Sql.Database(EMG_WCS_Server, #"EMG_WCS_Database (P)", [Query="SELECT #(lf)#(tab)   xt.[create_time]#(lf)      ,xs.[tm_id]#(lf)      ,xs.[sku_id]#(lf)      ,xs.[host_location]#(lf)#(tab)  ,xt.[tm_state]#(lf)#(tab)  ,xt.[location]#(lf)#(tab)  ,xt.[measured_weight]#(lf)#(tab)  ,xt.[host_weight]#(lf)#(tab)  ,xt.[measured_weight]-xt.[host_weight] ""Weight Diff""#(lf) FROM [wcs].[dbo].[x_stock] xs #(lf) left join [wcs].[dbo].[x_tm] xt#(lf) on xs.[tmrecno] = xt.[record_number]#(lf) where xs.[host_location] = 'ASRS-PICKED' and xs.tm_id <> ''", CreateNavigationProperties=false, CommandTimeout=#duration(0, 11, 0, 0)])
 				in
 				    Source
 

@@ -24,7 +24,7 @@ queryGroup 'Dataflow Parameters'
 
 annotation __PBI_TimeIntelligenceEnabled = 0
 
-annotation PBI_QueryOrder = ["Dynamic Calendar","LTG_BlueYonder_Server_Arch","LTG_BlueYonder_Server_Prod","LTG_WCS_Server_Prod","LTG_WCS_Database (T)","LTG_WCS_Database (P)","EMG_BlueYonder_Server_PPT","EMG_BlueYonder_Server_Prod","EMG_WCS_Server","EMG_WCS_Database (P)","EMG_WCS_Database (T)","EMG_Nulogy_Server","EMG_Nulogy_Database","Gateway Data Warehouse Server","Gateway Data Warehouse Database","workspaceID","dataflowID","Unpicked Pallet","Picked Pallets On Site","Picked Date Vs Appoinemnt Date","Load Status","Orders Status","Crane 10 SKU Spread","Outbound Summary","Returns Details","Pallets To Rework Out","Mondelez ASN Usage","Mondelez ASN Details","Part Pallets in Stock from Returns","DirectQuery to AS - K04 - EMG Shortage Report","Order Lines"]
+annotation PBI_QueryOrder = ["Dynamic Calendar","LTG_BlueYonder_Server_Arch","LTG_BlueYonder_Server_Prod","LTG_WCS_Server_Prod","LTG_WCS_Database (T)","LTG_WCS_Database (P)","EMG_BlueYonder_Server_PPT","EMG_BlueYonder_Server_Prod","EMG_WCS_Server","EMG_WCS_Database (P)","EMG_WCS_Database (T)","EMG_Nulogy_Server","EMG_Nulogy_Database","Gateway Data Warehouse Server","Gateway Data Warehouse Database","workspaceID","dataflowID","Unpicked Pallet","Picked Pallets On Site","Picked Date Vs Appoinemnt Date","Load Status","Orders Status","Crane 10 SKU Spread","Outbound Summary","Returns Details","Pallets To Rework Out","Mondelez ASN Usage","Mondelez ASN Details","Part Pallets in Stock from Returns","DirectQuery to AS - K04 - EMG Shortage Report","Order Lines","Picked Pallet Weight Check BY","Picked Pallet Weight Check WCS"]
 
 annotation PBI_ProTooling = ["DevMode"]
 
@@ -41,6 +41,8 @@ ref table 'Pallets To Rework Out'
 ref table 'Mondelez ASN Usage'
 ref table 'Mondelez ASN Details'
 ref table 'Part Pallets in Stock from Returns'
+ref table 'Picked Pallet Weight Check BY'
+ref table 'Picked Pallet Weight Check WCS'
 ref table MergeE430ShortsLive
 ref table 'Order Lines'
 ref table 'Order Line Summary'
