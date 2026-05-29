@@ -69,11 +69,20 @@ table 'Picked Pallet Weight Check BY'
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	column 'Customer Name'
+		dataType: string
+		sourceProviderType: Varchar2
+		lineageTag: b13b1a68-749f-4b57-b0dd-6089a5565ff9
+		summarizeBy: none
+		sourceColumn: Customer Name
+
+		annotation SummarizationSetBy = Automatic
+
 	partition 'Picked Pallet Weight Check BY' = m
 		mode: directQuery
 		source =
 				let
-				    Source = Oracle.Database(EMG_BlueYonder_Server_Prod, [Query="select#(lf)stoloc,#(lf)lodnum,#(lf)""Client"",#(lf)max(lstmov) ""Last Moved"",#(lf)nottxt,#(lf)sum(untqty)  ""Qty"",#(lf)sum(""TotWGT"")""BY Weight""#(lf)from#(lf)(#(lf)select #(lf)iv.STOLOC ,#(lf)iv.LODNUM ,#(lf)iv.PRTNUM ,#(lf)case #(lf)    when iv.PRT_CLIENT_ID = 'CID001842' then 'KP'#(lf)    when iv.PRT_CLIENT_ID = 'CID000001' then 'Mars'#(lf)    when iv.PRT_CLIENT_ID = 'CID001607' then 'GM'#(lf)    when iv.PRT_CLIENT_ID = 'CID011524' then 'TATA'#(lf)    when iv.PRT_CLIENT_ID = 'CID013634' then 'Mondelez'#(lf)    else iv.PRT_CLIENT_ID#(lf)    end ""Client"",#(lf)iv.UNTQTY ,#(lf)iv.SHIP_LINE_ID ,#(lf)iv.lstmov-1/24 lstmov,#(lf)sl.ordnum ,#(lf)ont.nottxt,#(lf)pf.UNTGRSWGT,#(lf)pf.UNTGRSWGT*iv.UNTQTY ""TotWGT""#(lf)from all_inventory_view iv#(lf)join shipment_line sl#(lf)on iv.ship_line_id = sl.ship_line_id#(lf)left join ord_note ont#(lf)on sl.ordnum = ont.ordnum#(lf)and ont.nottyp = 'PI'#(lf)left join#(lf)prtftp_view pf#(lf)on iv.prtnum = pf.prtnum#(lf)and iv.prt_client_id = pf.prt_client_id#(lf)and iv.wh_id = pf.wh_id#(lf)and pf.DEFFTP_FLG = 1#(lf)where iv.stoloc = 'ASRS-PICKED'#(lf))#(lf)group by#(lf)stoloc,lodnum,""Client"",nottxt", CreateNavigationProperties=false, CommandTimeout=#duration(0, 11, 0, 0)])
+				    Source = Oracle.Database(EMG_BlueYonder_Server_Prod, [Query="select#(lf)stoloc,#(lf)lodnum,#(lf)""Client"",#(lf)adrnam ""Customer Name"",#(lf)max(lstmov) ""Last Moved"",#(lf)nottxt,#(lf)sum(untqty)  ""Qty"",#(lf)sum(""TotWGT"")""BY Weight""#(lf)from#(lf)(#(lf)select #(lf)iv.STOLOC ,#(lf)iv.LODNUM ,#(lf)iv.PRTNUM ,#(lf)case #(lf)    when iv.PRT_CLIENT_ID = 'CID001842' then 'KP'#(lf)    when iv.PRT_CLIENT_ID = 'CID000001' then 'Mars'#(lf)    when iv.PRT_CLIENT_ID = 'CID001607' then 'GM'#(lf)    when iv.PRT_CLIENT_ID = 'CID011524' then 'TATA'#(lf)    when iv.PRT_CLIENT_ID = 'CID013634' then 'Mondelez'#(lf)    else iv.PRT_CLIENT_ID#(lf)    end ""Client"",#(lf)iv.UNTQTY ,#(lf)iv.SHIP_LINE_ID ,#(lf)iv.lstmov-1/24 lstmov,#(lf)sl.ordnum ,#(lf)ont.nottxt,#(lf)adm.adrnam,#(lf)pf.UNTGRSWGT,#(lf)pf.UNTGRSWGT*iv.UNTQTY ""TotWGT""#(lf)from all_inventory_view iv#(lf)join shipment_line sl#(lf)on iv.ship_line_id = sl.ship_line_id#(lf)left join #(lf)(select distinct#(lf)sp.ship_id#(lf),sp.rt_adr_id#(lf),am.adrnam#(lf)from shipment sp#(lf)left join adrmst am#(lf)on sp.rt_adr_id = am.adr_id#(lf))adm on sl.ship_id = adm.ship_id#(lf)left join ord_note ont#(lf)on sl.ordnum = ont.ordnum#(lf)and ont.nottyp = 'PI'#(lf)left join#(lf)prtftp_view pf#(lf)on iv.prtnum = pf.prtnum#(lf)and iv.prt_client_id = pf.prt_client_id#(lf)and iv.wh_id = pf.wh_id#(lf)and pf.DEFFTP_FLG = 1#(lf)where iv.stoloc = 'ASRS-PICKED'#(lf))#(lf)group by#(lf)stoloc,lodnum,""Client"",adrnam,nottxt", CreateNavigationProperties=false, CommandTimeout=#duration(0, 11, 0, 0)])
 				in
 				    Source
 
