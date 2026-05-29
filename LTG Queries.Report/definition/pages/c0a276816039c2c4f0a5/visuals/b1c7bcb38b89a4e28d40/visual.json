@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json",
   "name": "b1c7bcb38b89a4e28d40",
   "position": {
     "x": 0,
@@ -28,6 +28,20 @@
               },
               "queryRef": "Picked Pallet Weight Check BY.Client",
               "nativeQueryRef": "Client"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Picked Pallet Weight Check BY"
+                    }
+                  },
+                  "Property": "Customer Name"
+                }
+              },
+              "queryRef": "Picked Pallet Weight Check BY.Customer Name",
+              "nativeQueryRef": "Customer Name"
             },
             {
               "field": {
@@ -225,6 +239,13 @@
                   "Value": "'growToFit'"
                 }
               }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "9D"
+                }
+              }
             }
           }
         }
@@ -236,6 +257,13 @@
               "expr": {
                 "Literal": {
                   "Value": "false"
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'"
                 }
               }
             }
@@ -482,6 +510,20 @@
           }
         },
         "type": "Advanced"
+      },
+      {
+        "name": "1a4f1ebce76026f06173",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Picked Pallet Weight Check BY"
+              }
+            },
+            "Property": "Customer Name"
+          }
+        },
+        "type": "Categorical"
       }
     ]
   }
