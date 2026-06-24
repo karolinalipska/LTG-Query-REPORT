@@ -4,7 +4,7 @@
     {
       "ordinal": 0,
       "scrollPosition": {
-        "x": 2387.7777777777778,
+        "x": 818.88888888888891,
         "y": 0
       },
       "nodes": [
@@ -200,6 +200,19 @@
           "size": {
             "height": 296,
             "width": 327.33333333333348
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 3782.9019030079803,
+            "y": 285.69444444444446
+          },
+          "nodeIndex": "Mondelez FP/PP Pick",
+          "nodeLineageTag": "78197309-4b41-4971-8202-7107265b0a29",
+          "size": {
+            "height": 300,
+            "width": 234
           },
           "zIndex": 0
         }

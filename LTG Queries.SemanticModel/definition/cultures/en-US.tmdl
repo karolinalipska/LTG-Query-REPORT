@@ -2497,6 +2497,132 @@ cultureInfo en-US
 			          }
 			        }
 			      ]
+			    },
+			    "mondelez_fp_pp_pick.ordnum": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mondelez FP/PP Pick",
+			          "ConceptualProperty": "ORDNUM"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Order No": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "mondelez_fp_pp_pick.prtnum": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mondelez FP/PP Pick",
+			          "ConceptualProperty": "PRTNUM"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Item": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "mondelez_fp_pp_pick.ordqty": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mondelez FP/PP Pick",
+			          "ConceptualProperty": "ORDQTY"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Ordered Qty": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "mondelez_fp_pp_pick.total_qty_alloc": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mondelez FP/PP Pick",
+			          "ConceptualProperty": "Total Qty Alloc"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Total Qty Allocated": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "mondelez_fp_pp_pick.allocation": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mondelez FP/PP Pick",
+			          "ConceptualProperty": "Allocation"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Category": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "mondelez_fp_pp_pick.alloc_date": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mondelez FP/PP Pick",
+			          "ConceptualProperty": "Alloc Date"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Allocation Date": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {

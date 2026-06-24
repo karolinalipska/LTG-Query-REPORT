@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/report/3.1.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/report/3.3.0/schema.json",
   "themeCollection": {
     "baseTheme": {
       "name": "CY18SU07",
@@ -27,7 +27,7 @@
           "expanded": {
             "expr": {
               "Literal": {
-                "Value": "true"
+                "Value": "false"
               }
             }
           }
@@ -57,11 +57,6 @@
           "type": "Image"
         },
         {
-          "name": "Home_Final7065014094165554.png",
-          "path": "Home_Final7065014094165554.png",
-          "type": "Image"
-        },
-        {
           "name": "DHL_Light_Menu6493693964438227.png",
           "path": "DHL_Light_Menu6493693964438227.png",
           "type": "Image"
@@ -70,6 +65,11 @@
           "name": "DPDHL_PowerBI_Theme24738601369804702.json",
           "path": "DPDHL_PowerBI_Theme24738601369804702.json",
           "type": "CustomTheme"
+        },
+        {
+          "name": "Home_Final7065014094165554.png",
+          "path": "Home_Final7065014094165554.png",
+          "type": "Image"
         }
       ]
     }
