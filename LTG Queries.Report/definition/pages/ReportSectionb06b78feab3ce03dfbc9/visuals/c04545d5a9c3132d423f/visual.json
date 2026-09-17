@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "c04545d5a9c3132d423f",
   "position": {
     "x": 0,
@@ -22,11 +22,11 @@
                       "Entity": "Unpicked Pallet"
                     }
                   },
-                  "Property": "Transaction Date"
+                  "Property": "Unpicked Date/Time"
                 }
               },
-              "queryRef": "Unpicked Pallet.Transaction Date",
-              "nativeQueryRef": "Transaction Date"
+              "queryRef": "Unpicked Pallet.Unpicked Date/Time",
+              "nativeQueryRef": "Unpicked Date/Time"
             },
             {
               "field": {
@@ -78,11 +78,12 @@
                       "Entity": "Unpicked Pallet"
                     }
                   },
-                  "Property": "Client ID"
+                  "Property": "PRT_CLIENT_ID"
                 }
               },
-              "queryRef": "Unpicked Pallet.Client ID",
-              "nativeQueryRef": "Client ID"
+              "queryRef": "Unpicked Pallet.PRT_CLIENT_ID",
+              "nativeQueryRef": "Client ID1",
+              "displayName": "Client ID"
             },
             {
               "field": {
@@ -92,11 +93,12 @@
                       "Entity": "Unpicked Pallet"
                     }
                   },
-                  "Property": "SKU"
+                  "Property": "PRTNUM"
                 }
               },
-              "queryRef": "Unpicked Pallet.SKU",
-              "nativeQueryRef": "SKU"
+              "queryRef": "Unpicked Pallet.PRTNUM",
+              "nativeQueryRef": "SKU1",
+              "displayName": "SKU"
             },
             {
               "field": {
@@ -122,14 +124,14 @@
                           "Entity": "Unpicked Pallet"
                         }
                       },
-                      "Property": "Qty"
+                      "Property": "Unpicked Qty"
                     }
                   },
                   "Function": 0
                 }
               },
-              "queryRef": "Sum(Unpicked Pallet.Qty)",
-              "nativeQueryRef": "Qty"
+              "queryRef": "Sum(Unpicked Pallet.Unpicked Qty)",
+              "nativeQueryRef": "Unpicked Qty"
             },
             {
               "field": {
@@ -139,11 +141,12 @@
                       "Entity": "Unpicked Pallet"
                     }
                   },
-                  "Property": "Order Number"
+                  "Property": "ORDNUM"
                 }
               },
-              "queryRef": "Unpicked Pallet.Order Number",
-              "nativeQueryRef": "Order Number"
+              "queryRef": "Unpicked Pallet.ORDNUM",
+              "nativeQueryRef": "Order Number1",
+              "displayName": "Order Number"
             },
             {
               "field": {
@@ -153,11 +156,11 @@
                       "Entity": "Unpicked Pallet"
                     }
                   },
-                  "Property": "Pick Date"
+                  "Property": "Pick Date/Time"
                 }
               },
-              "queryRef": "Unpicked Pallet.Pick Date",
-              "nativeQueryRef": "Pick Date"
+              "queryRef": "Unpicked Pallet.Pick Date/Time",
+              "nativeQueryRef": "Pick Date/Time"
             },
             {
               "field": {
@@ -173,6 +176,21 @@
               "queryRef": "Unpicked Pallet.CAR_MOVE_ID",
               "nativeQueryRef": "Load Id",
               "displayName": "Load Id"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Unpicked Pallet"
+                    }
+                  },
+                  "Property": "SCHBAT"
+                }
+              },
+              "queryRef": "Unpicked Pallet.SCHBAT",
+              "nativeQueryRef": "Wave",
+              "displayName": "Wave"
             }
           ]
         }
@@ -188,6 +206,13 @@
                   "Value": "'Center'"
                 }
               }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "9D"
+                }
+              }
             }
           }
         }
@@ -198,41 +223,13 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "67.03464166149307D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Sum(Unpicked Pallet.Qty)"
-          }
-        },
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
-                  "Value": "107.48024562646287D"
+                  "Value": "80.96796481492127D"
                 }
               }
             }
           },
           "selector": {
             "metadata": "Unpicked Pallet.CAR_MOVE_ID"
-          }
-        },
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
-                  "Value": "94.04016436999213D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Unpicked Pallet.Order Number"
           }
         },
         {
@@ -254,13 +251,126 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "105.7234020770461D"
+                  "Value": "101.6555921568938D"
                 }
               }
             }
           },
           "selector": {
             "metadata": "Unpicked Pallet.New LPN Current Location"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "92.53514800880211D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Unpicked Pallet.Unpicked Date/Time"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "82.65423242467719D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Unpicked Pallet.ORDNUM"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "75.86225685174085D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Unpicked Pallet.Pick Date/Time"
+          }
+        }
+      ],
+      "values": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "8D"
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnFormatting": [
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Unpicked Pallet.Unpicked Date/Time"
+          }
+        },
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            },
+            "labelPrecision": {
+              "expr": {
+                "Literal": {
+                  "Value": "0L"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(Unpicked Pallet.Unpicked Qty)"
+          }
+        },
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Unpicked Pallet.Pick Date/Time"
           }
         }
       ]
