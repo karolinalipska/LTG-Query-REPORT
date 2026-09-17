@@ -194,6 +194,23 @@
             }
           ]
         }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Unpicked Pallet"
+                  }
+                },
+                "Property": "Unpicked Date/Time"
+              }
+            },
+            "direction": "Descending"
+          }
+        ]
       }
     },
     "objects": {
@@ -223,7 +240,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "80.96796481492127D"
+                  "Value": "73.1046291880479D"
                 }
               }
             }
@@ -237,7 +254,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "62.60183580642334D"
+                  "Value": "56.66949331185456D"
                 }
               }
             }
@@ -251,7 +268,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "101.6555921568938D"
+                  "Value": "90.81155602789808D"
                 }
               }
             }
@@ -300,6 +317,20 @@
           },
           "selector": {
             "metadata": "Unpicked Pallet.Pick Date/Time"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "72.2118138309832D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(Unpicked Pallet.Unpicked Qty)"
           }
         }
       ],

@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "86af1c9ef6e23a718ade",
   "position": {
-    "x": 1021.9799139167861,
-    "y": 205.68149210903874,
+    "x": 1021.6423637759017,
+    "y": 228.88718342287027,
     "z": 2000,
-    "height": 514.20373027259677,
-    "width": 258.02008608321376,
+    "height": 491.1742133537989,
+    "width": 258.3576362240982,
     "tabOrder": 1000
   },
   "visual": {
@@ -49,7 +49,8 @@
               },
               "queryRef": "Unpicked Pallet.Unpicked LPN",
               "nativeQueryRef": "LPNs",
-              "displayName": "LPNs"
+              "displayName": "LPNs",
+              "format": "#,0"
             },
             {
               "field": {
@@ -129,7 +130,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "115.219487200016D"
+                  "Value": "106.395134971947D"
                 }
               }
             }
