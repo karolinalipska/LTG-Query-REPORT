@@ -1,0 +1,224 @@
+table 'Mondelez FP/PP Pick'
+	lineageTag: 78197309-4b41-4971-8202-7107265b0a29
+
+	column WH_ID
+		dataType: string
+		isNullable: false
+		sourceProviderType: Varchar2
+		lineageTag: 54a4a789-8304-431c-8b5a-2c14131d2af3
+		summarizeBy: none
+		sourceColumn: WH_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column CLIENT_ID
+		dataType: string
+		isNullable: false
+		sourceProviderType: Varchar2
+		lineageTag: fac3d14d-81cf-4fd8-a3f2-36b143a99ea1
+		summarizeBy: none
+		sourceColumn: CLIENT_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column ORDNUM
+		dataType: string
+		isNullable: false
+		sourceProviderType: Varchar2
+		lineageTag: 46016869-659e-4bd8-85f4-8590b9f1b4bc
+		summarizeBy: none
+		sourceColumn: ORDNUM
+
+		annotation SummarizationSetBy = Automatic
+
+	column ENTDTE
+		dataType: dateTime
+		isNullable: false
+		formatString: General Date
+		sourceProviderType: Date
+		lineageTag: 21842386-ca51-4352-9d0b-a15b5b354d65
+		summarizeBy: none
+		sourceColumn: ENTDTE
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Alloc Date'
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: Date
+		lineageTag: 5b17eeaf-4927-4215-b819-29b5197d6e5d
+		summarizeBy: none
+		sourceColumn: Alloc Date
+
+		annotation SummarizationSetBy = Automatic
+
+	column ORDTYP
+		dataType: string
+		isNullable: false
+		sourceProviderType: Varchar2
+		lineageTag: d06a127a-70fd-45e9-a2fd-496c61f83705
+		summarizeBy: none
+		sourceColumn: ORDTYP
+
+		annotation SummarizationSetBy = Automatic
+
+	column PRTNUM
+		dataType: string
+		sourceProviderType: Varchar2
+		lineageTag: 61cc0e02-c53b-4192-954f-dffeb0711c04
+		summarizeBy: none
+		sourceColumn: PRTNUM
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Item Description'
+		dataType: string
+		sourceProviderType: Varchar2
+		lineageTag: 7beb4fe9-db67-4c83-8436-c004771c4977
+		summarizeBy: none
+		sourceColumn: Item Description
+
+		annotation SummarizationSetBy = Automatic
+
+	column ORDQTY
+		dataType: int64
+		formatString: 0
+		sourceProviderType: Int64
+		lineageTag: 1e9a57e9-5da0-4bef-9404-3d9dc64bc93a
+		summarizeBy: sum
+		sourceColumn: ORDQTY
+
+		annotation SummarizationSetBy = Automatic
+
+	column '% Expected'
+		dataType: double
+		sourceProviderType: Decimal(38, 127)
+		lineageTag: 83d65d2c-735a-4564-8d3f-93b6503a16cf
+		summarizeBy: sum
+		sourceColumn: % Expected
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column '% Allocated'
+		dataType: double
+		sourceProviderType: Decimal(38, 127)
+		lineageTag: 18da1b78-b3c8-4ec7-a30b-f612fdc86961
+		summarizeBy: sum
+		sourceColumn: % Allocated
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'MD Qty'
+		dataType: double
+		sourceProviderType: Decimal(38, 127)
+		lineageTag: 6018daa2-5d9d-49e4-a237-d3a30eaa5691
+		summarizeBy: sum
+		sourceColumn: MD Qty
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column RULE_NAM
+		dataType: string
+		sourceProviderType: Varchar2
+		lineageTag: e3c72bd1-c6f2-4a12-a070-6a0ef93a8661
+		summarizeBy: none
+		sourceColumn: RULE_NAM
+
+		annotation SummarizationSetBy = Automatic
+
+	column ALC_SEARCH_PATH
+		dataType: string
+		sourceProviderType: Varchar2
+		lineageTag: 4c424503-a7ff-49b1-99e0-f157b3c062d4
+		summarizeBy: none
+		sourceColumn: ALC_SEARCH_PATH
+
+		annotation SummarizationSetBy = Automatic
+
+	column INVSTS_PRG
+		dataType: string
+		sourceProviderType: Varchar2
+		lineageTag: 9ea2371e-ad3f-4e1d-96a3-dabe74bc8874
+		summarizeBy: none
+		sourceColumn: INVSTS_PRG
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Expected Pallets/Casses'
+		dataType: string
+		sourceProviderType: Varchar2
+		lineageTag: f5296075-f31f-4c88-821e-1d0643c05024
+		summarizeBy: none
+		sourceColumn: Expected Pallets/Casses
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Allocated Pallets/Casses'
+		dataType: string
+		sourceProviderType: Varchar2
+		lineageTag: 542f1a90-e2d4-4e7f-bfec-c33e60f71c08
+		summarizeBy: none
+		sourceColumn: Allocated Pallets/Casses
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'FP Allocated'
+		dataType: double
+		sourceProviderType: Decimal(38, 127)
+		lineageTag: 6e9cb466-049a-49ca-bfd4-45957b90f6c1
+		summarizeBy: sum
+		sourceColumn: FP Allocated
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'PP Allocated'
+		dataType: double
+		sourceProviderType: Decimal(38, 127)
+		lineageTag: 1935400a-d792-4c7d-a036-6e500d2a6562
+		summarizeBy: sum
+		sourceColumn: PP Allocated
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Allocation
+		dataType: string
+		sourceProviderType: Varchar2
+		lineageTag: 66915387-be94-49eb-95c6-cb7677e3583d
+		summarizeBy: none
+		sourceColumn: Allocation
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Total Qty Alloc'
+		dataType: double
+		sourceProviderType: Decimal(38, 127)
+		lineageTag: 97125c9c-addf-4243-b8ed-26bd96cd60c8
+		summarizeBy: sum
+		sourceColumn: Total Qty Alloc
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition 'Mondelez FP/PP Pick' = m
+		mode: directQuery
+		source =
+				let
+				    Source = Oracle.Database(LTG_BlueYonder_Server_Prod, [HierarchicalNavigation=true, Query="SELECT#(lf)    wh_id,#(lf)    client_id,#(lf)    ordnum,#(lf)    entdte,#(lf)    ""Alloc Date"",#(lf)    ordtyp,#(lf)    prtnum,#(lf)    lngdsc ""Item Description"",#(lf)    ordqty,#(lf)    round(((trunc(ordqty / ""MD Qty"")* ""MD Qty"")/ordqty) * 100,2) ""% Expected"",#(lf)    round(((coalesce(""FP Allocated"", 0)* ""MD Qty"")/ordqty) * 100,2) ""% Allocated"",  #(lf)    ""MD Qty"",#(lf)    rule_nam,#(lf)    alc_search_path,#(lf)    invsts_prg,#(lf)    ""Expected Pallets""#(lf)    || '/'#(lf)    || ""Expected Cases"" ""Expected Pallets/Casses"",#(lf)    ""Pallet Alloc""#(lf)    || '/'#(lf)    || ""Cases Alloc""    ""Allocated Pallets/Casses"",#(lf)    ""FP Allocated"",#(lf)    ""PP Allocated"",#(lf)    CASE#(lf)        WHEN ""Expected Pallets"" = ""FP Allocated"" and ""Expected Cases"" = ""Cases Alloc"" and ordqty = ""Total Qty Alloc"" then 'Full Order As Expected'#(lf)        WHEN ""Expected Pallets"" = ""FP Allocated"" then 'Full Pallets As Expected'#(lf)        WHEN ordqty <> ""Total Qty Alloc"" then 'Not Fully Alocated'#(lf)        WHEN ordqty = ""Total Qty Alloc"" and ""Expected Pallets"" <> ""FP Allocated""  and ""PP Allocated"" <> 0 then 'Pallet Pick Part Pallets'#(lf)        WHEN ordqty = ""Total Qty Alloc"" and ""Expected Pallets"" <> ""FP Allocated""  and ""PP Allocated"" = 0 then 'Case Pick'#(lf)        else null end ""Allocation"",#(lf)    ""Total Qty Alloc""#(lf)FROM#(lf)    (#(lf)        SELECT#(lf)            o.wh_id,#(lf)            o.client_id,#(lf)            o.ordnum,#(lf)            o.entdte,#(lf)            nvl(pvl.""Alloc Date"", pvc.""Alloc Date"")                                           ""Alloc Date"",#(lf)            o.ordtyp,#(lf)            ol.prtnum,#(lf)            ol.ordqty,#(lf)            sl.shpqty,#(lf)            ol.ordqty - sl.shpqty                                                             AS ""Shortages"",#(lf)            ol.rule_nam,#(lf)            ol.alc_search_path,#(lf)            ol.invsts_prg,#(lf)            pfd1.ftpcod,#(lf)            pfd1.lngdsc,#(lf)            pfd1.untpal                                                                       ""MD Qty"",#(lf)            sl.schbat,#(lf)            trunc(ol.ordqty / pfd1.untpal)                                                    AS ""Expected Pallets"",#(lf)            round(((ol.ordqty / pfd1.untpal) - trunc(ol.ordqty / pfd1.untpal)) * pfd1.untpal) AS ""Expected Cases"",#(lf)            coalesce(pvl.""Pallet Alloc"", 0)                                                   AS ""Pallet Alloc"",#(lf)            coalesce(pvl.""FP Allocated"", 0)                                                   AS ""FP Allocated"",#(lf)            coalesce(pvl.""PP Allocated"", 0)                                                   AS ""PP Allocated"",#(lf)            coalesce(pvc.""Cases Alloc"", 0)                                                    AS ""Cases Alloc"",#(lf)            coalesce(pvl.""Pallet Qty Alloc"", 0) + coalesce(pvc.""Cases Alloc"", 0)              AS ""Total Qty Alloc""#(lf)        FROM#(lf)            ord           o#(lf)            LEFT JOIN ord_line      ol ON o.ordnum = ol.ordnum#(lf)            LEFT JOIN shipment_line sl ON ol.ordnum = sl.ordnum#(lf)                                          AND ol.ordlin = sl.ordlin#(lf)            LEFT JOIN (#(lf)                SELECT DISTINCT#(lf)                    pf.prtnum,#(lf)                    pd.lngdsc,#(lf)                    pf.ftpcod,#(lf)                    pf.defftp_flg,#(lf)                    pf.def_asset_typ,#(lf)                    pf.untpal#(lf)                FROM#(lf)                         prtftp_view pf#(lf)                    left join prtdsc pd#(lf)                    on pf.prtnum||'|'||pf.prt_client_id||'|'||pf.wh_id = pd.colval#(lf)                WHERE#(lf)                        pf.wh_id = 'GB_5024'#(lf)                        and pf.defftp_flg = 1#(lf)            )             pfd1 ON ol.prtnum = pfd1.prtnum#(lf)            LEFT JOIN (#(lf)                SELECT#(lf)                    pv.ordnum,#(lf)                    pv.ordlin,#(lf)                    COUNT(pv.pckqty)     AS ""Pallet Alloc"",#(lf)                    sum(""FP Allocated"") ""FP Allocated"",#(lf)                    sum(""PP Allocated"") ""PP Allocated"",#(lf)                    SUM(pv.pckqty)       AS ""Pallet Qty Alloc"",#(lf)                    MAX(""Alloc Date"") ""Alloc Date"",#(lf)                    pv.lodlvl,#(lf)                    pv.pcksts,#(lf)                    pv.prtnum#(lf)                FROM#(lf)(SELECT#(lf)                    pwv.ordnum,#(lf)                    pwv.ordlin,#(lf)                    pwv.pckqty,#(lf)                    case when pwv.pckqty = pfv.untpal then 1 else 0 end ""FP Allocated"",#(lf)                    case when pwv.pckqty <> pfv.untpal then 1 else 0 end ""PP Allocated"",#(lf)                    pwv.pckqty       AS ""Pallet Qty Alloc"",#(lf)                    pwv.adddte - 1 / 24 ""Alloc Date"",#(lf)                    pwv.lodlvl,#(lf)                    pwv.pcksts,#(lf)                    pwv.prtnum,#(lf)                    pfv.untpal#(lf)                FROM#(lf)                    pckwrk_view pwv#(lf)                    left join prtftp_view pfv#(lf)                    on pwv.prtnum = pfv.prtnum#(lf)                    and pfv.wh_id = 'GB_5024'#(lf)                    and pfv.defftp_flg = 1#(lf)                WHERE#(lf)                    pwv.lodlvl = 'L'#(lf))pv#(lf)                GROUP BY#(lf)                    pv.ordnum,#(lf)                    pv.ordlin,#(lf)                    pv.lodlvl,#(lf)                    pv.pcksts,#(lf)                    pv.prtnum#(lf)            )             pvl ON o.ordnum = pvl.ordnum and ol.ordlin = pvl.ordlin#(lf)                     AND ol.prtnum = pvl.prtnum#(lf)            LEFT JOIN (#(lf)                SELECT#(lf)                    pv.ordnum,#(lf)                    pv.ordlin,#(lf)                    SUM(pv.pckqty)       AS ""Cases Alloc"",#(lf)                    MAX(adddte - 1 / 24) ""Alloc Date"",#(lf)                    pv.lodlvl,#(lf)                    pv.pcksts,#(lf)                    pv.prtnum#(lf)                FROM#(lf)                    pckwrk_view pv#(lf)                WHERE#(lf)                    pv.lodlvl = 'S'#(lf)                GROUP BY#(lf)                    pv.ordnum,#(lf)                    pv.ordlin,#(lf)                    pv.lodlvl,#(lf)                    pv.pcksts,#(lf)                    pv.prtnum#(lf)            )             pvc ON o.ordnum = pvc.ordnum#(lf)                     AND ol.prtnum = pvc.prtnum#(lf)                     and ol.ordlin = pvc.ordlin#(lf)        WHERE#(lf)            pvl.""Alloc Date"" > sysdate - 28#(lf)            OR pvc.""Alloc Date"" > sysdate - 28#(lf)    )#(lf)WHERE client_id = 'CID013634'#(lf)#(lf)        ", CommandTimeout=#duration(0, 11, 0, 0)])
+				in
+				    Source
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,586 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
+  "name": "5573915039052a6cb9a0",
+  "position": {
+    "x": 0,
+    "y": 188,
+    "z": 1000,
+    "height": 532,
+    "width": 1280,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mondelez FP/PP Pick"
+                    }
+                  },
+                  "Property": "ORDNUM"
+                }
+              },
+              "queryRef": "Mondelez FP/PP Pick.ORDNUM",
+              "nativeQueryRef": "Order No",
+              "displayName": "Order No"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mondelez FP/PP Pick"
+                    }
+                  },
+                  "Property": "PRTNUM"
+                }
+              },
+              "queryRef": "Mondelez FP/PP Pick.PRTNUM",
+              "nativeQueryRef": "Item",
+              "displayName": "Item"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mondelez FP/PP Pick"
+                    }
+                  },
+                  "Property": "Item Description"
+                }
+              },
+              "queryRef": "Mondelez FP/PP Pick.Item Description",
+              "nativeQueryRef": "Item Description"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mondelez FP/PP Pick"
+                    }
+                  },
+                  "Property": "ORDQTY"
+                }
+              },
+              "queryRef": "Sum(Mondelez FP/PP Pick.ORDQTY)",
+              "nativeQueryRef": "Ordered Qty",
+              "displayName": "Ordered Qty",
+              "format": "#,0"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mondelez FP/PP Pick"
+                    }
+                  },
+                  "Property": "Total Qty Alloc"
+                }
+              },
+              "queryRef": "Sum(Mondelez FP/PP Pick.Total Qty Alloc)",
+              "nativeQueryRef": "Total Qty Allocated",
+              "displayName": "Total Qty Allocated",
+              "format": "#,0"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mondelez FP/PP Pick"
+                    }
+                  },
+                  "Property": "MD Qty"
+                }
+              },
+              "queryRef": "Sum(Mondelez FP/PP Pick.MD Qty)",
+              "nativeQueryRef": "MD Qty1",
+              "format": "#,0"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mondelez FP/PP Pick"
+                    }
+                  },
+                  "Property": "% Expected"
+                }
+              },
+              "queryRef": "Sum(Mondelez FP/PP Pick.% Expected)",
+              "nativeQueryRef": "% Expected"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mondelez FP/PP Pick"
+                    }
+                  },
+                  "Property": "% Allocated"
+                }
+              },
+              "queryRef": "Sum(Mondelez FP/PP Pick.% Allocated)",
+              "nativeQueryRef": "% Allocated"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mondelez FP/PP Pick"
+                    }
+                  },
+                  "Property": "Expected Pallets/Casses"
+                }
+              },
+              "queryRef": "Mondelez FP/PP Pick.Expected Pallets/Casses",
+              "nativeQueryRef": "Expected Pallets/Casses"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mondelez FP/PP Pick"
+                    }
+                  },
+                  "Property": "Allocated Pallets/Casses"
+                }
+              },
+              "queryRef": "Mondelez FP/PP Pick.Allocated Pallets/Casses",
+              "nativeQueryRef": "Allocated Pallets/Casses"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mondelez FP/PP Pick"
+                    }
+                  },
+                  "Property": "FP Allocated"
+                }
+              },
+              "queryRef": "Sum(Mondelez FP/PP Pick.FP Allocated)",
+              "nativeQueryRef": "FP Allocated1",
+              "format": "#,0"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mondelez FP/PP Pick"
+                    }
+                  },
+                  "Property": "PP Allocated"
+                }
+              },
+              "queryRef": "Sum(Mondelez FP/PP Pick.PP Allocated)",
+              "nativeQueryRef": "PP Allocated1",
+              "format": "#,0"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mondelez FP/PP Pick"
+                    }
+                  },
+                  "Property": "Allocation"
+                }
+              },
+              "queryRef": "Mondelez FP/PP Pick.Allocation",
+              "nativeQueryRef": "Category",
+              "displayName": "Category"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "columnHeaders": [
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            },
+            "columnAdjustment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'growToFit'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "9D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "values": [
+        {
+          "properties": {
+            "wordWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "80D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(Mondelez FP/PP Pick.Total Qty Alloc)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "104D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mondelez FP/PP Pick.Expected Pallets/Casses"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "115D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mondelez FP/PP Pick.Allocated Pallets/Casses"
+          }
+        }
+      ],
+      "columnFormatting": [
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(Mondelez FP/PP Pick.ORDQTY)"
+          }
+        },
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(Mondelez FP/PP Pick.Total Qty Alloc)"
+          }
+        },
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(Mondelez FP/PP Pick.% Expected)"
+          }
+        },
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(Mondelez FP/PP Pick.MD Qty)"
+          }
+        },
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(Mondelez FP/PP Pick.% Allocated)"
+          }
+        },
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mondelez FP/PP Pick.Expected Pallets/Casses"
+          }
+        },
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mondelez FP/PP Pick.Allocated Pallets/Casses"
+          }
+        },
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(Mondelez FP/PP Pick.FP Allocated)"
+          }
+        },
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(Mondelez FP/PP Pick.PP Allocated)"
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Details'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualHeader": [
+        {
+          "properties": {
+            "background": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 2,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "6b2a8231b40d80c5b9a7",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mondelez FP/PP Pick"
+              }
+            },
+            "Property": "ORDNUM"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "98905f0957309076d8e0",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mondelez FP/PP Pick"
+              }
+            },
+            "Property": "PRTNUM"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "1f34864db7aaa842a430",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mondelez FP/PP Pick"
+              }
+            },
+            "Property": "Item Description"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "5943e4c78d4de00bc3ac",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mondelez FP/PP Pick"
+              }
+            },
+            "Property": "ORDQTY"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "33f14f0c3e0bc88d5441",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mondelez FP/PP Pick"
+              }
+            },
+            "Property": "MD Qty"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "3ae34a6bc0547c2c0b49",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mondelez FP/PP Pick"
+              }
+            },
+            "Property": "% Expected"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "300bf447035006aca145",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mondelez FP/PP Pick"
+              }
+            },
+            "Property": "% Allocated"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "16002be9155e00303cbd",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mondelez FP/PP Pick"
+              }
+            },
+            "Property": "Total Qty Alloc"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}

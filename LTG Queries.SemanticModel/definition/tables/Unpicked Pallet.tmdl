@@ -1,25 +1,6 @@
 table 'Unpicked Pallet'
 	lineageTag: 72ffd3a2-5ed3-4ec3-a068-7c4daefc309f
 
-	column 'Transaction Date'
-		dataType: dateTime
-		formatString: General Date
-		sourceProviderType: Date
-		lineageTag: cbd25fff-457a-48b4-b659-02a306570f26
-		summarizeBy: none
-		sourceColumn: Transaction Date
-
-		annotation SummarizationSetBy = Automatic
-
-	column 'Activity Code'
-		dataType: string
-		sourceProviderType: Varchar2
-		lineageTag: 43d516fc-d995-4e57-8911-1c8321623533
-		summarizeBy: none
-		sourceColumn: Activity Code
-
-		annotation SummarizationSetBy = Automatic
-
 	column 'Unpicked LPN'
 		dataType: string
 		sourceProviderType: Varchar2
@@ -38,40 +19,12 @@ table 'Unpicked Pallet'
 
 		annotation SummarizationSetBy = Automatic
 
-	column SKU
-		dataType: string
-		sourceProviderType: Varchar2
-		lineageTag: 646ba0aa-bc0b-4ea4-812b-dfcd0829b91c
-		summarizeBy: none
-		sourceColumn: SKU
-
-		annotation SummarizationSetBy = Automatic
-
-	column 'Client ID'
-		dataType: string
-		sourceProviderType: Varchar2
-		lineageTag: 8e51f783-5cc1-4b21-85bb-c409d9cd2968
-		summarizeBy: none
-		sourceColumn: Client ID
-
-		annotation SummarizationSetBy = Automatic
-
 	column Client
 		dataType: string
 		sourceProviderType: Varchar2
 		lineageTag: cb55b39f-b3e2-47b4-9ad6-de2b7d9a5b7c
 		summarizeBy: none
 		sourceColumn: Client
-
-		annotation SummarizationSetBy = Automatic
-
-	column Qty
-		dataType: int64
-		formatString: 0
-		sourceProviderType: Int64
-		lineageTag: 248d77ed-9450-46c4-8cef-60a6bf2fff2a
-		summarizeBy: sum
-		sourceColumn: Qty
 
 		annotation SummarizationSetBy = Automatic
 
@@ -84,31 +37,12 @@ table 'Unpicked Pallet'
 
 		annotation SummarizationSetBy = Automatic
 
-	column 'Order Number'
-		dataType: string
-		sourceProviderType: Varchar2
-		lineageTag: d171528e-37ee-450f-b488-526dd02b9220
-		summarizeBy: none
-		sourceColumn: Order Number
-
-		annotation SummarizationSetBy = Automatic
-
 	column CAR_MOVE_ID
 		dataType: string
 		sourceProviderType: Varchar2
 		lineageTag: 5a4d3c0d-ba8a-4158-af25-d10bd5e585f0
 		summarizeBy: none
 		sourceColumn: CAR_MOVE_ID
-
-		annotation SummarizationSetBy = Automatic
-
-	column 'Date Only'
-		dataType: dateTime
-		formatString: General Date
-		sourceProviderType: Date
-		lineageTag: 96b94f4b-c405-4f32-a0a3-93b0f7c60539
-		summarizeBy: none
-		sourceColumn: Date Only
 
 		annotation SummarizationSetBy = Automatic
 
@@ -121,16 +55,6 @@ table 'Unpicked Pallet'
 
 		annotation SummarizationSetBy = Automatic
 
-	column 'Pick Date'
-		dataType: dateTime
-		formatString: General Date
-		sourceProviderType: Date
-		lineageTag: fd4c88a4-385a-4dce-9a4f-69c23e4b8967
-		summarizeBy: none
-		sourceColumn: Pick Date
-
-		annotation SummarizationSetBy = Automatic
-
 	column 'New LPN Current Location'
 		dataType: string
 		sourceProviderType: Varchar2
@@ -140,11 +64,97 @@ table 'Unpicked Pallet'
 
 		annotation SummarizationSetBy = Automatic
 
+	column 'Unpicked Date/Time'
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: Date
+		lineageTag: 06e1b09b-234b-4514-8dbf-92d26a4746be
+		summarizeBy: none
+		sourceColumn: Unpicked Date/Time
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Unpicked DateOnly'
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: Date
+		lineageTag: 6bcf4128-bdfd-4481-866c-587122001dbf
+		summarizeBy: none
+		sourceColumn: Unpicked DateOnly
+
+		annotation SummarizationSetBy = Automatic
+
+	column ACTCOD
+		dataType: string
+		sourceProviderType: Varchar2
+		lineageTag: bb44806a-08d6-4dc4-9abb-01e658f327c9
+		summarizeBy: none
+		sourceColumn: ACTCOD
+
+		annotation SummarizationSetBy = Automatic
+
+	column PRTNUM
+		dataType: string
+		sourceProviderType: Varchar2
+		lineageTag: a71b7d1e-b605-4a4f-9aa4-796d75e164b5
+		summarizeBy: none
+		sourceColumn: PRTNUM
+
+		annotation SummarizationSetBy = Automatic
+
+	column PRT_CLIENT_ID
+		dataType: string
+		sourceProviderType: Varchar2
+		lineageTag: 20f8c91c-0482-478d-88d6-cb6b101a3969
+		summarizeBy: none
+		sourceColumn: PRT_CLIENT_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Unpicked Qty'
+		dataType: double
+		sourceProviderType: Decimal(38, 127)
+		lineageTag: b78a459e-8911-472c-b80d-c196158058c8
+		summarizeBy: sum
+		sourceColumn: Unpicked Qty
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ORDNUM
+		dataType: string
+		sourceProviderType: Varchar2
+		lineageTag: e057832d-ffe7-4a25-9dfe-d8526173d10a
+		summarizeBy: none
+		sourceColumn: ORDNUM
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Pick Date/Time'
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: Date
+		lineageTag: b53cd375-286c-4ce7-9f45-2bd156966e4b
+		summarizeBy: none
+		sourceColumn: Pick Date/Time
+
+		annotation SummarizationSetBy = Automatic
+
+	column SCHBAT
+		dataType: string
+		sourceProviderType: Varchar2
+		lineageTag: e6264eab-cf81-4708-8cb2-1b5647234b06
+		summarizeBy: none
+		sourceColumn: SCHBAT
+
+		annotation SummarizationSetBy = Automatic
+
 	partition 'Unpicked Pallet' = m
 		mode: directQuery
 		source =
 				let
-				    Source = Oracle.Database(LTG_BlueYonder_Server_Prod, [HierarchicalNavigation=true, Query="SELECT#(lf)    dt.trndte - 1 / 24           ""Transaction Date"",#(lf)    trunc(dt.trndte - 1 / 24)    ""Date Only"",#(lf)    dt.actcod                    ""Activity Code"",#(lf)    dt.lodnum                    ""Unpicked LPN"",#(lf)    nvl(dt.to_lodnum, dt.lodnum) ""New LPN"",#(lf)    il.stoloc ""New LPN Current Location"",#(lf)    dt.prtnum                    ""SKU"",#(lf)    dt.INV_ATTR_STR2             ""SAP Storage"", --25/09/25 KL added per request 4990 --#(lf)    dt.prt_client_id             ""Client ID"",#(lf)    CASE#(lf)        WHEN dt.prt_client_id = 'CID013634' THEN#(lf)            'Mondelez'#(lf)        WHEN dt.prt_client_id = 'CID000001' THEN#(lf)            'Mars'#(lf)        ELSE#(lf)            dt.prt_client_id#(lf)    END                          ""Client"",#(lf)    dt.trnqty                    ""Qty"",#(lf)    pck.ship_id,#(lf)    pck.ordnum                   ""Order Number"",#(lf)    pck.""Pick Date"", --25/09/25 KL added per request 4990 --#(lf)    act.car_move_id#(lf)FROM#(lf)    dlytrn dt#(lf)    LEFT JOIN (#(lf)        SELECT#(lf)            MIN(trndte - 1 / 24)   ""Pick Date"",#(lf)            nvl(LEAD(MIN(trndte - 1 / 24))#(lf)                OVER(PARTITION BY nvl(to_lodnum, lodnum)#(lf)                     ORDER BY#(lf)                         MIN(trndte - 1 / 24)#(lf)            ),#(lf)                sysdate - 1 / 24)  AS next_pick_date,#(lf)            actcod,#(lf)            nvl(to_lodnum, lodnum) ""SSCC"",#(lf)            prt_client_id,#(lf)            ship_id,#(lf)            ordnum#(lf)        FROM#(lf)            dlytrn#(lf)        WHERE#(lf)            actcod IN ( 'LSTPCK', 'PALPCK' )#(lf)            AND ordnum IS NOT NULL#(lf)        GROUP BY#(lf)            actcod,#(lf)            nvl(to_lodnum, lodnum),#(lf)            prt_client_id,#(lf)            ship_id,#(lf)            ordnum#(lf)    )      pck ON dt.lodnum = pck.""SSCC""#(lf)             AND dt.trndte - 1 / 24 > pck.""Pick Date""#(lf)             AND dt.trndte - 1 / 24 < pck.next_pick_date#(lf)    left join #(lf)    (#(lf)    select#(lf)que.*,#(lf)nvl(lead(que.""Date"") over (partition by que.ordnum order by que.""Date""),sysdate-1/24) ""Next Allocation""#(lf)from#(lf)(#(lf)select distinct #(lf)trndte-1/24 ""Date"",#(lf)actcod,#(lf)ordnum,#(lf)ship_id,#(lf)stop_id,#(lf)car_move_id#(lf)from ordact#(lf)where actcod = 'SASGWAV'#(lf))que#(lf))act on pck.ordnum = act.ordnum and pck.""Pick Date"" > act.""Date"" and pck.""Pick Date"" < act.""Next Allocation""#(lf)left join invlod il on nvl(dt.to_lodnum, dt.lodnum) = il.lodnum#(lf)WHERE#(lf)        dt.actcod = 'UPCK'#(lf)    AND dt.tostol = 'PERM-SHP-LOC'#(lf)    and dt.trndte-1/24 > trunc(sysdate-25)#(lf)    order by 1"])
+				    Source = Oracle.Database(LTG_BlueYonder_Server_Prod, [HierarchicalNavigation=true, Query="with upck as#(lf)(#(lf)select #(lf)d.lodnum ""Unpicked LPN"",#(lf)nvl(d.to_lodnum, d.lodnum) ""New LPN"",#(lf)il.stoloc ""New LPN Current Location"",#(lf)d.trndte-1/24  ""Unpicked Date/Time"",#(lf)nvl(lead(d.trndte-1/24) over (partition by d.lodnum order by d.trndte-1/24),sysdate-1/24) ""Next Unpick"",#(lf)trunc(d.trndte-1/24)  ""Unpicked DateOnly"",#(lf)d.actcod,#(lf)d.prtnum,#(lf)d.INV_ATTR_STR2             ""SAP Storage"",#(lf)d.prt_client_id,#(lf)CASE#(lf)        WHEN d.prt_client_id = 'CID013634' THEN#(lf)            'Mondelez'#(lf)        WHEN d.prt_client_id = 'CID000001' THEN#(lf)            'Mars'#(lf)        ELSE#(lf)            d.prt_client_id#(lf)    END                          ""Client"",#(lf)d.trnqty     ""Unpicked Qty""#(lf)from dlytrn d#(lf)left join invlod il on nvl(d.to_lodnum, d.lodnum) = il.lodnum#(lf)where d.actcod = 'UPCK' #(lf)and d.to_arecod = 'SADJ' #(lf)and trunc(d.trndte-1/24) >= trunc(sysdate-25) #(lf)),#(lf)pck as#(lf)(#(lf)select #(lf)nvl(d.to_lodnum,d.lodnum) ""Picked LPN"",#(lf)d.trndte-1/24  ""Pick Date/Time"",#(lf)nvl(lead(d.trndte-1/24) over (partition by nvl(d.to_lodnum,d.lodnum) order by d.trndte-1/24),sysdate-1/24) ""Next Pick"",#(lf)trunc(d.trndte-1/24)  ""Pick DateOnly"",#(lf)d.actcod,#(lf)d.prtnum,#(lf)d.prt_client_id,#(lf)d.trnqty ""Qty Picked"",#(lf)ordnum,#(lf)ship_id#(lf)from dlytrn d#(lf)where d.actcod in ('PALPCK', 'LSTPCK')#(lf)and ordnum is not null #(lf)),#(lf)act as#(lf)(#(lf)    select#(lf)que.*,#(lf)nvl(lead(que.""Date"") over (partition by que.ordnum order by que.""Date""),sysdate-1/24) ""Next Allocation""#(lf)from#(lf)(#(lf)select distinct #(lf)trndte-1/24 ""Date"",#(lf)actcod,#(lf)ordnum,#(lf)ship_id,#(lf)stop_id,#(lf)car_move_id,#(lf)schbat#(lf)from ordact#(lf)where actcod = 'SASGWAV'#(lf))que#(lf))#(lf)select#(lf)upck.""Unpicked LPN"",#(lf)upck.""New LPN"",#(lf)upck.""New LPN Current Location"",#(lf)upck.""Unpicked Date/Time"",#(lf)upck.""Unpicked DateOnly"",#(lf)upck.actcod,#(lf)upck.prtnum,#(lf)upck.""SAP Storage"",#(lf)upck.prt_client_id,#(lf)upck.""Client"",#(lf)sum(upck.""Unpicked Qty"")     ""Unpicked Qty"",#(lf)pck.ordnum,#(lf)pck.ship_id,#(lf)pck.""Pick Date/Time"",#(lf)act.car_move_id,#(lf)act.schbat#(lf)from upck#(lf)left join pck#(lf)on upck.""Unpicked LPN"" = pck.""Picked LPN""#(lf)and upck.prtnum = pck.prtnum#(lf)and upck.""Unpicked Date/Time"" > pck.""Pick Date/Time"" and upck.""Unpicked Date/Time"" < pck.""Next Pick""#(lf)left join act#(lf)on pck.ordnum = act.ordnum #(lf)and pck.ship_id = act.ship_id #(lf)and pck.""Pick Date/Time"" > act.""Date"" and pck.""Pick Date/Time"" < act.""Next Allocation""#(lf)#(lf)--where upck.""Unpicked LPN"" = '250328515000991620'#(lf)group by#(lf)upck.""Unpicked LPN"",#(lf)upck.""New LPN"",#(lf)upck.""New LPN Current Location"",#(lf)upck.""Unpicked Date/Time"",#(lf)upck.""Unpicked DateOnly"",#(lf)upck.actcod,#(lf)upck.prtnum,#(lf)upck.""SAP Storage"",#(lf)upck.prt_client_id,#(lf)upck.""Client"",#(lf)pck.ordnum,#(lf)pck.ship_id,#(lf)pck.""Pick Date/Time"",#(lf)act.car_move_id,#(lf)act.schbat#(lf)"])
 				in
 				    Source
 

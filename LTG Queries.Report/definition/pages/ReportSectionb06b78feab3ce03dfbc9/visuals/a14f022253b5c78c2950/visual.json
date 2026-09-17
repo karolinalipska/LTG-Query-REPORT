@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
-  "name": "86af1c9ef6e23a718ade",
+  "name": "a14f022253b5c78c2950",
   "position": {
     "x": 1021.9799139167861,
-    "y": 205.68149210903874,
-    "z": 2000,
-    "height": 514.20373027259677,
+    "y": 76.212338593974167,
+    "z": 3001,
+    "height": 129.46915351506456,
     "width": 258.02008608321376,
-    "tabOrder": 1000
+    "tabOrder": 3001
   },
   "visual": {
     "visualType": "tableEx",
@@ -23,13 +23,11 @@
                       "Entity": "Unpicked Pallet"
                     }
                   },
-                  "Property": "Unpicked DateOnly"
+                  "Property": "Client"
                 }
               },
-              "queryRef": "Unpicked Pallet.Unpicked DateOnly",
-              "nativeQueryRef": "Date Only1",
-              "displayName": "Date Only",
-              "format": "d"
+              "queryRef": "Unpicked Pallet.Client",
+              "nativeQueryRef": "Client"
             },
             {
               "field": {
@@ -101,27 +99,13 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "60.13259450437636D"
+                  "Value": "61.048906809679565D"
                 }
               }
             }
           },
           "selector": {
             "metadata": "Unpicked Pallet.Unpicked LPN"
-          }
-        },
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
-                  "Value": "69.67288753025092D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Unpicked Pallet.Unpicked DateOnly"
           }
         },
         {
@@ -137,23 +121,23 @@
           "selector": {
             "metadata": "Sum(Unpicked Pallet.Unpicked Qty)"
           }
-        }
-      ],
-      "columnFormatting": [
+        },
         {
           "properties": {
-            "alignment": {
+            "value": {
               "expr": {
                 "Literal": {
-                  "Value": "'Center'"
+                  "Value": "69.18220946915352D"
                 }
               }
             }
           },
           "selector": {
-            "metadata": "Unpicked Pallet.Unpicked DateOnly"
+            "metadata": "Unpicked Pallet.Client"
           }
-        },
+        }
+      ],
+      "columnFormatting": [
         {
           "properties": {
             "alignment": {
